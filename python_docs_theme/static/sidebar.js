@@ -28,6 +28,7 @@ $(function() {
   var jwindow = $(window);
   var jdocument = $(document);
   var bodywrapper = $('.bodywrapper');
+  var documentwrapper = $('.documentwrapper');
   var sidebar = $('.sphinxsidebar');
   var sidebarwrapper = $('.sphinxsidebarwrapper');
 
@@ -71,7 +72,7 @@ $(function() {
     bodywrapper.css('margin-left', bw_margin_collapsed);
     sidebarbutton.css({
         'margin-left': '0',
-        'height': bodywrapper.height(),
+        'height': documentwrapper.height(),
         'border-radius': '5px'
     });
     sidebarbutton.find('span').text('»');
@@ -85,7 +86,7 @@ $(function() {
     sidebarwrapper.show();
     sidebarbutton.css({
         'margin-left': ssb_width_expanded-12,
-        'height': Math.max(sidebarwrapper.height(), bodywrapper.height()),
+        'height': Math.max(sidebarwrapper.height(), documentwrapper.height()),
         'border-radius': '0 5px 5px 0'
     });
     sidebarbutton.find('span').text('«');
@@ -109,7 +110,7 @@ $(function() {
     // find the height of the viewport to center the '<<' in the page
     var viewport_height = get_viewport_height();
     var sidebar_offset = sidebar.offset().top;
-    var sidebar_height = Math.max(bodywrapper.height(), sidebar.height());
+    var sidebar_height = Math.max(documentwrapper.height(), sidebar.height());
     sidebarbutton.find('span').css({
         'display': 'block',
         'position': 'fixed',
