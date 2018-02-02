@@ -11,7 +11,8 @@ with io.open('README.rst', encoding='utf-8') as readme_file:
 
 setup(
     name='python-docs-theme',
-    version='0.0.1',
+    # Version is date based as year.month[.day].
+    version='2018.2',
     description='The Sphinx theme for the CPython docs and related projects',
     long_description=long_description,
     author='PyPA',
