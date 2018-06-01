@@ -10,7 +10,6 @@ projects if you so choose, but please keep in mind that in doing so you're also
 choosing to accept some of the responsibility for maintaining that collective
 trust.
 
-To use the theme either clone it directly with ``git``, or else install it
-into your docs build environment via ``pip``::
+To use the theme, install it into your docs build environment via ``pip``::
 
-    pip install git+https://github.com/python/python-docs-theme.git#egg=python-docs-theme
+    pip install python-docs-theme
