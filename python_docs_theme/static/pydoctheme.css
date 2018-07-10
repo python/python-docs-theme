@@ -29,7 +29,7 @@ form.inline-search input {
     display: inline;
 }
 form.inline-search input[type="submit"] {
-    width: 30px;
+    width: 40px;
 }
 
 div.sphinxsidebar {
