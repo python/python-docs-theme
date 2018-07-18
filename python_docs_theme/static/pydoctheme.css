@@ -1,16 +1,17 @@
 @import url("default.css");
 
 body {
-    background-color: white;
-    margin-left: 1em;
-    margin-right: 1em;
+    font-size: 18px;
+    background-color: #F1F1F1;
+}
+
+div.document {
+    max-width: 1024px;
 }
 
 div.related {
-    margin-bottom: 1.2em;
-    padding: 0.5em 0;
+    padding: 0.9em 0;
     border-top: 1px solid #ccc;
-    margin-top: 0.5em;
 }
 
 div.related a:hover {
@@ -33,7 +34,7 @@ form.inline-search input[type="submit"] {
 }
 
 div.sphinxsidebar {
-    background-color: #eeeeee;
+    background-color: #f1f1f1;
     border-radius: 5px;
     line-height: 130%;
     font-size: smaller;
@@ -68,7 +69,7 @@ div.sphinxsidebar input[type=text] {
 }
 
 div.body {
-    padding: 0 0 0 1.2em;
+    padding: 0 1.8em;
 }
 
 div.body p {
