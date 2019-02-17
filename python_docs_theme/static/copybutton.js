@@ -8,10 +8,14 @@ $(document).ready(function() {
                 '.highlight-default .highlight');
     var pre = div.find('pre');
 
+    // search for the translated prompt strings and fallback to use English if not found
+    var hide_text_p = $('#copybutton-hide-text');
+    var hide_text = hide_text_p.length > 0 ? hide_text_p.text() : "Hide the prompts and output";
+    var show_text_p = $('#copybutton-show-text');
+    var show_text = show_text_p.length > 0 ? show_text_p.text() : "Show the prompts and output";
+
     // get the styles from the current theme
     pre.parent().parent().css('position', 'relative');
-    var hide_text = 'Hide the prompts and output';
-    var show_text = 'Show the prompts and output';
     var border_width = pre.css('border-top-width');
     var border_style = pre.css('border-top-style');
     var border_color = pre.css('border-top-color');

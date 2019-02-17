@@ -57,4 +57,11 @@
 
     {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
     </div>
+    {# Translated messages used by copybutton #}
+    {% if builder != "htmlhelp" and not embedded %}
+    <div class="copybutton-msg" style="display: none">
+        <p id="copybutton-hide-text">{% trans %}Hide the prompts and output{% endtrans %}</p>
+        <p id="copybutton-show-text">{% trans %}Show the prompts and output{% endtrans %}</p>
+    </div>
+    {% endif %}
 {% endblock %}
