@@ -1,15 +1,13 @@
 {% extends "classic/layout.html" %}
 
 {% block header %}
-<style>
-#outdated-warning {
-    background-color: #FFBABA;
-    color: #6A0E0E;
-}
-</style>
-  <div id="outdated-warning" class="doc-floating-warning">
-  This document is for a version of Python that is no longer supported. Please upgrade to a newer release!
+{%- if outdated is defined %}
+<div id="outdated-warning" class="doc-floating-warning">
+    This document is for an old version of Python that is no longer supported.
+    You should upgrade, and read the
+    <a href="{{ "/" + language if language and language != "en" else "" }}/3/{{ pagename }}{{ file_suffix }}">Python documentation for the last stable release</a>.
 </div>
+{%- endif %}
 {% endblock %}
 
 {% block rootrellink %}

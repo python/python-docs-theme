@@ -195,3 +195,10 @@ div.footer a:hover {
 dl > dt span ~ em {
     font-family: monospace, sans-serif;
 }
+
+#outdated-warning {
+    padding: .5em;
+    text-align: center;
+    background-color: #FFBABA;
+    color: #6A0E0E;
+}
