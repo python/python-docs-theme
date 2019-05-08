@@ -1,5 +1,17 @@
 {% extends "classic/layout.html" %}
 
+{% block header %}
+<style>
+#outdated-warning {
+    background-color: #FFBABA;
+    color: #6A0E0E;
+}
+</style>
+  <div id="outdated-warning" class="doc-floating-warning">
+  This document is for a version of Python that is no longer supported. Please upgrade to a newer release!
+</div>
+{% endblock %}
+
 {% block rootrellink %}
     <li><img src="{{ pathto('_static/' + theme_root_icon, 1) }}" alt=""
              style="vertical-align: middle; margin-top: -1px"/></li>
