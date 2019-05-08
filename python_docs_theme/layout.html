@@ -1,11 +1,10 @@
 {% extends "classic/layout.html" %}
 
 {% block header %}
-{%- if outdated is defined %}
+{%- if outdated_message is defined and outdated_link_text is defined %}
 <div id="outdated-warning" class="doc-floating-warning">
-    This document is for an old version of Python that is no longer supported.
-    You should upgrade, and read the
-    <a href="{{ "/" + language if language and language != "en" else "" }}/3/{{ pagename }}{{ file_suffix }}">Python documentation for the last stable release</a>.
+    {{ outdated_message }}
+    <a href="{% block outdated_href %}/{{ pagename }}{{ file_suffix }}{% endblock %}">{{ outdated_link_text }}</a>.
 </div>
 {%- endif %}
 {% endblock %}
