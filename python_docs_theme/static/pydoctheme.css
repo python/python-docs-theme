@@ -133,10 +133,6 @@ div.body tt.xref, div.body a tt, div.body code.xref, div.body a code {
     font-weight: normal;
 }
 
-.deprecated {
-    border-radius: 3px;
-}
-
 table.docutils {
     border: 1px solid #ddd;
     min-width: 20%;
