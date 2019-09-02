@@ -7,6 +7,7 @@
     {% if theme_root_include_title %}
     <a href="{{ pathto('index') }}">{{ shorttitle }}</a>{{ reldelim1 }}
     {% endif %}
+
 {% endblock %}
 
 {%- macro searchbox() %}
@@ -54,6 +55,7 @@
 
     {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
     {% if theme_issues_url %}{% trans pathto_bugs=theme_issues_url %}<a href="{{ theme_issues_url }}">Found a bug</a>?{% endtrans %}{% endif %}
+		{% if python_version %}<a href ="{{ python_version_recent }}"> This document is about an unsupported version of Python. Please check the doc about Python 3.7. </a>{% endif %}
     <br />
 
     {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
