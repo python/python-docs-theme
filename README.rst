@@ -13,3 +13,11 @@ trust.
 To use the theme, install it into your docs build environment via ``pip``::
 
     pip install python-docs-theme
+
+Configuring the options the conf.py holds
+------------------------------------------
+
+For implementing the theme you should
+- enable `html_theme = 'python_docs_theme'`
+- html_sidebars:
+  - Defaults taken from http://www.sphinx-doc.org/en/stable/config.html#confval-html_sidebars
