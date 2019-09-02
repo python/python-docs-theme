@@ -160,7 +160,9 @@ $(function() {
 
   add_sidebar_button();
   var sidebarbutton = $('#sidebarbutton');
-  set_position_from_cookie();
+  if (jwindow.width > 768) {
+    set_position_from_cookie();
+  }
 
 
   /* intelligent scrolling */
