@@ -13,13 +13,15 @@
 {# modified from sphinx/themes/basic/searchbox.html #}
     {%- if builder != "htmlhelp" %}
     <div class="inline-search" style="display: none" role="search">
-        <form class="inline-search" action="{{ pathto('search') }}" method="get">
-          <input placeholder="{{ _('Quick search') }}" type="text" name="q" />
-          <input type="submit" value="{{ _('Go') }}" />
-          <input type="hidden" name="check_keywords" value="yes" />
-          <input type="hidden" name="area" value="default" />
-        </form>
-    </div>
+        <div class="flex-container">
+            <form class="inline-search" action="{{ pathto('search') }}" method="get">
+                <input placeholder="{{ _('Quick search') }}" type="text" name="q" />
+                <input type="submit" value="{{ _('Go') }}" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+        </div>
+	</div>
     <script type="text/javascript">$('.inline-search').show(0);</script>
     {%- endif %}
 {%- endmacro %}
