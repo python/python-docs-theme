@@ -47,6 +47,12 @@
     <div class="footer">
     &copy; <a href="{{ pathto('copyright') }}">{% trans %}Copyright{% endtrans %}</a> {{ copyright|e }}.
     <br />
+    {% trans %}This page is licensed under the Python Software Fundation License Version 2.{% endtrans %}
+    <br />
+    {% trans %}Any code contained in this page is additionally licensed under the Zero Clause BSD License.{% endtrans %}
+    <br />
+    {% trans pathto_license=license_file %}See <a href="{{ license_file }}">History and License</a> for more information.{% endtrans %}
+    <br /><br />
 
     {% include "footerdonate.html" %}
     <br />
