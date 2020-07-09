@@ -34,35 +34,33 @@
     {%- endif %}
 {% endblock %}
 
-{% block extrahead %}
+{%- block extrahead -%}
     <link rel="shortcut icon" type="image/png" href="{{ pathto('_static/' + theme_root_icon, 1) }}" />
-    {% if builder != "htmlhelp" %}
-        {% if not embedded %}
+    {%- if builder != "htmlhelp" %}
+        {%- if not embedded %}
             <script type="text/javascript" src="{{ pathto('_static/copybutton.js', 1) }}"></script>
             <script type="text/javascript" src="{{ pathto('_static/menu.js', 1) }}"></script>
-        {% endif %}
-    {% endif %}
+        {%- endif -%}
+    {%- endif -%}
     {{ super() }}
-{% endblock %}
+{%- endblock -%}
 
-{%- block css %}
+{%- block css -%}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{ super() }}
-{%- endblock %}
+{%- endblock -%}
 
 {%- block body_tag %}
-    <body>
-    <nav class="mobile-nav">
-        <button class="toggler" aria-expanded="false" aria-label="{{ _('Menu') }}" aria-controls="navigation">
-            <span class="hamburger">
-                <span></span>
-            </span>
-        </button>
-        <div class="nav-content" role="navigation">
+    {{ super() }}
+    <div class="mobile-nav">
+        <input type="checkbox" id="menuToggler" class="toggler__input"
+                aria-controls="navigation" aria-pressed="false" aria-expanded="false" />
+        <label for="menuToggler" class="toggler__label" role="button" aria-label="{{ _('Menu')}}">
+            <span></span>
+        </label>
+        <nav class="nav-content" role="navigation">
             <img src="{{ pathto('_static/' + theme_root_icon, 1) }}" alt="Logo"/>
-            {%- if switchers is defined %}
             <div class="version_switcher_placeholder">{{ release }}</div>
-            {% endif -%}
             {%- if pagename != "search" and builder != "singlehtml" %}
                 <div id="searchbox" role="search">
                     <form class="search" action="{{ pathto('search') }}" method="get">
@@ -76,28 +74,20 @@
                     </form>
                 </div>
             {%- endif %}
-        </div>
-    </nav>
-{% endblock %}
-
-{% block sidebar1 %}
-    <div class="menu-wrapper">
-        <nav class="menu" role="navigation" aria-label="main navigation">
-            {%- if switchers is defined %}
-            <div class="language_switcher_placeholder">{{ language or 'en' }}</div>
-            {% endif -%}
-            {%- block sidebarlogo %}
+        </nav>
+        <div class="menu-wrapper">
+            <nav class="menu" role="navigation" aria-label="main navigation">
+                <div class="language_switcher_placeholder"></div>
                 {%- if logo %}
                     <p class="logo"><a href="{{ pathto(master_doc)|e }}">
                         <img class="logo" src="{{ pathto('_static/' + logo, 1)|e }}" alt="Logo"/>
                     </a></p>
                 {%- endif %}
-            {%- endblock %}
-            {#- new style sidebar: explicitly include/exclude templates #}
-            {%- for sidebartemplate in sidebars %}
-                {%- include sidebartemplate %}
-            {%- endfor %}
-        </nav>
+                {%- for sidebartemplate in sidebars %}
+                    {%- include sidebartemplate %}
+                {%- endfor %}
+            </nav>
+        </div>
     </div>
 {% endblock %}
 
