@@ -18,7 +18,7 @@ setup(
     long_description=long_description,
     author='PyPA',
     author_email='distutils-sig@python.org',
-    url='https://docs.python.org',
+    url='https://github.com/python/python-docs-theme/',
     packages=['python_docs_theme'],
     include_package_data=True,
     entry_points={
