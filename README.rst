@@ -17,7 +17,7 @@ To use the theme, install it into your docs build environment via ``pip``
 Configuration options
 ---------------------
 
-To use this theme, add the following to ``conf.py``::
+To use this theme, add the following to ``conf.py``:
 
 - ``html_theme = 'python_docs_theme'``
 
