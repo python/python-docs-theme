@@ -57,7 +57,7 @@ div.sphinxsidebar a:hover {
 
 form.inline-search input,
 div.sphinxsidebar input {
-    font-family: 'Lucida Grande',Arial,sans-serif;
+    font-family: Arial,sans-serif;
     border: 1px solid #999999;
     font-size: smaller;
     border-radius: 3px;
