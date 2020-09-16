@@ -36,7 +36,7 @@
 {% endblock %}
 
 {% block extrahead %}
-    <link rel="shortcut icon" type="image/png" href="{{ pathto('_static/' + theme_root_icon, 1) }}" />
+    <link rel="icon" type="image/x-icon" href="{{ pathto('_static/' + theme_root_favicon, 1) }}" />
     {% if builder != "htmlhelp" %}
     {% if not embedded %}<script type="text/javascript" src="{{ pathto('_static/copybutton.js', 1) }}"></script>{% endif %}
     {% endif %}
