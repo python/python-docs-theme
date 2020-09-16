@@ -36,7 +36,18 @@
 {% endblock %}
 
 {% block extrahead %}
+    {# Place icon files in the root if possible (let browsers look for them where they expect them to be) #}
     <link rel="icon" type="image/x-icon" href="{{ pathto('_static/' + theme_root_favicon, 1) }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ pathto('_static/' + theme_apple_touch_icon_144x144, 1) }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ pathto('_static/' + theme_apple_touch_icon_72x72, 1) }}" />
+    <link rel="apple-touch-icon-precomposed" href="{{ pathto('_static/' + theme_apple_touch_icon, 1) }}" />
+    <link rel="apple-touch-icon" href="{{ pathto('_static/' + theme_apple_touch_icon, 1) }}" />
+
+    {# Tile icon for Win8 (icon + tile color) #}
+    <meta name="msapplication-TileImage" content="{{ pathto('_static/' + theme_msapplication_tileimage, 1) }}">
+    <meta name="msapplication-TileColor" content="{{ theme_msapplication_tilecolor }}">
+    <meta name="msapplication-navbutton-color" content="{{ theme_msapplication_tilecolor }}">
+
     {% if builder != "htmlhelp" %}
     {% if not embedded %}<script type="text/javascript" src="{{ pathto('_static/copybutton.js', 1) }}"></script>{% endif %}
     {% endif %}
