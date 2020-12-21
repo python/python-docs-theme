@@ -208,9 +208,6 @@ dl > dt span ~ em {
         margin: 0;
     }
     /* Typography */
-    div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body p {
-        font-family: SourceSansProRegular, Arial, sans-serif;
-    }
     div.body h1 {
         font-size: 1.625rem;
     }
@@ -265,17 +262,17 @@ dl > dt span ~ em {
         margin-right: 1rem;
     }
     .version_switcher_placeholder select {
-        height: 24px;
-    }
-    .nav-content #searchbox {
-        flex: 1 1 auto;
+        height: 30px;
+        border-radius: 0;
     }
     .nav-content .search {
         display: flex;
+        flex: 1 1 auto;
         align-items: center;
         padding: 0 0 0 2px;
         border: 1px solid #a9a9a9;
         height: 30px;
+        overflow: hidden;
     }
     .nav-content .search:hover {
         box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
@@ -434,7 +431,8 @@ dl > dt span ~ em {
     }
     .language_switcher_placeholder select {
         width: 95%;
-        height: 24px;
+        height: 30px;
+        border-radius: 0;
     }
     .document {
         padding-top: 40px;
