@@ -338,7 +338,7 @@ dl > dt span ~ em {
         flex: none;
         height: 2px;
         width: 100%;
-        background: black;
+        background: #444;
         transition: all 400ms ease;
     }
     .toggler__label > span::before,
