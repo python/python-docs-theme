@@ -13,7 +13,7 @@
                 </li>
             {%- endfor %}
             {%- block rootrellink %}
-                <li><img src="{{ pathto('_static/' + theme_root_icon, 1) }}" alt=""
+                <li><img src="{{ pathto('_static/py.svg', 1) }}" alt=""
                     style="vertical-align: middle; margin-top: -1px"/></li>
                 <li><a href="{{theme_root_url}}">{{theme_root_name}}</a>{{ reldelim1 }}</li>
                     {% if theme_root_include_title %}
@@ -81,7 +81,7 @@
             <span></span>
         </label>
         <nav class="nav-content" role="navigation">
-            <img src="{{ pathto('_static/' + theme_root_icon, 1) }}" alt="Logo"/>
+            <img src="{{ pathto('_static/' + 'py.svg', 1) }}" alt="Logo"/>
             <div class="version_switcher_placeholder"></div>
             {%- if pagename != "search" and builder != "singlehtml" %}
                 <form id="searchbox" role="search" class="search" action="{{ pathto('search') }}" method="get">
