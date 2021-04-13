@@ -316,7 +316,7 @@ dl > dt span ~ em {
         left: 0;
         background-color: transparent;
         border: 1px solid white;
-        box-shadow:none;
+        box-shadow: none;
         z-index: 3;
         display: flex;
         align-items: center;
@@ -348,7 +348,7 @@ dl > dt span ~ em {
         width: 100%;
         background: inherit;
         position: absolute;
-        left:0;
+        left: 0;
         top: -8px;
     }
     .toggler__label > span::after {
@@ -369,7 +369,7 @@ dl > dt span ~ em {
     }
     .toggler__input:checked ~ .menu-wrapper {
         visibility: visible;
-        left:0;
+        left: 0;
     }
 
     /* Sliding side menu */
@@ -425,8 +425,16 @@ dl > dt span ~ em {
     }
     .menu ul li {
         margin-bottom: 0.5rem;
-    }  
-
+    }
+    .language_switcher_placeholder,
+    .version_switcher_placeholder {
+        position: relative;
+        border: 1px solid #a8a8a8;
+        height: 30px;
+    }
+    .language_switcher_placeholder {
+        margin-top: 2rem;
+    }
     .language_switcher_placeholder::after,
     .version_switcher_placeholder::after {
         content: url('../_static/caret-down.svg');
