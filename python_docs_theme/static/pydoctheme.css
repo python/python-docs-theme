@@ -426,13 +426,25 @@ dl > dt span ~ em {
     .menu ul li {
         margin-bottom: 0.5rem;
     }  
-    .language_switcher_placeholder {
-        padding-top: 1.25rem;
+
+    .language_switcher_placeholder::after,
+    .version_switcher_placeholder::after {
+        content: url('../_static/caret-down.svg');
+        position: absolute;
+        top: 7px;
+        width: 15px;
+        height: 15px;
+        right: 3px;
+        pointer-events: none;
+    }
+    .language_switcher_placeholder select,
+    .version_switcher_placeholder select {
+        appearance: none;
+        border: 0;
+        height: 100%;
     }
     .language_switcher_placeholder select {
-        width: 95%;
-        height: 30px;
-        border-radius: 0;
+        width: 100%;
     }
     .document {
         padding-top: 40px;
