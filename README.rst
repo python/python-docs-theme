@@ -13,11 +13,12 @@ trust.
 To use the theme, install it into your docs build environment via ``pip`` 
 (preferably in a virtual environment).
 
-1. Create and activate a virtual environment::
 
-    $ python -m venv env
-    $ source env/bin/activate
+Configuration options
+---------------------
 
-2. Install python-docs-theme using `pip`::
-    
-    (env)$ python -m pip install python-docs-theme
+To use this theme, add the following to ``conf.py``:
+
+- ``html_theme = 'python_docs_theme'``
+
+- ``html_sidebars``, defaults taken from http://www.sphinx-doc.org/en/stable/config.html#confval-html_sidebars
