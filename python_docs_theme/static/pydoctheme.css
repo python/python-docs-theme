@@ -27,6 +27,20 @@ div.related ~ div.related {
     border-bottom: none;
 }
 
+.related .switchers {
+    display: inline-flex;
+}
+
+.switchers > div {
+    margin-right: 5px;
+}
+
+.version_switcher_placeholder,
+.language_switcher_placeholder {
+    padding-left: 3px;
+    background-color: white;
+}
+
 .inline-search {
     display: inline;
 }

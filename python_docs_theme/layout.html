@@ -5,23 +5,27 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>{{ _('Navigation') }}</h3>
       <ul>
-            {%- for rellink in rellinks %}
-                <li class="right" {% if loop.first %}style="margin-right: 10px"{% endif %}>
-                    <a href="{{ pathto(rellink[0])|e }}" title="{{ rellink[1]|striptags|e }}"
-                    {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
-                {%- if not loop.first %}{{ reldelim2 }}{% endif %}
-                </li>
-            {%- endfor %}
-            {%- block rootrellink %}
-                <li><img src="{{ pathto('_static/py.svg', 1) }}" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="{{theme_root_url}}">{{theme_root_name}}</a>{{ reldelim1 }}</li>
-                    {% if theme_root_include_title %}
-                        <a href="{{ pathto('index') }}">{{ shorttitle }}</a>{{ reldelim1 }}
-                    {% endif %}
-            {%- endblock %}
+          {%- for rellink in rellinks %}
+          <li class="right" {% if loop.first %}style="margin-right: 10px"{% endif %}>
+              <a href="{{ pathto(rellink[0])|e }}" title="{{ rellink[1]|striptags|e }}"
+                 {{ accesskey(rellink[2]) }}>{{ rellink[3] }}
+              </a>
+              {%- if not loop.first %}{{ reldelim2 }}{% endif %}
+          </li>
+          {%- endfor %}
+          {%- block rootrellink %}
+          <li><img src="{{ pathto('_static/py.svg', 1) }}" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="{{theme_root_url}}">{{theme_root_name}}</a>{{ reldelim1 }}</li>
+          <li class="switchers">
             <div class="language_switcher_placeholder"></div>
             <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              {% if theme_root_include_title %}
+              <a href="{{ pathto('index') }}">{{ shorttitle }}</a>{{ reldelim1 }}
+              {% endif %}
+          </li>
+          {%- endblock %}
             {%- for parent in parents %}
                 <li class="nav-item nav-item-{{ loop.index }}"><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>{{ reldelim1 }}</li>
                 {%- endfor %}
