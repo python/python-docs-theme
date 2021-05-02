@@ -80,8 +80,8 @@
     {{ super() }}
     <div class="mobile-nav">
         <input type="checkbox" id="menuToggler" class="toggler__input"
-                aria-controls="navigation" aria-pressed="false" aria-expanded="false" />
-        <label for="menuToggler" class="toggler__label" role="button" aria-label="{{ _('Menu')}}">
+                aria-controls="navigation" aria-pressed="false" aria-expanded="false" role="button" aria-label="{{ _('Menu')}}" />
+        <label for="menuToggler" class="toggler__label">
             <span></span>
         </label>
         <nav class="nav-content" role="navigation">

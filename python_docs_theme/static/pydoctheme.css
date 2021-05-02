@@ -37,7 +37,7 @@ div.related ~ div.related {
 
 .version_switcher_placeholder,
 .language_switcher_placeholder {
-    padding-left: 3px;
+    padding-left: 5px;
     background-color: white;
 }
 
