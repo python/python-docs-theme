@@ -85,7 +85,10 @@
         <span></span>
     </label>
     <nav class="nav-content" role="navigation">
-        <img src="{{ pathto('_static/' + 'py.svg', 1) }}" alt="Logo"/>
+         <a href="{{ pathto('index') }}">
+             <img src="{{ pathto('_static/' + 'py.svg', 1) }}" alt="Logo"/>
+             {{ shorttitle }}
+         </a>
         <div class="version_switcher_placeholder"></div>
         {%- if pagename != "search" and builder != "singlehtml" %}
         <form id="searchbox" role="search" class="search" action="{{ pathto('search') }}" method="get">
