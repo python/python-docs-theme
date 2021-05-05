@@ -22,6 +22,14 @@ div.related:first-child {
     border-bottom: 1px solid #ccc;
 }
 
+.flex.container {
+	display: flex;
+}
+
+.fill-width {
+	flex: 1;
+}
+
 .inline-search {
     display: inline;
 }
