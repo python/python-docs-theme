@@ -211,6 +211,10 @@ dl > dt span ~ em {
     font-family: monospace, sans-serif;
 }
 
+.toctree-wrapper ul {
+    padding-left: 20px;
+}
+
 @media (max-width: 1023px) {
     /* Body layout */
     div.body {
