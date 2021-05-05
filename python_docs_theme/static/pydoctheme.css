@@ -266,14 +266,19 @@ dl > dt span ~ em {
         top: 0;
         height: 40px;
         width: 100%;
-        padding: 0 1rem 0 50px;
+        padding: 0 1rem 0 45px;
         display: flex;
         align-items: center;
         background-color: white;
     }
-    .nav-content img {
-        flex: 0 0 auto;
+    .nav-logo {
         margin-right: 0.7rem;
+        display: flex;
+        flex: 0 0 auto;
+    }
+    .nav-content img {
+        width: 20px;
+        height: auto;
     }
     .version_switcher_placeholder {
         flex: 0 1 0;

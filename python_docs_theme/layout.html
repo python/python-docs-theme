@@ -86,7 +86,7 @@
     </label>
     <nav class="nav-content" role="navigation">
          <a href="{{ pathto(theme_root_url) }}" class="nav-logo">
-             <img src="{{ pathto('_static/' + 'py.svg', 1) }}" alt="Logo"/>
+             <img src="{{ pathto('_static/py.svg', 1) }}" alt="Logo"/>
          </a>
         <div class="version_switcher_placeholder"></div>
         {%- if pagename != "search" and builder != "singlehtml" %}
@@ -105,7 +105,7 @@
             <div class="language_switcher_placeholder"></div>
             {%- if logo %}
             <p class="logo">
-                <a href="{{ pathto(master_doc)|e }}">
+                <a href="{{ pathto('index') }}">
                 <img class="logo" src="{{ pathto('_static/' + logo, 1)|e }}" alt="Logo"/>
                 </a>
             </p>
