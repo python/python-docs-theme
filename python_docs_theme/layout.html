@@ -85,9 +85,8 @@
         <span></span>
     </label>
     <nav class="nav-content" role="navigation">
-         <a href="{{ pathto('index') }}">
+         <a href="{{ pathto(master_doc)|e }}">
              <img src="{{ pathto('_static/' + 'py.svg', 1) }}" alt="Logo"/>
-             {{ shorttitle }}
          </a>
         <div class="version_switcher_placeholder"></div>
         {%- if pagename != "search" and builder != "singlehtml" %}
