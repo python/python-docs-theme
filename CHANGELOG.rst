@@ -2,7 +2,7 @@
 Changelog
 =========
 
-`2021.05 <https://github.com/python/python-docs-theme/releases/tag/v2021.05>`_
+`2021.5 <https://github.com/python/python-docs-theme/releases/tag/v2021.5>`_
 ------------------------------------------------------------------------------
 
 - Make the theme responsive (#46)
