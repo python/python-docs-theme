@@ -35,6 +35,11 @@ Changelog
 - Fixed code bgcolor and codetextcolor for Sphinx 3.1.0+ (#57)
    Contributed by Zhiming Wang.
 
+2018.7
+------
+Corresponds to `44a8f30 <https://github.com/python/python-docs-theme/commit/44a8f306db9ec86d277a8a687538d5d51e415130>`_
+
+
 `2018.2 <https://github.com/python/python-docs-theme/releases/tag/2018.2>`_
 ---------------------------------------------------------------------------
 
