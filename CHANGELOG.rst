@@ -5,7 +5,16 @@ Changelog
 `2021.05 <https://github.com/python/python-docs-theme/releases/tag/v2021.05>`_
 ------------------------------------------------------------------------------
 
-
+- Make the theme responsive (#46)
+   Contributed by Olga Bulat.
+- Use Python 3.8 for the Github Actions (#71)
+   Contributed by Stéphane Wirtel.
+- Use default pygments theme (#68)
+   Contributed by Aaron Carlisle.
+- Test Github action to validate the theme against docsbuild scripts. (#69)
+   Contributed by Julien Palard.
+- Add the copy button to pycon3 highlighted code blocks. (#64) 
+   Contributed by Julien Palard.
 
 
 `2020.12 <https://github.com/python/python-docs-theme/releases/tag/v2020.12>`_
