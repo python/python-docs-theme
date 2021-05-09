@@ -454,6 +454,7 @@ dl > dt span ~ em {
         position: relative;
         border: 1px solid #a8a8a8;
         height: 30px;
+        padding-right: 7px;
     }
     .language_switcher_placeholder {
         margin-top: 2rem;
@@ -465,14 +466,19 @@ dl > dt span ~ em {
         top: 7px;
         width: 15px;
         height: 15px;
-        right: 3px;
+        right: 0;
         pointer-events: none;
     }
     .language_switcher_placeholder select,
     .version_switcher_placeholder select {
+        -webkit-appearance: none;
         appearance: none;
         border: 0;
         height: 100%;
+    }
+    .language_switcher_placeholder:focus-visible,
+    .version_switcher_placeholder:focus-visible {
+        outline-offset: 5px;
     }
     .language_switcher_placeholder select {
         width: 100%;
