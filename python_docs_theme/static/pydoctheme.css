@@ -235,6 +235,14 @@ dl > dt span ~ em {
     div.body h3, div.body h4, div.body h5 {
         font-size: 1rem;
     }
+    /* Override default styles to make more readable */
+    div.body ul {
+        padding-inline-start: 1rem;
+    }
+    div.body blockquote {
+        margin-inline-start: 1rem;
+        margin-inline-end: 0;
+    }
     /* Remove sidebar and top related bar */
     div.related, .sphinxsidebar {
         display: none;
@@ -266,6 +274,7 @@ dl > dt span ~ em {
         top: 0;
         height: 40px;
         width: 100%;
+        max-width: 100vw;
         padding: 0 1rem 0 45px;
         display: flex;
         align-items: center;
@@ -285,7 +294,6 @@ dl > dt span ~ em {
         margin-right: 1rem;
     }
     .version_switcher_placeholder select {
-        height: 30px;
         border-radius: 0;
     }
     .nav-content .search {
