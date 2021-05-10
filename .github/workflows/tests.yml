@@ -29,6 +29,7 @@ jobs:
       - name: build docs
         run: |
           python3 ./docsbuild-scripts/build_docs.py --quick --build-root ./build_root --www-root ./www --log-directory ./logs --group $(id -g) --skip-cache-invalidation --theme $(pwd) --language en --branch 3.9
+          cat logs/docsbuild.log
       - name: 'Upload'
         uses: actions/upload-artifact@v2.2.2
         with:
