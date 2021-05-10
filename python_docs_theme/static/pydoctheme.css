@@ -1,7 +1,29 @@
-@import url("default.css");
+@import url('classic.css');
+
+/* unset some styles from the classic stylesheet */
+div.document,
+div.body,
+div.related,
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6,
+div.sphinxsidebar a,
+div.sphinxsidebar p,
+div.sphinxsidebar ul,
+div.sphinxsidebar h3,
+div.sphinxsidebar h3 a,
+div.sphinxsidebar h4,
+table.docutils td,
+table.indextable tr.cap,
+pre {
+    background-color: inherit;
+    color: inherit;
+}
 
 body {
-    background-color: white;
     margin-left: 1em;
     margin-right: 1em;
 }
@@ -14,17 +36,22 @@ body {
 div.related {
     margin-bottom: 1.2em;
     padding: 0.5em 0;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
     margin-top: 0.5em;
 }
 
 div.related a:hover {
-    color: #0095C4;
+    color: #0095c4;
 }
 
 div.related ~ div.related {
     border-top: 1px solid #ccc;
     border-bottom: none;
+}
+
+div.related:first-child {
+    border-top: 0;
+    border-bottom: 1px solid #ccc;
 }
 
 .related .switchers {
@@ -41,13 +68,19 @@ div.related ~ div.related {
     background-color: white;
 }
 
-.inline-search {
-    display: inline;
+
+div.related ul::after {
+    content: '';
+    clear: both;
+    display: block;
 }
+
+.inline-search,
 form.inline-search input {
     display: inline;
 }
-form.inline-search input[type="submit"] {
+
+form.inline-search input[type='submit'] {
     width: 40px;
 }
 
@@ -60,13 +93,15 @@ div.sphinxsidebar {
     position: sticky;
     top: 0;
     max-height: 100vh;
-    background-color: #eeeeee;
+    color: #444;
+    background-color: #eee;
     border-radius: 5px;
     line-height: 130%;
     font-size: smaller;
 }
 
-div.sphinxsidebar h3, div.sphinxsidebar h4 {
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
     margin-top: 1.5em;
 }
 
@@ -86,18 +121,19 @@ div.sphinxsidebarwrapper > ul > li > ul > li {
 }
 
 div.sphinxsidebar a:hover {
-    color: #0095C4;
+    color: #0095c4;
 }
 
 form.inline-search input,
-div.sphinxsidebar input {
-    font-family: 'Lucida Grande',Arial,sans-serif;
+div.sphinxsidebar input,
+div.related input {
+    font-family: 'Lucida Grande', Arial, sans-serif;
     border: 1px solid #999999;
     font-size: smaller;
     border-radius: 3px;
 }
 
-div.sphinxsidebar input[type=text] {
+div.sphinxsidebar input[type='text'] {
     max-width: 150px;
 }
 
@@ -126,7 +162,8 @@ div.body pre {
     border: 1px solid #ac9;
 }
 
-div.body div.admonition, div.body div.impl-detail {
+div.body div.admonition,
+div.body div.impl-detail {
     border-radius: 3px;
 }
 
@@ -147,7 +184,7 @@ div.body a:visited {
 }
 
 div.body a:hover {
-    color: #00B0E4;
+    color: #00b0e4;
 }
 
 tt, code, pre {
@@ -155,15 +192,20 @@ tt, code, pre {
     font-size: 96.5%;
 }
 
-div.body tt, div.body code {
+div.body tt,
+div.body code {
     border-radius: 3px;
 }
 
-div.body tt.descname, div.body code.descname {
+div.body tt.descname,
+div.body code.descname {
     font-size: 120%;
 }
 
-div.body tt.xref, div.body a tt, div.body code.xref, div.body a code {
+div.body tt.xref,
+div.body a tt,
+div.body code.xref,
+div.body a code {
     font-weight: normal;
 }
 
@@ -175,12 +217,14 @@ table.docutils {
     margin-bottom: 10px;
 }
 
-table.docutils td, table.docutils th {
+table.docutils td,
+table.docutils th {
     border: 1px solid #ddd !important;
     border-radius: 3px;
 }
 
-table p, table li {
+table p,
+table li {
     text-align: left !important;
 }
 
@@ -194,7 +238,8 @@ table.docutils td {
     padding: 0.3em 0.5em;
 }
 
-table.footnote, table.footnote td {
+table.footnote,
+table.footnote td {
     border: 0 !important;
 }
 
@@ -207,7 +252,7 @@ div.footer {
 }
 
 div.footer a:hover {
-    color: #0095C4;
+    color: #0095c4;
 }
 
 .refcount {
@@ -216,10 +261,6 @@ div.footer a:hover {
 
 .stableabi {
     color: #229;
-}
-
-.highlight {
-    background: none !important;
 }
 
 dl > dt span ~ em {

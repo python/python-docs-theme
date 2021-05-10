@@ -59,13 +59,24 @@
 {% block relbar1 %} {% if builder != 'qthelp' %} {{ relbar() }} {% endif %} {% endblock %}
 {% block relbar2 %} {% if builder != 'qthelp' %} {{ relbar() }} {% endif %} {% endblock %}
 
+{% block relbaritems %}
+{%- if pagename != "search" and builder != "singlehtml" and builder != "htmlhelp" %}
+<li class="right">
+    {{ searchbox() }}
+    {{ reldelim2 }}
+</li>
+{%- endif %}
+<li class="right"><input type="button" value="Toggle theme" class="theme-toggle" onclick="toggleTheme()">{{ reldelim2 }}</li>
+{% endblock %}
 
 {%- block extrahead -%}
+    <link rel="stylesheet" href="{{ pathto('_static/pydoctheme_dark.css', 1) }}" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
     <link rel="shortcut icon" type="image/png" href="{{ pathto('_static/' + theme_root_icon, 1) }}" />
     {%- if builder != "htmlhelp" %}
         {%- if not embedded %}
             <script type="text/javascript" src="{{ pathto('_static/copybutton.js', 1) }}"></script>
             <script type="text/javascript" src="{{ pathto('_static/menu.js', 1) }}"></script>
+            <script type="text/javascript" src="{{ pathto('_static/themetoggle.js', 1) }}"></script>
         {%- endif -%}
     {%- endif -%}
     {{ super() }}
