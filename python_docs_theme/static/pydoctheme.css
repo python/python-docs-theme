@@ -16,6 +16,12 @@ div.sphinxsidebar ul,
 div.sphinxsidebar h3,
 div.sphinxsidebar h3 a,
 div.sphinxsidebar h4,
+.menu a,
+.menu p,
+.menu ul,
+.menu h3,
+.menu h3 a,
+.menu h4,
 table.docutils td,
 table.indextable tr.cap,
 pre {
@@ -213,6 +219,7 @@ table.docutils td,
 table.docutils th {
     border: 1px solid #ddd !important;
     border-radius: 3px;
+    padding: 0.3em 0.5em;
 }
 
 table p,
@@ -222,12 +229,6 @@ table li {
 
 table.docutils th {
     background-color: #eee;
-    padding: 0.3em 0.5em;
-}
-
-table.docutils td {
-    background-color: white;
-    padding: 0.3em 0.5em;
 }
 
 table.footnote,
@@ -465,6 +466,7 @@ dl > dt span ~ em {
         width: 300px;
         height: 100%;
         background-color: #eee;
+        color: #444444;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         overflow-y: auto;
     }
@@ -484,7 +486,6 @@ dl > dt span ~ em {
         font-size: 1.3em;
     }
     .menu-wrapper h3 {
-        color: #444444;
         font-size: 1.4em;
     }
     .menu-wrapper h3 + p,
@@ -493,7 +494,6 @@ dl > dt span ~ em {
     }
     .menu a {
         font-size: smaller;
-        color: #444444;
         text-decoration: none;
     }
     .menu ul {

@@ -17,7 +17,7 @@ div.related {
 }
 
 /* SIDEBAR */
-div.sphinxsidebar {
+div.sphinxsidebar, .menu-wrapper {
     background-color: #333;
     color: inherit;
 }
@@ -111,4 +111,8 @@ div.note {
 
 .note code {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav {
+    box-shadow: rgba(255, 255, 255, 0.25) 0 0 2px 0;
 }
