@@ -318,7 +318,7 @@ dl > dt span ~ em {
         height: 100%;
         appearance: none;
         -webkit-appearance: none;
-        border: 1px solid-transparent;
+        border: 1px solid transparent;
         border-left-color: #a9a9a9;
         box-shadow: none;
         cursor: pointer;
