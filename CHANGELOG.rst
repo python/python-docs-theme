@@ -2,6 +2,19 @@
 Changelog
 =========
 
+`2021.8 <https://github.com/python/python-docs-theme/releases/tag/v2021.8>`_
+------------------------------------------------------------------------------
+
+- Add the copyright_url variable in the theme (#67)
+  Contributed by jablonskidev
+- Improve readability (#79)
+  Contributed by Olga Bulat
+- Remove #searchbox on mobile to fix a layout bug (#76)
+  Contributed by Olga Bulat
+- Fix the appearance of version/language selects (#74)
+  Contributed by Olga Bulat
+
+
 `2021.5 <https://github.com/python/python-docs-theme/releases/tag/v2021.5>`_
 ------------------------------------------------------------------------------
 
@@ -13,7 +26,7 @@ Changelog
    Contributed by Aaron Carlisle.
 - Test Github action to validate the theme against docsbuild scripts. (#69)
    Contributed by Julien Palard.
-- Add the copy button to pycon3 highlighted code blocks. (#64) 
+- Add the copy button to pycon3 highlighted code blocks. (#64)
    Contributed by Julien Palard.
 
 
@@ -22,7 +35,7 @@ Changelog
 
 - Updated the readme, to remind user to install the package in a virtual environment. (#41)
    Contributed by Mariatta.
-- Updated the package url, using the GitHub repository instead of docs.python.org (#49) 
+- Updated the package url, using the GitHub repository instead of docs.python.org (#49)
    Contributed by Pradyun Gedam.
 - Added license information to the footer of the doc (#36)
    Contributed by Todd.

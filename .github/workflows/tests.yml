@@ -1,3 +1,5 @@
+---
+
 name: Tests
 
 on:
@@ -23,7 +25,7 @@ jobs:
       - name: setup requirements
         run: |
           python -m pip install --upgrade pip
-          python -m pip install jinja2 markupsafe
+          python -m pip install jinja2 markupsafe zc.lockfile
       - name: build docs
         run: |
           python3 ./docsbuild-scripts/build_docs.py --quick --build-root ./build_root --www-root ./www --log-directory ./logs --group $(id -g) --skip-cache-invalidation --theme $(pwd) --language en --branch 3.9
