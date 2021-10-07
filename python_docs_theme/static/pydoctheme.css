@@ -208,7 +208,7 @@ div.footer a:hover {
 }
 
 dl > dt span ~ em {
-    font-family: monospace, sans-serif;
+    font-family: "monospace", sans-serif;
 }
 
 .toctree-wrapper ul {
