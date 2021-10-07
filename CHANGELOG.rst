@@ -2,6 +2,13 @@
 Changelog
 =========
 
+`2021.11 <https://github.com/python/python-docs-theme/releases/tag/v2021.1>`_
+-------------------------------------------------------------------------------
+
+- Fix monospace on buggy Google Chrome (#85)
+  Contributed by Tushar Sadhwani
+
+
 `2021.8 <https://github.com/python/python-docs-theme/releases/tag/v2021.8>`_
 ------------------------------------------------------------------------------
 
