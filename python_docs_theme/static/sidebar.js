@@ -2,8 +2,8 @@
  * sidebar.js
  * ~~~~~~~~~~
  *
- * This script makes the Sphinx sidebar collapsible and implements intelligent
- * scrolling. This is a slightly modified version of Sphinx's own sidebar.js.
+ * This script makes the Sphinx sidebar collapsible. This is a slightly
+ * modified version of Sphinx's own sidebar.js.
  *
  * .sphinxsidebar contains .sphinxsidebarwrapper.  This script adds in
  * .sphixsidebar, after .sphinxsidebarwrapper, the #sidebarbutton used to
@@ -26,7 +26,6 @@ $(function() {
   // the 'sidebarbutton' element is defined as global after its
   // creation, in the add_sidebar_button function
   var jwindow = $(window);
-  var jdocument = $(document);
   var bodywrapper = $('.bodywrapper');
   var documentwrapper = $('.documentwrapper');
   var sidebar = $('.sphinxsidebar');
@@ -62,8 +61,6 @@ $(function() {
       expand_sidebar();
     else
       collapse_sidebar();
-    // adjust the scrolling of the sidebar
-    scroll_sidebar();
   }
 
   function collapse_sidebar() {
@@ -100,7 +97,7 @@ $(function() {
     sidebarwrapper.css({
         'float': 'left',
         'margin-right': '0',
-        'width': ssb_width_expanded - 28
+        'width': ssb_width_expanded - 13
     });
     // create the button
     sidebar.append(
@@ -161,34 +158,4 @@ $(function() {
   add_sidebar_button();
   var sidebarbutton = $('#sidebarbutton');
   set_position_from_cookie();
-
-
-  /* intelligent scrolling */
-  function scroll_sidebar() {
-    var sidebar_height = sidebarwrapper.height();
-    var viewport_height = get_viewport_height();
-    var offset = sidebar.position()['top'];
-    var wintop = jwindow.scrollTop();
-    var winbot = wintop + viewport_height;
-    var curtop = sidebarwrapper.position()['top'];
-    var curbot = curtop + sidebar_height;
-    // does sidebar fit in window?
-    if (sidebar_height < viewport_height) {
-      // yes: easy case -- always keep at the top
-      sidebarwrapper.css('top', $u.min([$u.max([0, wintop - offset - 10]),
-                            jdocument.height() - sidebar_height - 200]));
-    }
-    else {
-      // no: only scroll if top/bottom edge of sidebar is at
-      // top/bottom edge of window
-      if (curtop > wintop && curbot > winbot) {
-        sidebarwrapper.css('top', $u.max([wintop - offset - 10, 0]));
-      }
-      else if (curtop < wintop && curbot < winbot) {
-        sidebarwrapper.css('top', $u.min([winbot - sidebar_height - offset - 20,
-                              jdocument.height() - sidebar_height - 200]));
-      }
-    }
-  }
-  jwindow.scroll(scroll_sidebar);
 });
