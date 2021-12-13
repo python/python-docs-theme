@@ -25,9 +25,7 @@ $(function() {
   // global elements used by the functions.
   // the 'sidebarbutton' element is defined as global after its
   // creation, in the add_sidebar_button function
-  var jwindow = $(window);
   var bodywrapper = $('.bodywrapper');
-  var documentwrapper = $('.documentwrapper');
   var sidebar = $('.sphinxsidebar');
   var sidebarwrapper = $('.sphinxsidebarwrapper');
 
@@ -44,13 +42,6 @@ $(function() {
   // colors used by the current theme
   var dark_color = '#AAAAAA';
   var light_color = '#CCCCCC';
-
-  function get_viewport_height() {
-    if (window.innerHeight)
-      return window.innerHeight;
-    else
-      return jwindow.height();
-  }
 
   function sidebar_is_collapsed() {
     return sidebarwrapper.is(':not(:visible)');
@@ -69,7 +60,6 @@ $(function() {
     bodywrapper.css('margin-left', bw_margin_collapsed);
     sidebarbutton.css({
         'margin-left': '0',
-        'height': documentwrapper.height(),
         'border-radius': '5px'
     });
     sidebarbutton.find('span').text('»');
@@ -83,13 +73,10 @@ $(function() {
     sidebarwrapper.show();
     sidebarbutton.css({
         'margin-left': ssb_width_expanded-12,
-        'height': Math.max(sidebarwrapper.height(), documentwrapper.height()),
         'border-radius': '0 5px 5px 0'
     });
     sidebarbutton.find('span').text('«');
     sidebarbutton.attr('title', _('Collapse sidebar'));
-    //sidebarwrapper.css({'padding-top':
-    //  Math.max(window.pageYOffset - sidebarwrapper.offset().top, 10)});
     document.cookie = 'sidebar=expanded';
   }
 
@@ -104,14 +91,10 @@ $(function() {
       '<div id="sidebarbutton"><span>&laquo;</span></div>'
     );
     var sidebarbutton = $('#sidebarbutton');
-    // find the height of the viewport to center the '<<' in the page
-    var viewport_height = get_viewport_height();
-    var sidebar_offset = sidebar.offset().top;
-    var sidebar_height = Math.max(documentwrapper.height(), sidebar.height());
     sidebarbutton.find('span').css({
         'display': 'block',
         'position': 'fixed',
-        'top': Math.min(viewport_height/2, sidebar_height/2 + sidebar_offset) - 10
+        'top': '50%'
     });
 
     sidebarbutton.click(toggle_sidebar);
@@ -122,8 +105,7 @@ $(function() {
         'background-color': '#CCCCCC',
         'font-size': '1.2em',
         'cursor': 'pointer',
-        'height': sidebar_height,
-        'padding-top': '1px',
+        'height': '100%',
         'padding-left': '1px',
         'margin-left': ssb_width_expanded - 12
     });
