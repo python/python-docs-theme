@@ -78,6 +78,7 @@
 
 {%- block body_tag %}
 {{ super() }}
+{%- if builder != 'htmlhelp' %}
 <div class="mobile-nav">
     <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
            aria-pressed="false" aria-expanded="false" role="button" aria-label="{{ _('Menu')}}" />
@@ -116,6 +117,7 @@
         </nav>
     </div>
 </div>
+{% endif -%}
 {% endblock %}
 
 {% block footer %}
