@@ -2,6 +2,14 @@
 Changelog
 =========
 
+`2022.1 <https://github.com/python/python-docs-theme/releases/tag/v2022.1>`_
+----------------------------------------------------------------------------------
+
+- Add a configuration for license URL. (#90)
+- Exclude the floating navbar from CHM help. (#84)
+- Make sidebar scrollable and sticky (on modern browsers) (#91)
+
+
 `2021.11.1 <https://github.com/python/python-docs-theme/releases/tag/v2021.11.1>`_
 -----------------------------------------------------------------------------------
 
