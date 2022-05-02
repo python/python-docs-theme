@@ -13,3 +13,12 @@
 - bump version (YYYY.MM.dev) in setup.py and python_docs_theme/theme.conf
 - Commit this last bump.
 - push and push the tag (``git push && git push --tags``)
+
+# Makefile Usage
+
+This project includes a simple Makefile for syncing changes to the theme with
+the main cpython repository. Run ``make help`` for details on available rules.
+
+There is one configurable variable, ``CPYTHON_ROOT``, which should be the path
+to the cpython repository on your machine. By default, it points to
+``../cpython``.
