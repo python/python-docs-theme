@@ -19,6 +19,6 @@
 This project includes a simple Makefile for syncing changes to the theme with
 the main cpython repository. Run ``make help`` for details on available rules.
 
-There is one configurable variable, ``CPYTHON_ROOT``, which should be the path
+There is one configurable variable, ``CPYTHON_PATH``, which should be the path
 to the cpython repository on your machine. By default, it points to
 ``../cpython``.
