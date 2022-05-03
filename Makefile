@@ -16,6 +16,6 @@ install:
 
 .PHONY: help
 help:
-	@echo "all: run the \`\`\install\`\\ rule, and also rebuild the cpython docs"
-	@echo "install: build the package, and install it in the virtual environment"
-	@echo "         at $(CPYTHON_PATH)/Doc/venv"
+	@echo "all:		default rule; run the \`install\` rule, and also rebuild the cpython docs"
+	@echo "install: 	build the package, and install it into the virtual environment"
+	@echo "		at $(CPYTHON_PATH)/Doc/venv"
