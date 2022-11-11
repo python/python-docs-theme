@@ -18,6 +18,7 @@ requires-python = ">=3.8"
 # Classifiers list: https://pypi.org/classifiers/
 classifiers = [
     "Development Status :: 5 - Production/Stable",
+    "Framework :: Sphinx :: Theme",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: Python Software Foundation License",
     "Operating System :: OS Independent",
