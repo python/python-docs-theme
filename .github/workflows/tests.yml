@@ -17,7 +17,7 @@ jobs:
       - name: Clone docsbuild scripts
         run: |
           git clone https://github.com/python/docsbuild-scripts/
-      - name: Setup requirements
+      - name: Set up requirements
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r docsbuild-scripts/requirements.txt
@@ -34,7 +34,7 @@ jobs:
           --language en 
           --branch 3.11
       - name: Upload
-        uses: actions/upload-artifact@v2.2.2
+        uses: actions/upload-artifact@v3
         with:
           name: doc-html
           path: www/
