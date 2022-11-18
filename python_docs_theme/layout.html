@@ -37,7 +37,7 @@
                     {{ reldelim2 }}
                 </li>
             {%- endif %}
-            <li class="right"><input type="button" value="Toggle theme" class="theme-toggle" onclick="toggleTheme()">{{ reldelim2 }}</li>
+            <li class="right">{{ themeselector() }}{{ reldelim2 }}</li>
             {% endblock %}
       </ul>
     </div>
@@ -55,6 +55,17 @@
         </form>
     </div>
     {%- endif %}
+{%- endmacro %}
+
+{%- macro themeselector() %}
+<label class="theme-selector-label">
+    {{ _('Color theme') }}
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>{{ _('Auto (default)') }}</option>
+        <option value="light">{{ _('Light theme') }}</option>
+        <option value="dark">{{ _('Dark theme') }}</option>
+    </select>
+</label>
 {%- endmacro %}
 
 {% block relbar1 %} {% if builder != 'qthelp' %} {{ relbar() }} {% endif %} {% endblock %}
@@ -84,28 +95,31 @@
 <div class="mobile-nav">
     <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
            aria-pressed="false" aria-expanded="false" role="button" aria-label="{{ _('Menu')}}" />
-    <label for="menuToggler" class="toggler__label">
-        <span></span>
-    </label>
     <nav class="nav-content" role="navigation">
-         <a href="{{ theme_root_url }}" class="nav-logo">
-             <img src="{{ pathto('_static/py.svg', 1) }}" alt="Logo"/>
-         </a>
-        <div class="version_switcher_placeholder"></div>
-        {%- if pagename != "search" and builder != "singlehtml" %}
-        <form role="search" class="search" action="{{ pathto('search') }}" method="get">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
-                <path fill-rule="nonzero"
-                        d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#444"></path>
-            </svg>
-            <input type="text" name="q" aria-label="{{ _('Quick search') }}"/>
-            <input type="submit" value="{{ _('Go') }}"/>
-        </form>
-        {%- endif %}
+        <label for="menuToggler" class="toggler__label">
+            <span></span>
+        </label>
+        <span class="nav-items-wrapper">
+            <a href="{{ theme_root_url }}" class="nav-logo">
+                <img src="{{ pathto('_static/py.svg', 1) }}" alt="Logo"/>
+            </a>
+            <span class="version_switcher_placeholder"></span>
+            {%- if pagename != "search" and builder != "singlehtml" %}
+            <form id="searchbox" role="search" class="search" action="{{ pathto('search') }}" method="get">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                    <path fill-rule="nonzero" fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+                <input type="search" name="q" aria-label="{{ _('Quick search') }}"/>
+                <input type="submit" value="{{ _('Go') }}"/>
+                {# TODO missing hidden inputs #}
+            </form>
+            {%- endif %}
+        </span>
     </nav>
     <div class="menu-wrapper">
         <nav class="menu" role="navigation" aria-label="main navigation">
             <div class="language_switcher_placeholder"></div>
+            {{ themeselector() }}
             {%- if logo %}
             <p class="logo">
                 <a href="{{ pathto('index') }}">

@@ -264,6 +264,10 @@ dl > dt span ~ em {
     padding-left: 20px;
 }
 
+.theme-selector {
+    margin-left: .5em;
+}
+
 @media (max-width: 1023px) {
     /* Body layout */
     div.body {
@@ -309,7 +313,6 @@ dl > dt span ~ em {
         position: fixed;
         top: 0;
         left: 0;
-        background-color: white;
         box-shadow: rgba(0, 0, 0, 0.25) 0 0 2px 0;
         z-index: 1;
     }
@@ -318,58 +321,55 @@ dl > dt span ~ em {
     }
     .nav-content {
         position: absolute;
-        z-index: 2;
-        left: 0;
-        top: 0;
+        z-index: 1;
         height: 40px;
         width: 100%;
         max-width: 100vw;
         padding: 0 1rem 0 45px;
         display: flex;
-        align-items: center;
         background-color: white;
     }
-    .nav-logo {
-        margin-right: 0.7rem;
+    .nav-items-wrapper {
         display: flex;
-        flex: 0 0 auto;
+        flex: auto;
+        padding: .5rem;
+    }
+    .nav-logo {
+        margin-right: 1rem;
+        flex-shrink: 0;
     }
     .nav-content img {
+        display: block;
         width: 20px;
-        height: auto;
     }
     .version_switcher_placeholder {
-        flex: 0 1 0;
         margin-right: 1rem;
+    }
+    .version_switcher_placeholder > select {
+        height: 100%;
     }
     .nav-content .search {
         display: flex;
-        flex: 1 1 auto;
-        align-items: center;
-        padding: 0 0 0 2px;
+        flex: auto;
         border: 1px solid #a9a9a9;
-        height: 30px;
-        overflow: hidden;
     }
     .nav-content .search:hover {
         box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
         border-color: rgba(223,225,229,0);
     }
-    .nav-content .search input[type=text] {
+    .nav-content .search input[type=search] {
         border: 0;
         outline: 0;
-        box-shadow: none;
-        width: 40px;
-        height: 28px;
-        flex: 1 1 auto;
+        padding-left: 20px;
+        flex: 1;
     }
     .nav-content .search input[type=submit] {
         height: 100%;
         appearance: none;
         -webkit-appearance: none;
-        border: 1px solid transparent;
-        border-left-color: #a9a9a9;
         box-shadow: none;
+        border: 0;
+        outline: 1px solid #999;
         cursor: pointer;
         background-color: #f0f0f0;
         margin-right: 0;
@@ -378,34 +378,21 @@ dl > dt span ~ em {
         border-color: #a9a9a9;
     }
     .nav-content .search svg {
-        flex: 0 0 20px;
-        fill: #333;
+        position: absolute;
     }
     .toggler__input {
-        width: 40px;
-        height: 40px;
-        left: 0;
-        opacity: 0;
-        position: absolute;
-        z-index: 3;
-        margin: 0;
+        display: none;
     }
     .toggler__label {
         width: 40px;
-        height: 40px;
-        margin: 0;
-        position: absolute;
         cursor: pointer;
-        top: 0;
-        left: 0;
         background-color: transparent;
         border: 1px solid white;
-        box-shadow: none;
-        z-index: 3;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 8px;
+        padding: 8px;
+        flex-shrink: 0;
     }
     .toggler__label:focus {
         background-color: #eee;
@@ -438,17 +425,17 @@ dl > dt span ~ em {
     .toggler__label > span::after {
         top: 8px;
     }
-    .toggler__input:checked ~ .toggler__label span {
+    .toggler__input:checked ~ nav > .toggler__label span {
         transform: rotate(135deg);
     }
-    .toggler__input:checked ~ .toggler__label span::before {
+    .toggler__input:checked ~ nav > .toggler__label span::before {
         transform: rotate(90deg);
     }
-    .toggler__input:checked ~ .toggler__label span::before,
-    .toggler__input:checked ~ .toggler__label span::after {
+    .toggler__input:checked ~ nav > .toggler__label span::before,
+    .toggler__input:checked ~ nav > .toggler__label span::after {
         top: 0;
     }
-    .toggler__input:checked:hover ~ .toggler__label span {
+    .toggler__input:checked:hover ~ nav > .toggler__label span {
         transform: rotate(315deg);
     }
     .toggler__input:checked ~ .menu-wrapper {
@@ -553,5 +540,15 @@ dl > dt span ~ em {
     .responsive-table__container {
         width: 100%;
         overflow-x: auto;
+    }
+
+    .menu .theme-selector-label {
+        margin-top: .5em;
+        display: flex;
+        width: 100%;
+    }
+
+    .menu .theme-selector {
+        flex: auto;
     }
 }

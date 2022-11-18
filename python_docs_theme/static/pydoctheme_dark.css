@@ -116,3 +116,11 @@ div.note {
 .mobile-nav {
     box-shadow: rgba(255, 255, 255, 0.25) 0 0 2px 0;
 }
+
+.nav-content {
+    background-color: black;
+}
+
+.nav-content .search svg {
+    color: black;
+}
