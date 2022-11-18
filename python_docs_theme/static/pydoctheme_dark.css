@@ -13,12 +13,7 @@ body {
 
 div.related {
     color: rgba(255, 255, 255, 0.7); /* classic overwrite */
-    border-top-color: #424242;
-}
-
-div.related:first-child {
-    /* use :first-child because border-color would need !important */
-    border-bottom-color: #424242;
+    border-color: #424242;
 }
 
 /* SIDEBAR */

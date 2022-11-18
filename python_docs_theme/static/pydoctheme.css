@@ -34,24 +34,23 @@ body {
 }
 
 div.related {
+    margin-top: 0.5em;
     margin-bottom: 1.2em;
     padding: 0.5em 0;
-    border-top: 1px solid #ccc;
-    margin-top: 0.5em;
+    border-width: 1px;
+    border-color: #ccc;
+}
+
+.mobile-nav + div.related {
+    border-bottom-style: solid;
+}
+
+.document + div.related {
+    border-top-style: solid;
 }
 
 div.related a:hover {
     color: #0095c4;
-}
-
-div.related ~ div.related {
-    border-top: 1px solid #ccc;
-    border-bottom: none;
-}
-
-div.related:first-child {
-    border-top: 0;
-    border-bottom: 1px solid #ccc;
 }
 
 .related .switchers {
@@ -61,13 +60,6 @@ div.related:first-child {
 .switchers > div {
     margin-right: 5px;
 }
-
-.version_switcher_placeholder,
-.language_switcher_placeholder {
-    padding-left: 5px;
-    background-color: white;
-}
-
 
 div.related ul::after {
     content: '';
