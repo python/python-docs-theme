@@ -59,11 +59,11 @@
 
 {%- macro themeselector() %}
 <label class="theme-selector-label">
-    {{ _('Color theme') }}
+    {{ _('Theme') }}
     <select class="theme-selector" oninput="activateTheme(this.value)">
-        <option value="auto" selected>{{ _('Auto (default)') }}</option>
-        <option value="light">{{ _('Light theme') }}</option>
-        <option value="dark">{{ _('Dark theme') }}</option>
+        <option value="auto" selected>{{ _('Auto') }}</option>
+        <option value="light">{{ _('Light') }}</option>
+        <option value="dark">{{ _('Dark') }}</option>
     </select>
 </label>
 {%- endmacro %}

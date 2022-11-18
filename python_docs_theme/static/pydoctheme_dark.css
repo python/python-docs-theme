@@ -2,7 +2,7 @@
 /* Browser elements */
 :root {
     scrollbar-color: #616161 transparent;
-    color-scheme: dark light;
+    color-scheme: dark;
 }
 
 html,
@@ -28,7 +28,7 @@ div.sphinxsidebar, .menu-wrapper {
     color: inherit !important;
 }
 
-div.sidebar {
+div.sidebar, aside.sidebar {
     background-color: #424242;
     border-color: #616161;
 }
@@ -119,8 +119,4 @@ div.note {
 
 .nav-content {
     background-color: black;
-}
-
-.nav-content .search svg {
-    color: black;
 }

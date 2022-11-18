@@ -324,19 +324,19 @@ dl > dt span ~ em {
         z-index: 1;
         height: 40px;
         width: 100%;
-        max-width: 100vw;
-        padding: 0 1rem 0 45px;
         display: flex;
         background-color: white;
     }
     .nav-items-wrapper {
         display: flex;
         flex: auto;
-        padding: .5rem;
+        padding: .25rem;
+        align-items: stretch;
     }
     .nav-logo {
         margin-right: 1rem;
         flex-shrink: 0;
+        align-self: center;
     }
     .nav-content img {
         display: block;
@@ -352,33 +352,25 @@ dl > dt span ~ em {
         display: flex;
         flex: auto;
         border: 1px solid #a9a9a9;
-    }
-    .nav-content .search:hover {
-        box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
-        border-color: rgba(223,225,229,0);
+        align-items: stretch;
     }
     .nav-content .search input[type=search] {
         border: 0;
-        outline: 0;
-        padding-left: 20px;
+        padding-left: 24px;
         flex: 1;
     }
     .nav-content .search input[type=submit] {
         height: 100%;
-        appearance: none;
-        -webkit-appearance: none;
         box-shadow: none;
         border: 0;
-        outline: 1px solid #999;
+        border-left: 1px solid #a9a9a9;
         cursor: pointer;
-        background-color: #f0f0f0;
         margin-right: 0;
-    }
-    .nav-content .search input[type=submit]:hover {
-        border-color: #a9a9a9;
     }
     .nav-content .search svg {
         position: absolute;
+        align-self: center;
+        padding-left: 4px;
     }
     .toggler__input {
         display: none;
@@ -386,30 +378,21 @@ dl > dt span ~ em {
     .toggler__label {
         width: 40px;
         cursor: pointer;
-        background-color: transparent;
-        border: 1px solid white;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 8px;
         flex-shrink: 0;
     }
-    .toggler__label:focus {
-        background-color: #eee;
-        border: 1px solid #ededed;
-        box-shadow: rgba(0, 0, 0, 0.25) 1px 0 2px 0;
-    }
-    .toggler__label:hover {
-        background-color: #eee;
-        border: 1px solid #ededed;
-        box-shadow: rgba(0, 0, 0, 0.25) 1px 0 2px 0;
+    .toggler__label:hover, .toggler__label:focus {
+        background-color: rgba(127 127 127 / 50%);
     }
     .toggler__label > span {
         position: relative;
         flex: none;
         height: 2px;
         width: 100%;
-        background: #444;
+        background: currentColor;
         transition: all 400ms ease;
     }
     .toggler__label > span::before,
@@ -496,37 +479,8 @@ dl > dt span ~ em {
     .menu ul li {
         margin-bottom: 0.5rem;
     }
-    .language_switcher_placeholder,
-    .version_switcher_placeholder {
-        position: relative;
-        border: 1px solid #a8a8a8;
-        height: 30px;
-        padding-right: 7px;
-    }
     .language_switcher_placeholder {
         margin-top: 2rem;
-    }
-    .language_switcher_placeholder::after,
-    .version_switcher_placeholder::after {
-        content: url('../_static/caret-down.svg');
-        position: absolute;
-        top: 7px;
-        width: 15px;
-        height: 15px;
-        right: 0;
-        pointer-events: none;
-    }
-    .language_switcher_placeholder select,
-    .version_switcher_placeholder select {
-        -webkit-appearance: none;
-        appearance: none;
-        border: 0;
-        height: 100%;
-        background-color: white;
-    }
-    .language_switcher_placeholder:focus-visible,
-    .version_switcher_placeholder:focus-visible {
-        outline-offset: 5px;
     }
     .language_switcher_placeholder select {
         width: 100%;
