@@ -230,6 +230,10 @@ dl > dt span ~ em {
     padding-left: 20px;
 }
 
+div.genindex-jumpbox a {
+    padding: 0 0.5em;
+}
+
 @media (max-width: 1023px) {
     /* Body layout */
     div.body {
