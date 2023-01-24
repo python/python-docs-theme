@@ -1,37 +1,40 @@
----
-
 name: Tests
 
 on:
   push:
-    branches:
-      - master
   pull_request:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
   build_doc:
-    name: 'Build cpython doc'
+    name: Build CPython documentation
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
-          python-version: 3.8
-      - name: clone docsbuild scripts
+          python-version: 3
+      - name: Clone docsbuild scripts
         run: |
           git clone https://github.com/python/docsbuild-scripts/
-      - name: setup requirements
+      - name: Set up requirements
         run: |
           python -m pip install --upgrade pip
-          python -m pip install jinja2 markupsafe zc.lockfile
-      - name: build docs
-        run: |
-          python3 ./docsbuild-scripts/build_docs.py --quick --build-root ./build_root --www-root ./www --log-directory ./logs --group $(id -g) --skip-cache-invalidation --theme $(pwd) --language en --branch 3.9
-          cat logs/docsbuild.log
-      - name: 'Upload'
-        uses: actions/upload-artifact@v2.2.2
+          python -m pip install -r docsbuild-scripts/requirements.txt
+      - name: Build documentation
+        run: >
+          python ./docsbuild-scripts/build_docs.py 
+          --quick 
+          --build-root ./build_root 
+          --www-root ./www 
+          --log-directory ./logs 
+          --group $(id -g) 
+          --skip-cache-invalidation 
+          --theme $(pwd) 
+          --language en 
+          --branch 3.11
+      - name: Upload
+        uses: actions/upload-artifact@v3
         with:
           name: doc-html
           path: www/
