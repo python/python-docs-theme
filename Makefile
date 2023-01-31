@@ -10,6 +10,7 @@ html: venv
 
 .PHONY: venv
 venv:
+	python3 -m pip install build
 	python3 -m build
 	cd $(CPYTHON_PATH)/Doc \
 		&& make venv \
@@ -18,5 +19,5 @@ venv:
 .PHONY: help
 help:
 	@echo "html:		default rule; run the \`venv\` rule, and also rebuild the CPython docs"
-	@echo "venv: 		build the package, and install it into the virtual environment"
+	@echo "venv:		build the package, and install it into the virtual environment"
 	@echo "		at $(CPYTHON_PATH)/Doc/venv"
