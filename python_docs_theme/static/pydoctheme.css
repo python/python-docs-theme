@@ -151,7 +151,7 @@ div.body a:hover {
 }
 
 tt, code, pre {
-    font-family: "monospace", monospace;
+    font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
     font-size: 96.5%;
 }
 
@@ -223,7 +223,7 @@ div.footer a:hover {
 }
 
 dl > dt span ~ em {
-    font-family: "monospace", monospace;
+    font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
 }
 
 .toctree-wrapper ul {
