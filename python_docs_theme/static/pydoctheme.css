@@ -200,7 +200,6 @@ table.footnote, table.footnote td {
 
 div.footer {
     line-height: 150%;
-    margin-top: -2em;
     text-align: right;
     width: auto;
     margin-right: 10px;
@@ -520,5 +519,11 @@ dl > dt span ~ em {
     .responsive-table__container {
         width: 100%;
         overflow-x: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    div.footer {
+        margin-top: -2em;
     }
 }
