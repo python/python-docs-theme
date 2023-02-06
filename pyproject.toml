@@ -1,7 +1,48 @@
 [build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
-]
-build-backend = "setuptools.build_meta"
+requires = ["flit_core>=3.7"]
+build-backend = "flit_core.buildapi"
 
+# project metadata
+[project]
+name = "python-docs-theme"
+version = "2022.1"
+description = "The Sphinx theme for the CPython docs and related projects"
+readme = "README.rst"
+urls.Code = "https://github.com/python/python-docs-theme"
+urls.Download = "https://pypi.org/project/python-docs-theme/"
+urls.Homepage = "https://github.com/python/python-docs-theme/"
+urls."Issue tracker" = "https://github.com/python/python-docs-theme/issues"
+license.text = "PSF-2.0"
+requires-python = ">=3.8"
+
+# Classifiers list: https://pypi.org/classifiers/
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Sphinx :: Theme",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Python Software Foundation License",
+    "Operating System :: OS Independent",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Documentation",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+[[project.authors]]
+name = "PyPA"
+email = "distutils-sig@python.org"
+
+[project.entry-points."sphinx.html_themes"]
+python_docs_theme = 'python_docs_theme'
+
+[tool.flit.module]
+name = "python_docs_theme"
+
+[tool.flit.sdist]
+include = [
+    "python_docs_theme/",
+]
