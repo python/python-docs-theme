@@ -230,6 +230,18 @@ dl > dt span ~ em {
     padding-left: 20px;
 }
 
+div.genindex-jumpbox,
+div.genindex-jumpbox > p {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+div.genindex-jumpbox a {
+    margin: 0 5px;
+    min-width: 30px;
+    text-align: center;
+}
+
 @media (max-width: 1023px) {
     /* Body layout */
     div.body {
