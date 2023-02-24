@@ -357,6 +357,7 @@ dl > dt span ~ em {
     .nav-content .search input[type=search] {
         border: 0;
         padding-left: 24px;
+        width: 100%;
         flex: 1;
     }
     .nav-content .search input[type=submit] {
