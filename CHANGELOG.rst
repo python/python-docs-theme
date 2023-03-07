@@ -2,6 +2,15 @@
 Changelog
 =========
 
+`2023.3 <https://github.com/python/python-docs-theme/releases/tag/v2023.3>`_
+----------------------------------------------------------------------------
+
+- Fix problem with monospace rendering in Vivaldi #104
+- Fix mobile nav obstructing content #96
+- Reduce footer margin only for desktop #106
+- Append a hash ?digest to CSS files for cache-busting #108
+
+
 `2022.1 <https://github.com/python/python-docs-theme/releases/tag/v2022.1>`_
 ----------------------------------------------------------------------------------
 

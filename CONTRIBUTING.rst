@@ -1,7 +1,7 @@
 # How to release
 
 - Update CHANGELOG.rst
-- bump version (YYYY.MM) in setup.py and python_docs_theme/theme.conf
+- bump version (YYYY.MM) in pyproject.toml
 - commit
 - push to check one last time if the tests pass github side.
 - tag it (YYYY.MM).
