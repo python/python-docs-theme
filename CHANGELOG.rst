@@ -2,6 +2,12 @@
 Changelog
 =========
 
+`2023.3.1 <https://github.com/python/python-docs-theme/releases/tag/v2023.3.1>`_
+--------------------------------------------------------------------------------
+
+- Skip cache-busting for old Sphinx #113
+
+
 `2023.3 <https://github.com/python/python-docs-theme/releases/tag/v2023.3>`_
 ----------------------------------------------------------------------------
 
