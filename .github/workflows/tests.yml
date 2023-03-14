@@ -7,11 +7,11 @@ on:
 
 jobs:
   build_doc:
-    name: Build CPython documentation
+    name: Build CPython docs
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: [3.7, 3.8, 3.9, '3.10', 3.11]
+        branch: [origin/main, 3.11, '3.10', 3.9, 3.8, 3.7]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
@@ -35,7 +35,7 @@ jobs:
           --skip-cache-invalidation 
           --theme $(pwd) 
           --language en 
-          --branch ${{ matrix.version }}
+          --branch ${{ matrix.branch }}
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
