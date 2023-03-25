@@ -284,7 +284,8 @@ div.footer a:hover {
     color: #229;
 }
 
-dl > dt span ~ em {
+dl > dt span ~ em,
+.sig {
     font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
 }
 
