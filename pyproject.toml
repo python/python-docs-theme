@@ -12,7 +12,7 @@ urls.Code = "https://github.com/python/python-docs-theme"
 urls.Download = "https://pypi.org/project/python-docs-theme/"
 urls.Homepage = "https://github.com/python/python-docs-theme/"
 urls."Issue tracker" = "https://github.com/python/python-docs-theme/issues"
-license.text = "PSF-2.0"
+license.file = "LICENSE"
 requires-python = ">=3.8"
 
 # Classifiers list: https://pypi.org/classifiers/
