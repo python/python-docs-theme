@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         closeMenu()
     })
     // Add accessibility data when sideMenu is opened/closed
-    togglerInput.addEventListener("change", function (e) {
+    togglerInput.addEventListener("change", function (_event) {
         togglerInput.checked ? openMenu() : closeMenu()
     })
     // Make sideMenu links tabbable only when visible
