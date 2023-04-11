@@ -45,13 +45,11 @@ const initialiseSidebar = () => {
   sidebarButton.appendChild(sidebarArrow)
   sidebar.appendChild(sidebarButton)
 
-  const flipArrow = element => element.innerText = (element.innerText === "»") ? "«" : "»"
-
   const collapse_sidebar = () => {
     bodyWrapper.style.marginLeft = ".8em"
     sidebar.style.width = ".8em"
     sidebarWrapper.style.display = "none"
-    flipArrow(sidebarArrow)
+    sidebarArrow.innerText = "»"
     sidebarButton.title = _("Expand sidebar")
     window.localStorage.setItem("sidebar", "collapsed")
   }
@@ -60,7 +58,7 @@ const initialiseSidebar = () => {
     bodyWrapper.style.marginLeft = ""
     sidebar.style.removeProperty("width")
     sidebarWrapper.style.display = ""
-    flipArrow(sidebarArrow)
+    sidebarArrow.innerText = "«"
     sidebarButton.title = _("Collapse sidebar")
     window.localStorage.setItem("sidebar", "expanded")
   }
@@ -69,14 +67,11 @@ const initialiseSidebar = () => {
     (sidebarWrapper.style.display === "none") ? expand_sidebar() : collapse_sidebar()
   })
 
-  if (!window.localStorage.getItem("sidebar")) {
-    return
-  }
-  const value = window.localStorage.getItem("sidebar")
-  if (value === "collapsed") {
+  const sidebar_state = window.localStorage.getItem("sidebar")
+  if (sidebar_state === "collapsed") {
     collapse_sidebar()
   }
-  else if (value === "expanded") {
+  else if (sidebar_state === "expanded") {
     expand_sidebar()
   }
 }
