@@ -31,7 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Close menu when link on the sideMenu is clicked
     sideMenu.addEventListener('click', function (event) {
         let target = event.target
-        if (target.tagName.toLowerCase() !== 'a') return
+        if (target.tagName.toLowerCase() !== 'a') {
+            return
+        }
         closeMenu()
     })
     // Add accessibility data when sideMenu is opened/closed
