@@ -104,10 +104,12 @@ div.sphinxsidebar h4 {
 }
 
 div.sphinxsidebarwrapper {
+    width: 217px;
     box-sizing: border-box;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    float: left;
 }
 
 div.sphinxsidebarwrapper > h3:first-child {
@@ -133,6 +135,33 @@ div.related input {
 
 div.sphinxsidebar input[type='text'] {
     max-width: 150px;
+}
+
+#sidebarbutton {
+    /* Sphinx 4.x and earlier compat */
+    height: 100%;
+    background-color: #CCCCCC;
+    margin-left: 0;
+    color: #444444;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding-top: 1px;
+    float: right;
+    display: table;
+    /* after Sphinx 4.x and earlier is dropped, only the below is needed */
+    width: 12px;
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+}
+
+#sidebarbutton span {
+    /* Sphinx 4.x and earlier compat */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#sidebarbutton:hover {
+    background-color: #AAAAAA;
 }
 
 div.body {
@@ -277,6 +306,26 @@ div.genindex-jumpbox a {
     margin: 0 5px;
     min-width: 30px;
     text-align: center;
+}
+
+.copybutton {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-size: 75%;
+    font-family: monospace;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-radius: 0 3px 0 0;
+    color: #ac9; /* follows div.body pre */
+    border-color: #ac9; /* follows div.body pre */
+    border-style: solid; /* follows div.body pre */
+    border-width: 1px; /* follows div.body pre */
+}
+
+.copybutton[data-hidden='true'] {
+    text-decoration: line-through;
 }
 
 @media (max-width: 1023px) {
