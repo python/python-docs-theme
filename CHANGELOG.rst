@@ -2,6 +2,21 @@
 Changelog
 =========
 
+`2023.5 <https://github.com/python/python-docs-theme/releases/tag/v2023.5>`_
+----------------------------------------------------------------------------
+
+- Add a dark theme. (#44)
+  Contributed by Nils K
+- Fix: Remove searchbox id from form. (fixes #117)
+  Contributed by Nils K
+- Update ``python-docs-theme`` to work with Sphinx 5 & 6. (#99 & #127)
+  Contributed by Adam Turner
+- Override font for ``.sig`` for consistency with other code blocks. (#121)
+  Contributed by Chris Warrick
+- Dark mode: add class to invert image brightness. (#128)
+  Contributed by Hugo van Kemenade
+
+
 `2023.3.1 <https://github.com/python/python-docs-theme/releases/tag/v2023.3.1>`_
 --------------------------------------------------------------------------------
 
