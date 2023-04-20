@@ -45,7 +45,7 @@ const initialiseSidebar = () => {
 {% if sphinx_version_tuple is defined and sphinx_version_tuple[0] >= 5 %}
   const sidebarButton = document.getElementById("sidebarbutton")
   const sidebarArrow = sidebarButton.querySelector('span')
-{%  else %}
+{% else %}
   // create the sidebar button element
   const sidebarButton = document.createElement("div")
   sidebarButton.id = "sidebarbutton"
