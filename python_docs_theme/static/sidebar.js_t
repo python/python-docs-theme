@@ -36,6 +36,16 @@ const initialiseSidebar = () => {
     return
   }
 
+{# Check if we need to dynamically insert the sidebar button.
+ # We prefer the ``sphinx_version_tuple`` variable, and if it is undefined we
+ # know we are running a Sphinx version older than 4.2.
+ #
+ # See: https://www.sphinx-doc.org/en/master/development/templating.html#sphinx_version_tuple
+ #}
+{% if sphinx_version_tuple is defined and sphinx_version_tuple[0] >= 5 %}
+  const sidebarButton = document.getElementById("sidebarbutton")
+  const sidebarArrow = sidebarButton.querySelector('span')
+{%  else %}
   // create the sidebar button element
   const sidebarButton = document.createElement("div")
   sidebarButton.id = "sidebarbutton"
@@ -44,6 +54,7 @@ const initialiseSidebar = () => {
   sidebarArrow.innerText =  "«"
   sidebarButton.appendChild(sidebarArrow)
   sidebar.appendChild(sidebarButton)
+{% endif %}
 
   const collapse_sidebar = () => {
     bodyWrapper.style.marginLeft = ".8em"
