@@ -120,3 +120,7 @@ div.note {
 .nav-content {
     background-color: black;
 }
+
+img.invert-in-dark-mode {
+    filter: invert(1) hue-rotate(.5turn);
+}
