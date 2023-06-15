@@ -48,7 +48,7 @@
     {%- if builder != "htmlhelp" %}
     <div class="inline-search" role="search">
         <form class="inline-search" action="{{ pathto('search') }}" method="get">
-          <input placeholder="{{ _('Quick search') }}" aria-label="{{ _('Quick search') }}" type="search" name="q" />
+          <input placeholder="{{ _('Quick search') }}" aria-label="{{ _('Quick search') }}" type="search" name="q" id="search-box" />
           <input type="submit" value="{{ _('Go') }}" />
         </form>
     </div>
@@ -76,6 +76,7 @@
         {%- if not embedded %}
             <script type="text/javascript" src="{{ pathto('_static/copybutton.js', 1) }}"></script>
             <script type="text/javascript" src="{{ pathto('_static/menu.js', 1) }}"></script>
+            <script type="text/javascript" src="{{ pathto('_static/search-focus.js', 1) }}"></script>
             <script type="text/javascript" src="{{ pathto('_static/themetoggle.js', 1) }}"></script>
         {%- endif -%}
     {%- endif -%}
