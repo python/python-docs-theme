@@ -129,6 +129,7 @@ img.invert-in-dark-mode {
 
 /* C++ specific styling */
 
+/* Override Sphinx's basic.css to fix colour contrast */
 .sig.c   .k, .sig.c   .kt,
 .sig.cpp .k, .sig.cpp .kt {
     color: #5283ff;
