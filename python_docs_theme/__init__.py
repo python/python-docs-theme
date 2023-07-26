@@ -4,6 +4,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, List
 
+import sphinx
 import sphinx.application
 from sphinx.builders.html import StandaloneHTMLBuilder
 
@@ -20,6 +21,11 @@ def _asset_hash(path: str) -> str:
 
 
 def _add_asset_hashes(static: List[str], add_digest_to: List[str]) -> None:
+    if sphinx.version_info >= (7, 1):
+        # https://github.com/sphinx-doc/sphinx/pull/11415 added the relevant
+        # functionality to Sphinx, so we don't need to do anything.
+        return
+
     for asset in add_digest_to:
         index = static.index(asset)
         static[index].filename = _asset_hash(asset)  # type: ignore
