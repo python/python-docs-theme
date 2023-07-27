@@ -368,6 +368,11 @@ div.genindex-jumpbox a {
     body {
         margin-top: 40px;
     }
+    /* Don't let long code literals extend beyond the right side of the screen */
+    span.pre {
+        overflow-wrap: break-word;
+        white-space: unset;
+    }
 
     /* Top navigation bar */
     .mobile-nav {
