@@ -37,7 +37,7 @@ def _html_page_context(
 
     assert isinstance(app.builder, StandaloneHTMLBuilder)
 
-    if sphinx.version_info >= (4,) and "css_files" in context:
+    if (4,) <= sphinx.version_info < (7, 1) and "css_files" in context:
         if "_static/pydoctheme.css" not in context["css_files"]:
             raise ValueError(
                 "This documentation is not using `pydoctheme.css` as the stylesheet. "
