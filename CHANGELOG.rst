@@ -22,15 +22,15 @@ Changelog
 ----------------------------------------------------------------------------
 
 - Add a dark theme. (#44)
-  Contributed by Nils K
+   Contributed by Nils K
 - Fix: Remove searchbox id from form. (fixes #117)
-  Contributed by Nils K
+   Contributed by Nils K
 - Update ``python-docs-theme`` to work with Sphinx 5 & 6. (#99 & #127)
-  Contributed by Adam Turner
+   Contributed by Adam Turner
 - Override font for ``.sig`` for consistency with other code blocks. (#121)
-  Contributed by Chris Warrick
+   Contributed by Chris Warrick
 - Dark mode: add class to invert image brightness. (#128)
-  Contributed by Hugo van Kemenade
+   Contributed by Hugo van Kemenade
 
 
 `2023.3.1 <https://github.com/python/python-docs-theme/releases/tag/v2023.3.1>`_
@@ -60,27 +60,27 @@ Changelog
 -----------------------------------------------------------------------------------
 
 - Fix monospace again, on buggy Google Chrome (#87)
-  Contributed by Tushar Sadhwani
+   Contributed by Tushar Sadhwani
 
 
 `2021.11 <https://github.com/python/python-docs-theme/releases/tag/v2021.11>`_
 -------------------------------------------------------------------------------
 
 - Fix monospace on buggy Google Chrome (#85)
-  Contributed by Tushar Sadhwani
+   Contributed by Tushar Sadhwani
 
 
 `2021.8 <https://github.com/python/python-docs-theme/releases/tag/v2021.8>`_
 ------------------------------------------------------------------------------
 
 - Add the copyright_url variable in the theme (#67)
-  Contributed by jablonskidev
+   Contributed by jablonskidev
 - Improve readability (#79)
-  Contributed by Olga Bulat
+   Contributed by Olga Bulat
 - Remove #searchbox on mobile to fix a layout bug (#76)
-  Contributed by Olga Bulat
+   Contributed by Olga Bulat
 - Fix the appearance of version/language selects (#74)
-  Contributed by Olga Bulat
+   Contributed by Olga Bulat
 
 
 `2021.5 <https://github.com/python/python-docs-theme/releases/tag/v2021.5>`_
