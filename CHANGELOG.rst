@@ -2,19 +2,35 @@
 Changelog
 =========
 
+`2023.7 <https://github.com/python/python-docs-theme/releases/tag/v2023.7>`_
+----------------------------------------------------------------------------
+
+- Fix compatability with Sphinx 7.1 (#137)
+   Contributed by Pradyun Gedam
+- Enable the slash keypress to focus the search field (#141)
+   Contributed by Mike Fiedler
+- Sphinx 6.2 fix: add ``nav.contents`` where ``div.topic`` is used (#138)
+   Contributed by Hugo van Kemenade
+- Dark mode: fix contrast for C++ specific styling (#133)
+  Contributed by Hugo van Kemenade
+- Don't let long code literals extend beyond the right side of the screen (#139)
+   Contributed by Hugo van Kemenade
+- Test with Python 3.12 (#140)
+   Contributed by Hugo van Kemenade
+
 `2023.5 <https://github.com/python/python-docs-theme/releases/tag/v2023.5>`_
 ----------------------------------------------------------------------------
 
 - Add a dark theme. (#44)
-  Contributed by Nils K
+   Contributed by Nils K
 - Fix: Remove searchbox id from form. (fixes #117)
-  Contributed by Nils K
+   Contributed by Nils K
 - Update ``python-docs-theme`` to work with Sphinx 5 & 6. (#99 & #127)
-  Contributed by Adam Turner
+   Contributed by Adam Turner
 - Override font for ``.sig`` for consistency with other code blocks. (#121)
-  Contributed by Chris Warrick
+   Contributed by Chris Warrick
 - Dark mode: add class to invert image brightness. (#128)
-  Contributed by Hugo van Kemenade
+   Contributed by Hugo van Kemenade
 
 
 `2023.3.1 <https://github.com/python/python-docs-theme/releases/tag/v2023.3.1>`_
@@ -44,27 +60,27 @@ Changelog
 -----------------------------------------------------------------------------------
 
 - Fix monospace again, on buggy Google Chrome (#87)
-  Contributed by Tushar Sadhwani
+   Contributed by Tushar Sadhwani
 
 
 `2021.11 <https://github.com/python/python-docs-theme/releases/tag/v2021.11>`_
 -------------------------------------------------------------------------------
 
 - Fix monospace on buggy Google Chrome (#85)
-  Contributed by Tushar Sadhwani
+   Contributed by Tushar Sadhwani
 
 
 `2021.8 <https://github.com/python/python-docs-theme/releases/tag/v2021.8>`_
 ------------------------------------------------------------------------------
 
 - Add the copyright_url variable in the theme (#67)
-  Contributed by jablonskidev
+   Contributed by jablonskidev
 - Improve readability (#79)
-  Contributed by Olga Bulat
+   Contributed by Olga Bulat
 - Remove #searchbox on mobile to fix a layout bug (#76)
-  Contributed by Olga Bulat
+   Contributed by Olga Bulat
 - Fix the appearance of version/language selects (#74)
-  Contributed by Olga Bulat
+   Contributed by Olga Bulat
 
 
 `2021.5 <https://github.com/python/python-docs-theme/releases/tag/v2021.5>`_
