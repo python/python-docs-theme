@@ -5,17 +5,17 @@ Changelog
 `2023.7 <https://github.com/python/python-docs-theme/releases/tag/v2023.7>`_
 ----------------------------------------------------------------------------
 
-- Do not append asset hashes on Sphinx 7.1+ (#137)
+- Fix compatability with Sphinx 7.1 (#137)
    Contributed by Pradyun Gedam
-- Use correct block, enable built-in slash keypress (#141)
+- Enable the slash keypress to focus the search field (#141)
    Contributed by Mike Fiedler
-- Sphinx 6.2 fix: add ``nav.contents`` where that ``div.topic`` is used (#138)
+- Sphinx 6.2 fix: add ``nav.contents`` where ``div.topic`` is used (#138)
    Contributed by Hugo van Kemenade
 - Dark mode: fix contrast for C++ specific styling (#133)
   Contributed by Hugo van Kemenade
 - Don't let long code literals extend beyond the right side of the screen (#139)
    Contributed by Hugo van Kemenade
-- Test 3.12 branch, now `main` is 3.13 (#140)
+- Test with Python 3.12 (#140)
    Contributed by Hugo van Kemenade
 
 `2023.5 <https://github.com/python/python-docs-theme/releases/tag/v2023.5>`_
