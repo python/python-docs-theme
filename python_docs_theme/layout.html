@@ -82,7 +82,12 @@
     {{ super() }}
 {%- endblock -%}
 
-{%- block document %}
+{%- block css -%}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ super() }}
+{%- endblock -%}
+
+{%- block body_tag %}
 {{ super() }}
 {%- if builder != 'htmlhelp' %}
 <div class="mobile-nav">
