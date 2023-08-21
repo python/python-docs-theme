@@ -1,4 +1,3 @@
----
 name: Build & maybe upload PyPI package
 
 on:
@@ -50,7 +49,7 @@ jobs:
 
   # Upload to real PyPI on GitHub Releases.
   release-pypi:
-    name: Publish released package to pypi.org
+    name: Publish to PyPI
     environment: release-pypi
     if: github.repository_owner == 'python' && github.event.action == 'published'
     runs-on: ubuntu-latest
