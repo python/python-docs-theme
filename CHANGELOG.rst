@@ -22,7 +22,7 @@ Changelog
 - Sphinx 6.2 fix: add ``nav.contents`` where ``div.topic`` is used (#138)
    Contributed by Hugo van Kemenade
 - Dark mode: fix contrast for C++ specific styling (#133)
-  Contributed by Hugo van Kemenade
+   Contributed by Hugo van Kemenade
 - Don't let long code literals extend beyond the right side of the screen (#139)
    Contributed by Hugo van Kemenade
 - Test with Python 3.12 (#140)
