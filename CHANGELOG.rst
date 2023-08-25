@@ -2,6 +2,16 @@
 Changelog
 =========
 
+`2023.8 <https://github.com/python/python-docs-theme/releases/tag/v2023.8>`_
+----------------------------------------------------------------------------
+
+- Add Python 3.12 and 3.13 classifiers (#147)
+    Contributed by Hugo van Kemenade
+- Dark mode: Also give aside.topic a dark background (#150)
+   Contributed by Hugo van Kemenade
+- Revert "Enable the slash keypress to focus the search field (#141)" (#146)
+   Contributed by Hugo van Kemenade
+
 `2023.7 <https://github.com/python/python-docs-theme/releases/tag/v2023.7>`_
 ----------------------------------------------------------------------------
 
