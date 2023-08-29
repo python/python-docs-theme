@@ -2,6 +2,16 @@
 Changelog
 =========
 
+`2023.8 <https://github.com/python/python-docs-theme/releases/tag/v2023.8>`_
+----------------------------------------------------------------------------
+
+- Add Python 3.12 and 3.13 classifiers (#147)
+   Contributed by Hugo van Kemenade
+- Dark mode: Also give aside.topic a dark background (#150)
+   Contributed by Hugo van Kemenade
+- Restore the menu on mobile devices (inadvertently broken in 2023.7) (#146)
+   Contributed by Hugo van Kemenade
+
 `2023.7 <https://github.com/python/python-docs-theme/releases/tag/v2023.7>`_
 ----------------------------------------------------------------------------
 
@@ -12,7 +22,7 @@ Changelog
 - Sphinx 6.2 fix: add ``nav.contents`` where ``div.topic`` is used (#138)
    Contributed by Hugo van Kemenade
 - Dark mode: fix contrast for C++ specific styling (#133)
-  Contributed by Hugo van Kemenade
+   Contributed by Hugo van Kemenade
 - Don't let long code literals extend beyond the right side of the screen (#139)
    Contributed by Hugo van Kemenade
 - Test with Python 3.12 (#140)
