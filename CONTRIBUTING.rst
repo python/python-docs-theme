@@ -1,4 +1,5 @@
-# How to release
+How to release
+--------------
 
 - Update CHANGELOG.rst
 - bump version (YYYY.MM) in pyproject.toml
@@ -13,7 +14,8 @@
 - push the tag (``git push --tags``)
 
 
-# Makefile usage
+Makefile usage
+--------------
 
 This project includes a simple Makefile for syncing changes to the theme with
 the main CPython repository. Run ``make help`` for details on available rules.
