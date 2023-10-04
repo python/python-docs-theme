@@ -9,8 +9,9 @@ How to release
 - Go to https://github.com/python/python-docs-theme/releases
 - Click "Draft a new release"
 - Click "Choose a tag"
-- Type the next YYYY.MM version and
+- Type the next YYYY.MM version (no leading zero) and
   select "**Create new tag: YYYY.MM** on publish"
+- Leave the "Release title" blank (it will be autofilled)
 - Click "Generate release notes" and amend as required
 - Click "Publish release"
 - Check the tagged `GitHub Actions build <https://github.com/python/python-docs-theme/actions/workflows/pypi-package.yml>`__
