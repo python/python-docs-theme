@@ -2,6 +2,12 @@
 Changelog
 =========
 
+`2023.9 <https://github.com/python/python-docs-theme/releases/tag/v2023.9>`_
+----------------------------------------------------------------------------
+
+- Focus search box when pressing slash (#153)
+   Contributed by Hugo van Kemenade
+
 `2023.8 <https://github.com/python/python-docs-theme/releases/tag/v2023.8>`_
 ----------------------------------------------------------------------------
 
