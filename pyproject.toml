@@ -1,43 +1,38 @@
 [build-system]
-requires = ["flit_core>=3.7"]
 build-backend = "flit_core.buildapi"
+requires = [
+  "flit_core>=3.7",
+]
 
-# project metadata
 [project]
 name = "python-docs-theme"
 version = "2023.9"
 description = "The Sphinx theme for the CPython docs and related projects"
 readme = "README.rst"
+license.file = "LICENSE"
+authors = [{name = "PyPA", email = "distutils-sig@python.org"}]
+requires-python = ">=3.8"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Framework :: Sphinx :: Theme",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Python Software Foundation License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Documentation",
+  "Topic :: Software Development :: Documentation",
+]
 urls.Code = "https://github.com/python/python-docs-theme"
 urls.Download = "https://pypi.org/project/python-docs-theme/"
 urls.Homepage = "https://github.com/python/python-docs-theme/"
 urls."Issue tracker" = "https://github.com/python/python-docs-theme/issues"
-license.file = "LICENSE"
-requires-python = ">=3.8"
-
-# Classifiers list: https://pypi.org/classifiers/
-classifiers = [
-    "Development Status :: 5 - Production/Stable",
-    "Framework :: Sphinx :: Theme",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: Python Software Foundation License",
-    "Operating System :: OS Independent",
-    "Topic :: Documentation",
-    "Topic :: Software Development :: Documentation",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-]
-
-[[project.authors]]
-name = "PyPA"
-email = "distutils-sig@python.org"
-
 [project.entry-points."sphinx.html_themes"]
 python_docs_theme = 'python_docs_theme'
 

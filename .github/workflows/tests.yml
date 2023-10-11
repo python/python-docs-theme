@@ -1,22 +1,25 @@
 name: Tests
 
-on:
-  push:
-  pull_request:
-  workflow_dispatch:
+on: [push, pull_request, workflow_dispatch]
+
+env:
+  FORCE_COLOR: 1
 
 jobs:
   build_doc:
     name: Build CPython docs
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        branch: [origin/main, 3.12, 3.11, '3.10', 3.9, 3.8]
+        branch: ["origin/main", "3.12", "3.11", "3.10", "3.9", "3.8"]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: 3
+          allow-prereleases: true
+          cache: pip
       - name: Clone docsbuild scripts
         run: |
           git clone https://github.com/python/docsbuild-scripts/
@@ -26,15 +29,15 @@ jobs:
           python -m pip install -r docsbuild-scripts/requirements.txt
       - name: Build documentation
         run: >
-          python ./docsbuild-scripts/build_docs.py 
-          --quick 
-          --build-root ./build_root 
-          --www-root ./www 
-          --log-directory ./logs 
-          --group $(id -g) 
-          --skip-cache-invalidation 
-          --theme $(pwd) 
-          --language en 
+          python ./docsbuild-scripts/build_docs.py
+          --quick
+          --build-root ./build_root
+          --www-root ./www
+          --log-directory ./logs
+          --group $(id -g)
+          --skip-cache-invalidation
+          --theme $(pwd)
+          --language en
           --branch ${{ matrix.branch }}
       - name: Upload
         uses: actions/upload-artifact@v3
