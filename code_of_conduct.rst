@@ -11,4 +11,3 @@ which includes all infrastructure used in the development of Python itself
 
 In general this means everyone is expected to be open, considerate, and
 respectful of others no matter what their position is within the project.
-

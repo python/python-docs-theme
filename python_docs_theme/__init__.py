@@ -1,8 +1,10 @@
+from __future__ import annotations
+
 import hashlib
 import os
 from functools import lru_cache
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any
 
 import sphinx.application
 from sphinx.builders.html import StandaloneHTMLBuilder
@@ -19,7 +21,7 @@ def _asset_hash(path: str) -> str:
     return f"{path}?digest={digest}"
 
 
-def _add_asset_hashes(static: List[str], add_digest_to: List[str]) -> None:
+def _add_asset_hashes(static: list[str], add_digest_to: list[str]) -> None:
     for asset in add_digest_to:
         index = static.index(asset)
         static[index].filename = _asset_hash(asset)  # type: ignore
@@ -29,7 +31,7 @@ def _html_page_context(
     app: sphinx.application.Sphinx,
     pagename: str,
     templatename: str,
-    context: Dict[str, Any],
+    context: dict[str, Any],
     doctree: Any,
 ) -> None:
     if app.config.html_theme != "python_docs_theme":
