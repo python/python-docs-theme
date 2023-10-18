@@ -29,6 +29,10 @@ pre {
     color: inherit;
 }
 
+a {
+    text-decoration: underline;
+}
+
 body {
     margin-left: 1em;
     margin-right: 1em;
