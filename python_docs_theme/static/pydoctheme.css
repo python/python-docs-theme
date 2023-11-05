@@ -29,7 +29,7 @@ pre {
     color: inherit;
 }
 
-a {
+a[href] {
     text-decoration: underline 1px;
     text-underline-offset: 0.3em;
 }
