@@ -14,7 +14,7 @@
           </li>
           {%- endfor %}
           {%- block rootrellink %}
-          <li><img src="{{ pathto('_static/py.svg', 1) }}" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><img src="{{ pathto('_static/' + theme_root_icon, 1) }}" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
           <li><a href="{{theme_root_url}}">{{theme_root_name}}</a>{{ reldelim1 }}</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -100,7 +100,7 @@
         </label>
         <span class="nav-items-wrapper">
             <a href="{{ theme_root_url }}" class="nav-logo">
-                <img src="{{ pathto('_static/py.svg', 1) }}" alt="Logo"/>
+                <img src="{{ pathto('_static/' + theme_root_icon, 1) }}" alt="Logo"/>
             </a>
             <span class="version_switcher_placeholder"></span>
             {%- if pagename != "search" and builder != "singlehtml" %}
