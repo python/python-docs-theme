@@ -39,6 +39,10 @@ jobs:
           --theme $(pwd)
           --language en
           --branch ${{ matrix.branch }}
+      - name: Show logs
+        if: failure()
+        run: |
+          cat ./logs/docsbuild.log
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
