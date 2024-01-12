@@ -71,7 +71,7 @@
 
 {%- block extrahead -%}
     <link rel="stylesheet" href="{{ pathto('_static/pydoctheme_dark.css', 1) }}" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
-    <link rel="shortcut icon" type="image/png" href="{{ pathto('_static/' + theme_root_icon, 1) }}" />
+    <link rel="shortcut icon" type="image/png" href="{{ pathto('_static/' ~ theme_root_icon, 1) }}" />
     {%- if builder != "htmlhelp" %}
         {%- if not embedded %}
             <script type="text/javascript" src="{{ pathto('_static/copybutton.js', 1) }}"></script>
@@ -121,7 +121,7 @@
             {%- if logo %}
             <p class="logo">
                 <a href="{{ pathto('index') }}">
-                <img class="logo" src="{{ pathto('_static/' + logo, 1)|e }}" alt="Logo"/>
+                <img class="logo" src="{{ pathto('_static/' ~ logo, 1)|e }}" alt="Logo"/>
                 </a>
             </p>
             {%- endif %}
