@@ -143,6 +143,9 @@
     {% trans %}Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.{% endtrans %}
     <br />
     {% if theme_license_url %}{% trans license_file=theme_license_url %}See <a href="{{ license_file }}">History and License</a> for more information.{% endtrans %}<br />{% endif %}
+    {% if theme_hosted_on %}
+        {% trans hosted_on=theme_hosted_on %}Hosted on {{ hosted_on }}.{% endtrans %}<br />
+    {% endif %}
     <br />
 
     {% include "footerdonate.html" %}
