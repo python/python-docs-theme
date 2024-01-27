@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "python-docs-theme"
-version = "2023.9"
+version = "2024.1"
 description = "The Sphinx theme for the CPython docs and related projects"
 readme = "README.rst"
 license.file = "LICENSE"
