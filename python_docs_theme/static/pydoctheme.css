@@ -31,7 +31,7 @@ pre {
 
 a[href] {
     text-decoration: underline 1px;
-    text-underline-offset: 0.2em;
+    text-underline-offset: 0.25em;
 }
 
 body {
