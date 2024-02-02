@@ -36,6 +36,9 @@ urls."Issue tracker" = "https://github.com/python/python-docs-theme/issues"
 [project.entry-points."sphinx.html_themes"]
 python_docs_theme = 'python_docs_theme'
 
+[tool.isort]
+profile = "black"
+
 [tool.flit.module]
 name = "python_docs_theme"
 
