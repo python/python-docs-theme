@@ -14,7 +14,6 @@ repos:
     rev: 5.13.2
     hooks:
       - id: isort
-        args: [--add-import=from __future__ import annotations]
 
   - repo: https://github.com/PyCQA/flake8
     rev: 7.0.0
@@ -32,19 +31,28 @@ repos:
     rev: v4.5.0
     hooks:
       - id: check-case-conflict
-      - id: check-executables-have-shebangs
       - id: check-merge-conflict
-      - id: check-json
       - id: check-toml
       - id: check-yaml
       - id: debug-statements
       - id: end-of-file-fixer
       - id: trailing-whitespace
 
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: 1.7.0
+    hooks:
+      - id: pyproject-fmt
+        args: [--max-supported-python=3.13]
+
   - repo: https://github.com/abravalheri/validate-pyproject
     rev: v0.16
     hooks:
       - id: validate-pyproject
+
+  - repo: meta
+    hooks:
+      - id: check-hooks-apply
+      - id: check-useless-excludes
 
 ci:
   autoupdate_schedule: quarterly
