@@ -31,7 +31,10 @@ pre {
 
 a[href] {
     text-decoration: underline 1px;
+
+a[href]:has(> code) {
     text-underline-offset: 0.25em;
+    color: red;
 }
 
 body {
