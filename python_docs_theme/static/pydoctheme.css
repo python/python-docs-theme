@@ -34,7 +34,6 @@ a[href] {
 
 a[href]:has(> code) {
     text-underline-offset: 0.25em;
-    color: red;
 }
 
 body {
