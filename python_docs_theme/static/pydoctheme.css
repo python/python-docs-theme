@@ -29,10 +29,12 @@ pre {
     color: inherit;
 }
 
+/* Add underlines to links */
 a[href] {
     text-decoration: underline 1px;
 }
 
+/* Increase the underline offset for code to avoid obscuring underscores */
 a[href]:has(> code) {
     text-underline-offset: 0.25em;
 }
