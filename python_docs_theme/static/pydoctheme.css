@@ -38,6 +38,7 @@ a[href] {
 a[href]:has(> code) {
     text-underline-offset: 0.25em;
 }
+
 /* No underline for navigation */
 a.headerlink,
 div.genindex-jumpbox a,
