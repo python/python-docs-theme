@@ -21,4 +21,11 @@ To use this theme, add the following to ``conf.py``:
 
 - ``html_theme = 'python_docs_theme'``
 
-- ``html_sidebars``, defaults taken from http://www.sphinx-doc.org/en/stable/config.html#confval-html_sidebars
+- ``html_sidebars``, defaults taken from https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_sidebars
+
+Preview
+-------
+
+See a demo of the CPython docs using this theme:
+
+- https://python-docs-theme-previews.readthedocs.io
