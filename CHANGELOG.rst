@@ -1,18 +1,25 @@
-=========
 Changelog
 =========
+
+`2024.2 <https://github.com/python/python-docs-theme/releases/tag/v2024.2>`_
+----------------------------------------------------------------------------
+
+- Do not underline navigation links (#169)
+   Contributed by Hugo van Kemenade
+- Only apply underline offset to code formatting for underline visibility (#171)
+   Contributed by Hugo van Kemenade
 
 `2024.1 <https://github.com/python/python-docs-theme/releases/tag/v2024.1>`_
 ----------------------------------------------------------------------------
 
 - Underline links for readability and a11y (#160, #166)
-  Contributed by Hugo van Kemenade
+   Contributed by Hugo van Kemenade
 - Add ``hosted_on`` variable for a link in the footer (#165)
-  Contributed by Hugo van Kemenade
+   Contributed by Hugo van Kemenade
 - Consistently reference ``theme_root_icon`` (#163)
-  Contributed by Marko Budiselic
+   Contributed by Marko Budiselic
 - Dark mode: fix contrast of footer highlight (#162)
-  Contributed by Hugo van Kemenade
+   Contributed by Hugo van Kemenade
 
 `2023.9 <https://github.com/python/python-docs-theme/releases/tag/v2023.9>`_
 ----------------------------------------------------------------------------
