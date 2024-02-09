@@ -6,18 +6,17 @@ repos:
         args: [--py38-plus]
 
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 23.9.1
+    rev: 24.1.1
     hooks:
       - id: black
 
   - repo: https://github.com/PyCQA/isort
-    rev: 5.12.0
+    rev: 5.13.2
     hooks:
       - id: isort
-        args: [--add-import=from __future__ import annotations]
 
   - repo: https://github.com/PyCQA/flake8
-    rev: 6.1.0
+    rev: 7.0.0
     hooks:
       - id: flake8
         additional_dependencies:
@@ -32,19 +31,28 @@ repos:
     rev: v4.5.0
     hooks:
       - id: check-case-conflict
-      - id: check-executables-have-shebangs
       - id: check-merge-conflict
-      - id: check-json
       - id: check-toml
       - id: check-yaml
       - id: debug-statements
       - id: end-of-file-fixer
       - id: trailing-whitespace
 
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: 1.7.0
+    hooks:
+      - id: pyproject-fmt
+        args: [--max-supported-python=3.13]
+
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: v0.14
+    rev: v0.16
     hooks:
       - id: validate-pyproject
+
+  - repo: meta
+    hooks:
+      - id: check-hooks-apply
+      - id: check-useless-excludes
 
 ci:
   autoupdate_schedule: quarterly
