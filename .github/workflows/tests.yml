@@ -15,7 +15,7 @@ jobs:
         branch: ["origin/main", "3.12", "3.11", "3.10", "3.9", "3.8"]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: 3
           allow-prereleases: true
@@ -44,7 +44,7 @@ jobs:
         run: |
           cat ./logs/docsbuild.log
       - name: Upload
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: doc-html
+          name: doc-html-${{ matrix.branch }}
           path: www/
