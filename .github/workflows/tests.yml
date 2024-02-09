@@ -46,5 +46,5 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          name: doc-html
+          name: doc-html-${{ matrix.branch }}
           path: www/
