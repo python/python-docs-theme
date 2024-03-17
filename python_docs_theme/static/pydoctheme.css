@@ -34,6 +34,10 @@ ul {
     list-style-type: none;
 }
 
+ul.simple {
+    list-style-type: initial;
+}
+
 /* Add underlines to links */
 a[href] {
     text-decoration: underline 1px;
@@ -342,7 +346,7 @@ dl > dt span ~ em,
 }
 
 .toctree-wrapper ul {
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .theme-selector {
