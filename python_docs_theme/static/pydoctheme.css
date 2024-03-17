@@ -29,6 +29,11 @@ pre {
     color: inherit;
 }
 
+/* Unset default list style */
+ul {
+    list-style-type: none;
+}
+
 /* Add underlines to links */
 a[href] {
     text-decoration: underline 1px;
