@@ -1,6 +1,14 @@
 Changelog
 =========
 
+`2024.3 <https://github.com/python/python-docs-theme/releases/tag/v2024.3>`_
+----------------------------------------------------------------------------
+
+- Modernise font: use system font stack to improve text readability and webpage performance (#174)
+    Contributed by Hugo van Kemenade
+- Remove incorrect CSS property (#178)
+    Contributed by Kerim Kabirov
+
 `2024.2 <https://github.com/python/python-docs-theme/releases/tag/v2024.2>`_
 ----------------------------------------------------------------------------
 
@@ -40,7 +48,7 @@ Changelog
 `2023.7 <https://github.com/python/python-docs-theme/releases/tag/v2023.7>`_
 ----------------------------------------------------------------------------
 
-- Fix compatability with Sphinx 7.1 (#137)
+- Fix compatibility with Sphinx 7.1 (#137)
    Contributed by Pradyun Gedam
 - Enable the slash keypress to focus the search field (#141)
    Contributed by Mike Fiedler
