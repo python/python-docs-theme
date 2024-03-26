@@ -29,3 +29,7 @@ Preview
 See a demo of the CPython docs using this theme:
 
 - https://python-docs-theme-previews.readthedocs.io
+
+The kitchen sink is a showcase of every Sphinx feature:
+
+- https://sphinx-themes.org/sample-sites/python-docs-theme/kitchen-sink/
