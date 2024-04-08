@@ -333,7 +333,7 @@ div.footer a:hover {
 
 dl > dt span ~ em,
 .sig {
-    font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
+    font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 
 .toctree-wrapper ul {
