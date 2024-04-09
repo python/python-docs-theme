@@ -1,6 +1,16 @@
 Changelog
 =========
 
+`2024.4 <https://github.com/python/python-docs-theme/releases/tag/v2024.4>`_
+----------------------------------------------------------------------------
+
+- Add colour to version change directives (#185)
+    Contributed by Hugo van Kemenade
+- Only show 'Last updated on ...' when ``last_updated`` defined (#183)
+    Contributed by Hugo van Kemenade
+- Use system font stack for all code (#186)
+    Contributed by Hugo van Kemenade
+
 `2024.3 <https://github.com/python/python-docs-theme/releases/tag/v2024.3>`_
 ----------------------------------------------------------------------------
 
