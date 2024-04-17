@@ -323,8 +323,18 @@ div.footer a:hover {
     color: #0095c4;
 }
 
+/* C API return value annotations */
+:root {
+    --refcount: #060;
+    --refcount-return-borrowed-ref: rgb(133 72 38);
+}
+
 .refcount {
-    color: #060;
+    color: var(--refcount);
+}
+
+.refcount.return_borrowed_ref {
+    color: var(--refcount-return-borrowed-ref)
 }
 
 .stableabi {

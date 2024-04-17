@@ -79,8 +79,11 @@ table.docutils th {
     background-color: #424242;
 }
 
-.refcount {
-    color: #afa;
+/* C API return value annotations */
+
+:root {
+    --refcount: #afa;
+    --refcount-return-borrowed-ref: rgb(244, 227, 76);
 }
 
 .stableabi {
