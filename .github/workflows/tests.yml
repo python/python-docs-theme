@@ -34,9 +34,9 @@ jobs:
           --build-root ./build_root
           --www-root ./www
           --log-directory ./logs
-          --group $(id -g)
+          --group "$(id -g)"
           --skip-cache-invalidation
-          --theme $(pwd)
+          --theme "$(pwd)"
           --language en
           --branch ${{ matrix.branch }}
       - name: Show logs
