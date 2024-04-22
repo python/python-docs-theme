@@ -24,7 +24,7 @@ def _asset_hash(path: str) -> str:
 def _add_asset_hashes(static: list[str], add_digest_to: list[str]) -> None:
     for asset in add_digest_to:
         index = static.index(asset)
-        static[index].filename = _asset_hash(asset)  # type: ignore
+        static[index].filename = _asset_hash(asset)  # type: ignore[attr-defined]
 
 
 def _html_page_context(
