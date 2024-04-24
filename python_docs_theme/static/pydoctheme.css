@@ -1,5 +1,15 @@
 @import url('classic.css');
 
+/* Common colours */
+:root {
+    --good-color: rgb(41 100 51);
+    --good-border: rgb(79 196 100);
+    --middle-color: rgb(133 72 38);
+    --middle-border: rgb(244, 227, 76);
+    --bad-color: rgb(159 49 51);
+    --bad-border: rgb(244, 76, 78);
+}
+
 /* unset some styles from the classic stylesheet */
 div.document,
 div.body,
@@ -325,8 +335,8 @@ div.footer a:hover {
 
 /* C API return value annotations */
 :root {
-    --refcount: #060;
-    --refcount-return-borrowed-ref: rgb(133 72 38);
+    --refcount: var(--good-color);
+    --refcount-return-borrowed-ref: var(--middle-color);
 }
 
 .refcount {
@@ -635,13 +645,13 @@ div.genindex-jumpbox a {
 
 /* Version change directives */
 :root {
-    --versionadded: rgb(41 100 51);
-    --versionchanged: rgb(133 72 38);
-    --deprecated: rgb(159 49 51);
+    --versionadded: var(--good-color);
+    --versionchanged: var(--middle-color);
+    --deprecated: var(--bad-color);
 
-    --versionadded-border: rgb(79 196 100);
-    --versionchanged-border: rgb(244, 227, 76);
-    --deprecated-border: rgb(244, 76, 78);
+    --versionadded-border: var(--good-border);
+    --versionchanged-border: var(--middle-border);
+    --deprecated-border: var(--bad-border);
 }
 
 div.versionadded,
