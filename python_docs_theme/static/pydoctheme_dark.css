@@ -113,6 +113,28 @@ div.warning {
     background-color: rgba(255, 0, 0, 0.5);
 }
 
+/* Admonitions */
+:root {
+    --admonition-background: rgba(255, 255, 255, 0.1);
+    --admonition-border: currentColor;
+    --attention-background: rgba(255, 255, 255, 0.1);
+    --attention-border: currentColor;
+    --caution-background: rgba(255, 255, 0, 0.1);
+    --caution-border: #dd6;
+    --danger-background: rgba(255, 0, 0, 0.2);
+    --danger-border: #f66;
+    --error-background: rgba(255, 0, 0, 0.2);
+    --error-border: #f66;
+    --hint-background: #0044117a;
+    --hint-border: green;
+    --seealso-background: rgba(255, 255, 0, 0.1);
+    --seealso-border: #dd6;
+    --tip-background: #0044117a;
+    --tip-border: green;
+    --warning-background: rgba(255, 0, 0, 0.2);
+    --warning-border: #f66;
+}
+
 aside.topic,
 div.topic,
 div.note,
