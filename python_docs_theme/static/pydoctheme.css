@@ -266,8 +266,8 @@ div.body pre {
 
 div.body div.admonition {
     background-color: var(--admonition-background);
-    border-radius: 3px;
     border: 1px solid var(--admonition-border);
+    border-radius: 3px;
 }
 
 div.body div.admonition.attention {
