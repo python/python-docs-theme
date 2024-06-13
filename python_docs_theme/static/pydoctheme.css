@@ -246,6 +246,7 @@ div.body pre {
 :root {
     --admonition-background: #eee;
     --admonition-border: #ccc;
+    --admonition-color: black;
     --attention-background: #bbddff5c;
     --attention-border: #0000ff36;
     --caution-background: #ffc;
@@ -268,6 +269,7 @@ div.body div.admonition {
     background-color: var(--admonition-background);
     border: 1px solid var(--admonition-border);
     border-radius: 3px;
+    color: var(--admonition-color);
 }
 
 div.body div.admonition.attention {

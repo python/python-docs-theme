@@ -117,6 +117,7 @@ div.warning {
 :root {
     --admonition-background: rgba(255, 255, 255, 0.1);
     --admonition-border: currentColor;
+    --admonition-color: rgba(255, 255, 255, 0.87);
     --attention-background: rgba(255, 255, 255, 0.1);
     --attention-border: currentColor;
     --caution-background: rgba(255, 255, 0, 0.1);
