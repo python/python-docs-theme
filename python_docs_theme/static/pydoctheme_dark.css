@@ -115,25 +115,25 @@ div.warning {
 
 /* Admonitions */
 :root {
-    --admonition-background: rgba(255, 255, 255, 0.1);
+    --admonition-background: #ffffff1a;
     --admonition-border: currentColor;
-    --admonition-color: rgba(255, 255, 255, 0.87);
-    --attention-background: rgba(255, 255, 255, 0.1);
+    --admonition-color: #ffffffde;
+    --attention-background: #ffffff1a;
     --attention-border: currentColor;
-    --caution-background: rgba(255, 255, 0, 0.1);
+    --caution-background: #ffff001a;
     --caution-border: #dd6;
-    --danger-background: rgba(255, 0, 0, 0.2);
+    --danger-background: #f003;
     --danger-border: #f66;
-    --error-background: rgba(255, 0, 0, 0.2);
+    --error-background: #f003;
     --error-border: #f66;
     --hint-background: #0044117a;
     --hint-border: green;
-    --seealso-background: rgba(255, 255, 0, 0.1);
+    --seealso-background: #ffff001a;
     --seealso-border: #dd6;
     --tip-background: #0044117a;
     --tip-border: green;
-    --warning-background: rgba(255, 0, 0, 0.2);
-    --warning-border: #f66;
+    --warning-background: #ff000033;
+    --warning-border: #ff6666;
 }
 
 aside.topic,

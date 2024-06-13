@@ -250,7 +250,7 @@ div.body pre {
     --attention-background: #bbddff5c;
     --attention-border: #0000ff36;
     --caution-background: #ffc;
-    --caution-border: #dddd66;
+    --caution-border: #dd6;
     --danger-background: #ffe4e4;
     --danger-border: red;
     --error-background: #ffe4e4;
@@ -258,7 +258,7 @@ div.body pre {
     --hint-background: #dfd;
     --hint-border: green;
     --seealso-background: #ffc;
-    --seealso-border: #dddd66;
+    --seealso-border: #dd6;
     --tip-background: #dfd;
     --tip-border: green;
     --warning-background: #ffe4e4;
