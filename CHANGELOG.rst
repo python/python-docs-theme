@@ -1,6 +1,14 @@
 Changelog
 =========
 
+`2024.6 <https://github.com/python/python-docs-theme/releases/tag/v2024.6>`_
+----------------------------------------------------------------------------
+
+- Add backgrounds and borders to admonitions (#190)
+    Contributed by Hugo van Kemenade
+- Use different colour for 'Return value: Borrowed reference' (#188)
+    Contributed by Hugo van Kemenade
+
 `2024.4 <https://github.com/python/python-docs-theme/releases/tag/v2024.4>`_
 ----------------------------------------------------------------------------
 
