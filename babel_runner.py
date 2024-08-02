@@ -68,7 +68,7 @@ def update_catalogs(locale: str):
     """Update translations from existing message catalogs"""
     cmd = ["pybabel", "update", "-i", POT_FILE, "-d", LOCALES_DIR]
     if locale != "":
-        cmd.append(["-l", locale])
+        cmd.extend(["-l", locale])
     subprocess.run(cmd, check=True)
 
 
@@ -76,7 +76,7 @@ def compile_catalogs(locale: str):
     """Compile existing message catalogs"""
     cmd = ["pybabel", "compile", "-d", LOCALES_DIR]
     if locale != "":
-        cmd.append(["-l", locale])
+        cmd.extend(["-l", locale])
     subprocess.run(cmd, check=True)
 
 
