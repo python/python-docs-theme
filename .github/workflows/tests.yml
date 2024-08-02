@@ -48,3 +48,36 @@ jobs:
         with:
           name: doc-html-${{ matrix.branch }}
           path: www/
+
+  translations:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["ubuntu-latest", "windows-latest"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3
+          allow-prereleases: true
+          cache: pip
+      - name: Install dependencies
+        run: |
+          pip install -U pip setuptools
+          pip install Babel jinja2
+      - run: python3 babel_runner.py extract
+      - run: python3 babel_runner.py init -l pt_BR
+      - run: python3 babel_runner.py update
+      - run: python3 babel_runner.py update -l pt_BR
+      - run: python3 babel_runner.py compile
+      - run: python3 babel_runner.py compile -l pt_BR
+      - name: Print .pot file
+        shell: bash
+        run: cat locales/messages.pot
+      - name: Print .po file
+        shell: bash
+        run: cat locales/pt_BR/LC_MESSAGES/messages.po
+      - name: list files in locales dir
+        shell: bash
+        run: ls -R locales/
