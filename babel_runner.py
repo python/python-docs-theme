@@ -1,9 +1,11 @@
 #!/usr/bin/venv python3
 """Script for handling translations with Babel"""
+from __future__ import annotations
 
 import argparse
 import os
 import subprocess
+
 import tomllib
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
