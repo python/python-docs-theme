@@ -18,7 +18,7 @@ POT_FILE = os.path.relpath(os.path.join(LOCALES_DIR, f"{DOMAIN}.pot"), PROJECT_D
 SOURCE_DIR = os.path.relpath(
     os.path.join(PROJECT_DIR, "python_docs_theme"), PROJECT_DIR
 )
-MAPPING_FILE = os.path.relpath(os.path.join(PROJECT_DIR, "babel.cfg"), PROJECT_DIR)
+MAPPING_FILE = os.path.relpath(os.path.join(PROJECT_DIR, ".babel.cfg"), PROJECT_DIR)
 
 
 def get_project_info() -> dict:
