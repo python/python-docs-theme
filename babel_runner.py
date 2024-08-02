@@ -29,7 +29,7 @@ def get_project_info() -> dict:
 
 
 def extract_messages():
-    """Extract messages from all source files into template file"""
+    """Extract messages from all source files into message catalog template"""
     os.makedirs(LOCALES_DIR, exist_ok=True)
     project_data = get_project_info()
     subprocess.run(
@@ -55,7 +55,11 @@ def extract_messages():
 
 
 def init_locale(locale: str):
-    """Initialize a new locale based on existing"""
+    """Initialize a new locale based on existing message catalog template"""
+    pofile = os.path.join(LOCALES_DIR, locale, "LC_MESSAGES", f"{DOMAIN}.po")
+    if os.path.exists(pofile):
+        print(f"There is already a message catalog for locale {locale}, skipping.")
+        return
     cmd = ["pybabel", "init", "-i", POT_FILE, "-d", LOCALES_DIR, "-l", locale]
     subprocess.run(cmd, check=True)
 
