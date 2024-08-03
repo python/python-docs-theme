@@ -55,17 +55,19 @@ jobs:
       fail-fast: false
       matrix:
         os: ["ubuntu-latest", "windows-latest"]
+        # Test minimum supported and latest stable from 3.x series
+        python-version: ["3.8", "3"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: 3
+          python-version: ${{ matrix.python-version }}
           allow-prereleases: true
           cache: pip
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install Babel jinja2 setuptools
+          pip install -r requirements.txt
       - run: python babel_runner.py extract
       - run: python babel_runner.py init -l pt_BR
       - run: python babel_runner.py update
