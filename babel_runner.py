@@ -6,7 +6,15 @@ import argparse
 import subprocess
 from pathlib import Path
 
-import tomllib
+try:
+    import tomllib
+except ImportError:
+    try:
+        import tomli as tomllib
+    except ImportError as ie:
+        raise ImportError(
+            "tomli or tomllib is required to parse pyproject.toml"
+        ) from ie
 
 PROJECT_DIR = Path(__file__).resolve().parent
 
