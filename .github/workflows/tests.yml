@@ -64,14 +64,14 @@ jobs:
           cache: pip
       - name: Install dependencies
         run: |
-          pip install -U pip setuptools
-          pip install Babel jinja2
-      - run: python3 babel_runner.py extract
-      - run: python3 babel_runner.py init -l pt_BR
-      - run: python3 babel_runner.py update
-      - run: python3 babel_runner.py update -l pt_BR
-      - run: python3 babel_runner.py compile
-      - run: python3 babel_runner.py compile -l pt_BR
+          pip install --upgrade pip
+          pip install Babel jinja2 setuptools
+      - run: python babel_runner.py extract
+      - run: python babel_runner.py init -l pt_BR
+      - run: python babel_runner.py update
+      - run: python babel_runner.py update -l pt_BR
+      - run: python babel_runner.py compile
+      - run: python babel_runner.py compile -l pt_BR
       - name: Print .pot file
         shell: bash
         run: cat locales/messages.pot
