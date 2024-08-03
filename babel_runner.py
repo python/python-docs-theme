@@ -3,34 +3,32 @@
 from __future__ import annotations
 
 import argparse
-import os
 import subprocess
+from pathlib import Path
 
 import tomllib
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = Path(__file__).resolve().parent
 
-# Global variables used by pybabel below
+# Global variables used by pybabel below (paths relative to PROJECT_DIR)
 DOMAIN = "messages"
 COPYRIGHT_HOLDER = "Python Software Foundation"
-LOCALES_DIR = os.path.relpath(os.path.join(PROJECT_DIR, "locales"))
-POT_FILE = os.path.relpath(os.path.join(LOCALES_DIR, f"{DOMAIN}.pot"), PROJECT_DIR)
-SOURCE_DIR = os.path.relpath(
-    os.path.join(PROJECT_DIR, "python_docs_theme"), PROJECT_DIR
-)
-MAPPING_FILE = os.path.relpath(os.path.join(PROJECT_DIR, ".babel.cfg"), PROJECT_DIR)
+LOCALES_DIR = "locales"
+POT_FILE = Path(LOCALES_DIR, f"{DOMAIN}.pot")
+SOURCE_DIR = "python_docs_theme"
+MAPPING_FILE = ".babel.cfg"
 
 
 def get_project_info() -> dict:
     """Retrieve project's info to populate the message catalog template"""
-    with open(os.path.join(PROJECT_DIR, "pyproject.toml"), "rb") as f:
+    with open(Path(PROJECT_DIR / "pyproject.toml"), "rb") as f:
         data = tomllib.load(f)
     return data["project"]
 
 
 def extract_messages():
     """Extract messages from all source files into message catalog template"""
-    os.makedirs(LOCALES_DIR, exist_ok=True)
+    Path(PROJECT_DIR, LOCALES_DIR).mkdir(parents=True, exist_ok=True)
     project_data = get_project_info()
     subprocess.run(
         [
@@ -50,18 +48,19 @@ def extract_messages():
             POT_FILE,
             SOURCE_DIR,
         ],
+        cwd=PROJECT_DIR,
         check=True,
     )
 
 
 def init_locale(locale: str):
     """Initialize a new locale based on existing message catalog template"""
-    pofile = os.path.join(LOCALES_DIR, locale, "LC_MESSAGES", f"{DOMAIN}.po")
-    if os.path.exists(pofile):
+    pofile = PROJECT_DIR / LOCALES_DIR / locale / "LC_MESSAGES" / f"{DOMAIN}.po"
+    if pofile.exists():
         print(f"There is already a message catalog for locale {locale}, skipping.")
         return
     cmd = ["pybabel", "init", "-i", POT_FILE, "-d", LOCALES_DIR, "-l", locale]
-    subprocess.run(cmd, check=True)
+    subprocess.run(cmd, cwd=PROJECT_DIR, check=True)
 
 
 def update_catalogs(locale: str):
@@ -69,7 +68,7 @@ def update_catalogs(locale: str):
     cmd = ["pybabel", "update", "-i", POT_FILE, "-d", LOCALES_DIR]
     if locale != "":
         cmd.extend(["-l", locale])
-    subprocess.run(cmd, check=True)
+    subprocess.run(cmd, cwd=PROJECT_DIR, check=True)
 
 
 def compile_catalogs(locale: str):
@@ -77,7 +76,7 @@ def compile_catalogs(locale: str):
     cmd = ["pybabel", "compile", "-d", LOCALES_DIR]
     if locale != "":
         cmd.extend(["-l", locale])
-    subprocess.run(cmd, check=True)
+    subprocess.run(cmd, cwd=PROJECT_DIR, check=True)
 
 
 def main():
@@ -95,8 +94,6 @@ def main():
 
     args = parser.parse_args()
     locale = args.locale if args.locale else ""
-
-    os.chdir(PROJECT_DIR)
 
     if args.command == "extract":
         extract_messages()
