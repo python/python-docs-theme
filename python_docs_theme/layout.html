@@ -17,8 +17,20 @@
           <li><img src="{{ pathto('_static/' ~ theme_root_icon, 1) }}" alt="{{ theme_root_icon_alt_text }}" style="vertical-align: middle; margin-top: -1px"/></li>
           <li><a href="{{theme_root_url}}">{{theme_root_name}}</a>{{ reldelim1 }}</li>
           <li class="switchers">
-            <div class="language_switcher_placeholder"></div>
-            <div class="version_switcher_placeholder"></div>
+            <div class="language_switcher_placeholder">{% if switchers_languages %}
+                <select class="language">
+                {% for lang_code, lang_name in switchers_languages -%}
+                    <option value="{{ lang_code }}" {%- if lang_code == language %} selected="true" {%- endif %}>{{ lang_name }}</option>
+                {% endfor -%}
+                </select>
+            {% endif -%}</div>
+            <div class="version_switcher_placeholder">{% if switchers_versions %}
+                <select class="version-select">
+                {% for (version_name, version_title) in switchers_versions -%}
+                    <option value="{{ version_name }}" {%- if version_title == release %} selected="true" {%- endif %}>{{ version_title }}</option>
+                {% endfor -%}
+                </select>
+            {% endif %}</div>
           </li>
           <li>
               {% if theme_root_include_title %}
@@ -74,6 +86,7 @@
     <link rel="shortcut icon" type="image/png" href="{{ pathto('_static/' ~ theme_root_icon, 1) }}" />
     {%- if builder != "htmlhelp" %}
         {%- if not embedded %}
+            <script type="text/javascript" src="{{ pathto('_static/switchers.js', 1) }}"></script>
             <script type="text/javascript" src="{{ pathto('_static/copybutton.js', 1) }}"></script>
             <script type="text/javascript" src="{{ pathto('_static/menu.js', 1) }}"></script>
             <script type="text/javascript" src="{{ pathto('_static/search-focus.js', 1) }}"></script>
