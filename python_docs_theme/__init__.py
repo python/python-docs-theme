@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import os
-from functools import lru_cache
+from functools import cache
 from pathlib import Path
 from typing import Any
 
@@ -12,7 +12,7 @@ from sphinx.builders.html import StandaloneHTMLBuilder
 THEME_PATH = Path(__file__).parent.resolve()
 
 
-@lru_cache(maxsize=None)
+@cache
 def _asset_hash(path: str) -> str:
     """Append a `?digest=` to an url based on the file content."""
     full_path = THEME_PATH / path.replace("_static/", "static/")
