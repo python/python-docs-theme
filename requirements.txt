@@ -1,0 +1,5 @@
+# for babel_runner.py
+setuptools
+Babel
+Jinja2
+tomli; python_version < "3.10"
