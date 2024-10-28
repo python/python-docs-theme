@@ -1,6 +1,18 @@
 Changelog
 =========
 
+`2024.10 <https://github.com/python/python-docs-theme/releases/tag/v2024.10>`_
+------------------------------------------------------------------------------
+
+- Add support for Python 3.13 (#196)
+    Contributed by Hugo van Kemenade
+- Drop support for Python 3.8 (#197)
+    Contributed by Hugo van Kemenade
+- Add script for handling translations (#195)
+    Contributed by Rafael Fontenelle
+- Generate digital attestations for PyPI (PEP 740) (#198)
+    Contributed by Hugo van Kemenade
+
 `2024.6 <https://github.com/python/python-docs-theme/releases/tag/v2024.6>`_
 ----------------------------------------------------------------------------
 
