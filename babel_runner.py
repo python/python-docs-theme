@@ -91,7 +91,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "command",
-        choices=["init", "extract", "update", "compile"],
+        choices=["extract", "init", "update", "compile"],
         help="command to be executed",
     )
     parser.add_argument(
