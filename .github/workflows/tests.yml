@@ -69,6 +69,7 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
       - name: Remove locale file for testing
+        shell: bash
         run: rm -rf locales/pt_BR/
       - run: python babel_runner.py extract
       - run: python babel_runner.py init -l pt_BR
