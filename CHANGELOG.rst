@@ -1,8 +1,8 @@
 Changelog
 =========
 
-`2024.10 <https://github.com/python/python-docs-theme/releases/tag/v2024.10>`_
-------------------------------------------------------------------------------
+`2024.10 <https://github.com/python/python-docs-theme/releases/tag/2024.10>`_
+-----------------------------------------------------------------------------
 
 - Add support for Python 3.13 (#196)
     Contributed by Hugo van Kemenade
@@ -13,16 +13,16 @@ Changelog
 - Generate digital attestations for PyPI (PEP 740) (#198)
     Contributed by Hugo van Kemenade
 
-`2024.6 <https://github.com/python/python-docs-theme/releases/tag/v2024.6>`_
-----------------------------------------------------------------------------
+`2024.6 <https://github.com/python/python-docs-theme/releases/tag/2024.6>`_
+---------------------------------------------------------------------------
 
 - Add backgrounds and borders to admonitions (#190)
     Contributed by Hugo van Kemenade
 - Use different colour for 'Return value: Borrowed reference' (#188)
     Contributed by Hugo van Kemenade
 
-`2024.4 <https://github.com/python/python-docs-theme/releases/tag/v2024.4>`_
-----------------------------------------------------------------------------
+`2024.4 <https://github.com/python/python-docs-theme/releases/tag/2024.4>`_
+---------------------------------------------------------------------------
 
 - Add colour to version change directives (#185)
     Contributed by Hugo van Kemenade
@@ -31,24 +31,24 @@ Changelog
 - Use system font stack for all code (#186)
     Contributed by Hugo van Kemenade
 
-`2024.3 <https://github.com/python/python-docs-theme/releases/tag/v2024.3>`_
-----------------------------------------------------------------------------
+`2024.3 <https://github.com/python/python-docs-theme/releases/tag/2024.3>`_
+---------------------------------------------------------------------------
 
 - Modernise font: use system font stack to improve text readability and webpage performance (#174)
     Contributed by Hugo van Kemenade
 - Remove incorrect CSS property (#178)
     Contributed by Kerim Kabirov
 
-`2024.2 <https://github.com/python/python-docs-theme/releases/tag/v2024.2>`_
-----------------------------------------------------------------------------
+`2024.2 <https://github.com/python/python-docs-theme/releases/tag/2024.2>`_
+---------------------------------------------------------------------------
 
 - Do not underline navigation links (#169)
    Contributed by Hugo van Kemenade
 - Only apply underline offset to code formatting for underline visibility (#171)
    Contributed by Hugo van Kemenade
 
-`2024.1 <https://github.com/python/python-docs-theme/releases/tag/v2024.1>`_
-----------------------------------------------------------------------------
+`2024.1 <https://github.com/python/python-docs-theme/releases/tag/2024.1>`_
+---------------------------------------------------------------------------
 
 - Underline links for readability and a11y (#160, #166)
    Contributed by Hugo van Kemenade
@@ -59,14 +59,14 @@ Changelog
 - Dark mode: fix contrast of footer highlight (#162)
    Contributed by Hugo van Kemenade
 
-`2023.9 <https://github.com/python/python-docs-theme/releases/tag/v2023.9>`_
-----------------------------------------------------------------------------
+`2023.9 <https://github.com/python/python-docs-theme/releases/tag/2023.9>`_
+---------------------------------------------------------------------------
 
 - Focus search box when pressing slash (#153)
    Contributed by Hugo van Kemenade
 
-`2023.8 <https://github.com/python/python-docs-theme/releases/tag/v2023.8>`_
-----------------------------------------------------------------------------
+`2023.8 <https://github.com/python/python-docs-theme/releases/tag/2023.8>`_
+---------------------------------------------------------------------------
 
 - Add Python 3.12 and 3.13 classifiers (#147)
    Contributed by Hugo van Kemenade
@@ -75,8 +75,8 @@ Changelog
 - Restore the menu on mobile devices (inadvertently broken in 2023.7) (#146)
    Contributed by Hugo van Kemenade
 
-`2023.7 <https://github.com/python/python-docs-theme/releases/tag/v2023.7>`_
-----------------------------------------------------------------------------
+`2023.7 <https://github.com/python/python-docs-theme/releases/tag/2023.7>`_
+---------------------------------------------------------------------------
 
 - Fix compatibility with Sphinx 7.1 (#137)
    Contributed by Pradyun Gedam
@@ -91,8 +91,8 @@ Changelog
 - Test with Python 3.12 (#140)
    Contributed by Hugo van Kemenade
 
-`2023.5 <https://github.com/python/python-docs-theme/releases/tag/v2023.5>`_
-----------------------------------------------------------------------------
+`2023.5 <https://github.com/python/python-docs-theme/releases/tag/2023.5>`_
+---------------------------------------------------------------------------
 
 - Add a dark theme. (#44)
    Contributed by Nils K
@@ -106,14 +106,14 @@ Changelog
    Contributed by Hugo van Kemenade
 
 
-`2023.3.1 <https://github.com/python/python-docs-theme/releases/tag/v2023.3.1>`_
---------------------------------------------------------------------------------
+`2023.3.1 <https://github.com/python/python-docs-theme/releases/tag/2023.3.1>`_
+-------------------------------------------------------------------------------
 
 - Skip cache-busting for old Sphinx #113
 
 
-`2023.3 <https://github.com/python/python-docs-theme/releases/tag/v2023.3>`_
-----------------------------------------------------------------------------
+`2023.3 <https://github.com/python/python-docs-theme/releases/tag/2023.3>`_
+---------------------------------------------------------------------------
 
 - Fix problem with monospace rendering in Vivaldi #104
 - Fix mobile nav obstructing content #96
@@ -121,30 +121,30 @@ Changelog
 - Append a hash ?digest to CSS files for cache-busting #108
 
 
-`2022.1 <https://github.com/python/python-docs-theme/releases/tag/v2022.1>`_
-----------------------------------------------------------------------------------
+`2022.1 <https://github.com/python/python-docs-theme/releases/tag/2022.1>`_
+----------------------------------------------------------------------------
 
 - Add a configuration for license URL. (#90)
 - Exclude the floating navbar from CHM help. (#84)
 - Make sidebar scrollable and sticky (on modern browsers) (#91)
 
 
-`2021.11.1 <https://github.com/python/python-docs-theme/releases/tag/v2021.11.1>`_
------------------------------------------------------------------------------------
+`2021.11.1 <https://github.com/python/python-docs-theme/releases/tag/2021.11.1>`_
+----------------------------------------------------------------------------------
 
 - Fix monospace again, on buggy Google Chrome (#87)
    Contributed by Tushar Sadhwani
 
 
-`2021.11 <https://github.com/python/python-docs-theme/releases/tag/v2021.11>`_
--------------------------------------------------------------------------------
+`2021.11 <https://github.com/python/python-docs-theme/releases/tag/2021.11>`_
+------------------------------------------------------------------------------
 
 - Fix monospace on buggy Google Chrome (#85)
    Contributed by Tushar Sadhwani
 
 
-`2021.8 <https://github.com/python/python-docs-theme/releases/tag/v2021.8>`_
-------------------------------------------------------------------------------
+`2021.8 <https://github.com/python/python-docs-theme/releases/tag/2021.8>`_
+-----------------------------------------------------------------------------
 
 - Add the copyright_url variable in the theme (#67)
    Contributed by jablonskidev
@@ -156,8 +156,8 @@ Changelog
    Contributed by Olga Bulat
 
 
-`2021.5 <https://github.com/python/python-docs-theme/releases/tag/v2021.5>`_
-------------------------------------------------------------------------------
+`2021.5 <https://github.com/python/python-docs-theme/releases/tag/2021.5>`_
+-----------------------------------------------------------------------------
 
 - Make the theme responsive (#46)
    Contributed by Olga Bulat.
