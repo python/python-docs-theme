@@ -1,7 +1,7 @@
 Changelog
 =========
 
-`2024.10 <https://github.com/python/python-docs-theme/releases/tag/2024.12>`_
+`2024.12 <https://github.com/python/python-docs-theme/releases/tag/2024.12>`_
 -----------------------------------------------------------------------------
 
 - Hide header and search bar when printing (#204)
