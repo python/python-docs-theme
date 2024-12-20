@@ -149,6 +149,9 @@ div.sphinxsidebar {
     border-radius: 5px;
     line-height: 130%;
     font-size: smaller;
+    width: 300px;
+    resize: horizontal;
+    overflow: auto;
 }
 
 div.sphinxsidebar h3,
@@ -157,7 +160,7 @@ div.sphinxsidebar h4 {
 }
 
 div.sphinxsidebarwrapper {
-    width: 217px;
+    width: 100%;
     box-sizing: border-box;
     height: 100%;
     overflow-x: hidden;
