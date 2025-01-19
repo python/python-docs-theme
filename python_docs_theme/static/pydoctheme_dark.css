@@ -8,7 +8,6 @@
     --bad-border: var(--bad-color);
 }
 
-
 /* Browser elements */
 :root {
     scrollbar-color: #616161 transparent;
@@ -27,20 +26,46 @@ div.related {
 }
 
 /* SIDEBAR */
-div.sphinxsidebar, .menu-wrapper {
-    background-color: #333;
-    color: inherit;
-}
-
-#sidebarbutton {
-    /* important to overwrite style attribute */
-    background-color: #555 !important;
-    color: inherit !important;
-}
-
 div.sidebar, aside.sidebar {
     background-color: #424242;
     border-color: #616161;
+    width: 250px; /* Set the sidebar width */
+    transition: width 0.3s ease; /* Smooth transition */
+}
+
+/* Make sidebar responsive */
+@media screen and (max-width: 768px) {
+    div.sidebar, aside.sidebar {
+        width: 200px; /* Adjust width on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    div.sidebar, aside.sidebar {
+        display: none; /* Hide sidebar on very small screens */
+    }
+
+    #sidebarbutton {
+        display: block; /* Show sidebar toggle button */
+    }
+}
+
+/* Sidebar button style */
+#sidebarbutton {
+    background-color: #555;
+    color: inherit;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Transition and hover effects */
+div.sidebar, aside.sidebar {
+    transition: all 0.3s ease-in-out;
+}
+
+div.sidebar:hover, aside.sidebar:hover {
+    background-color: #555;
 }
 
 /* ANCHORS AND HIGHLIGHTS */
@@ -73,8 +98,6 @@ span.highlighted {
 .footnote:target {
     background-color: #2c3e50;
 }
-
-/* Below for most things in text */
 
 dl.field-list > dt {
     background-color: #434;
