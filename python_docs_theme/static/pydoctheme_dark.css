@@ -1,15 +1,12 @@
 /* Updated Common colors */
 :root {
-
   --good-color: rgb(79, 196, 100);
-  --good-color: rgb(79 196 100);
   --good-border: var(--good-color);
   --middle-color: rgb(244, 227, 76);
   --middle-border: var(--middle-color);
   --bad-color: rgb(244, 76, 78);
   --bad-border: var(--bad-color);
 }
-
 
 /* Browser elements */
 :root {
@@ -24,22 +21,20 @@ body {
 }
 
 div.related {
-
   color: rgba(255, 255, 255, 0.7);
-
-  color: rgba(255, 255, 255, 0.7); /* classic overwrite */
-
   border-color: #424242;
 }
 
 /* SIDEBAR */
 
 .sidebar {
-  background-color: #424242; /* Dark background for sidebar */
+  background-color: #424242;
+  /* Dark background for sidebar */
   border-color: #616161;
   width: 250px;
   transition: width 0.3s ease, background-color 0.3s ease;
-  overflow-x: hidden; /* Ensure smooth scrolling on long content */
+  overflow-x: hidden;
+  /* Ensure smooth scrolling on long content */
 }
 
 .sidebar.collapsed {
@@ -77,8 +72,11 @@ div.related {
 .sidebar:hover {
   background-color: #555;
 }
-div.sphinxsidebar, .menu-wrapper {
-  background-color: #414141;  /* Sidebar background color */
+
+div.sphinxsidebar,
+.menu-wrapper {
+  background-color: #414141;
+  /* Sidebar background color */
   color: inherit;
 }
 
@@ -87,13 +85,18 @@ div.sphinxsidebar, .menu-wrapper {
   color: inherit !important;
 }
 
-div.sidebar, aside.sidebar {
-  background-color: #414141;  /* Sidebar background color */
+div.sidebar,
+aside.sidebar {
+  background-color: #414141;
+  /* Sidebar background color */
   border-color: #616161;
-  width: 300px;  /* Sidebar width increased */
-  resize: horizontal;  /* Make it resizable */
+  width: 300px;
+  /* Sidebar width increased */
+  resize: horizontal;
+  /* Make it resizable */
   overflow: auto;
-  position: fixed;  /* Fixed position to keep sidebar in place */
+  position: fixed;
+  /* Fixed position to keep sidebar in place */
   top: 0;
   left: 0;
   height: 100%;
@@ -104,7 +107,6 @@ div.sidebar, aside.sidebar {
 /* Sidebar Open State */
 div.sidebar.open {
   left: 0;
-
 }
 
 .menu-wrapper {
@@ -125,8 +127,8 @@ div.sidebar.open {
   font-size: 1.4em;
 }
 
-.menu-wrapper h3 + p,
-.menu-wrapper h4 + p {
+.menu-wrapper h3+p,
+.menu-wrapper h4+p {
   margin-top: 0.5rem;
 }
 
@@ -180,9 +182,6 @@ div.sidebar.open {
   flex: auto;
 }
 
-
-
-
 /* ANCHORS AND HIGHLIGHTS */
 
 a {
@@ -211,11 +210,7 @@ div.related a {
 
 div.footer,
 div.footer a {
-
   color: currentColor;
-
-  color: currentColor; /* classic overwrites */
-
 }
 
 dt:target,
@@ -229,7 +224,7 @@ span.highlighted {
 
 /* Below for most things in text */
 
-dl.field-list > dt {
+dl.field-list>dt {
   background-color: #434;
 }
 
@@ -249,6 +244,7 @@ table.docutils th {
 pre {
   border-color: #616161;
 }
+
 div.body pre {
   border-color: #616161;
 }
@@ -260,7 +256,6 @@ code {
 div.seealso {
   background-color: rgba(255, 255, 0, 0.1);
 }
-
 
 div.warning {
   background-color: rgba(255, 0, 0, 0.2);
@@ -319,8 +314,10 @@ img.invert-in-dark-mode {
 
 /* Object description styles */
 /* C++ specific styling */
-.sig.c .k, .sig.c .kt,
-.sig.cpp .k, .sig.cpp .kt {
+.sig.c .k,
+.sig.c .kt,
+.sig.cpp .k,
+.sig.cpp .kt {
   color: #5283ff;
 }
 
