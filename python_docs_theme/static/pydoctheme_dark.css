@@ -8,7 +8,6 @@
   --bad-border: var(--bad-color);
 }
 
-
 /* Browser elements */
 :root {
   scrollbar-color: #616161 transparent;
@@ -129,9 +128,6 @@ div.sidebar.open {
   flex: auto;
 }
 
-
-
-
 /* ANCHORS AND HIGHLIGHTS */
 div.body a {
   color: #7af;
@@ -250,9 +246,7 @@ img.invert-in-dark-mode {
 }
 
 /* -- object description styles --------------------------------------------- */
-
 /* C++ specific styling */
-
 /* Override Sphinx's basic.css to fix colour contrast */
 .sig.c   .k, .sig.c   .kt,
 .sig.cpp .k, .sig.cpp .kt {
