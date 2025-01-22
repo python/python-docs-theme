@@ -5,7 +5,7 @@ html {
     scroll-behavior: auto;
 }
 
-:target {
+html:has(:target) {
     scroll-behavior: smooth;
 }
 
