@@ -776,3 +776,18 @@ div.versionremoved .versionmodified {
         opacity: 1;
     }
 }
+
+@media (prefers-reduced-motion) {
+    div.document {
+        animation: none;
+        transition: none;
+    }
+
+    #sidebarbutton {
+        transition: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
