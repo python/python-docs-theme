@@ -1,5 +1,10 @@
 @import url('classic.css');
 
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Common colours */
 :root {
     --good-color: rgb(41 100 51);
@@ -129,6 +134,7 @@ form.inline-search input[type='submit'] {
 }
 
 div.document {
+    animation: fadeIn 0.6s ease-in-out;
     display: flex;
     /* Don't let long code literals extend beyond the right side of the screen */
     overflow-wrap: break-word;
@@ -149,11 +155,7 @@ div.sphinxsidebar {
     border-radius: 5px;
     line-height: 130%;
     font-size: smaller;
-    width: 300px;
-    min-width: 200px;
-    max-width: 500px;
-    resize: horizontal;
-    overflow: auto;
+    transition: width 0.3s ease;
 }
 
 div.sphinxsidebar h3,
@@ -162,7 +164,7 @@ div.sphinxsidebar h4 {
 }
 
 div.sphinxsidebarwrapper {
-    width: 300px;
+    width: 217px;
     box-sizing: border-box;
     height: 100%;
     overflow-x: hidden;
@@ -210,6 +212,9 @@ div.sphinxsidebar input[type='text'] {
     width: 12px;
     border-radius: 0 5px 5px 0;
     border-left: none;
+    position: absolute;
+    right: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #sidebarbutton span {
@@ -764,5 +769,15 @@ div.versionremoved .versionmodified {
 @media print {
     div.mobile-nav {
         display: none;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
