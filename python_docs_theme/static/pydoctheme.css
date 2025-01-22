@@ -1,14 +1,5 @@
 @import url('classic.css');
 
-/* Smooth scroll */
-html {
-    scroll-behavior: auto;
-}
-
-html:has(:target) {
-    scroll-behavior: smooth;
-}
-
 /* Common colours */
 :root {
     --good-color: rgb(41 100 51);
