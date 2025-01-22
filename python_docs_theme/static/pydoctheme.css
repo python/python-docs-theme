@@ -6,7 +6,7 @@ html {
 }
 
 :target {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
 }
 
 /* Common colours */
