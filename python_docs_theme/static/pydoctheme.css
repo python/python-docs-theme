@@ -777,7 +777,7 @@ div.versionremoved .versionmodified {
     }
 }
 
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
     div.document {
         animation: none;
         transition: none;
@@ -785,9 +785,5 @@ div.versionremoved .versionmodified {
 
     #sidebarbutton {
         transition: none;
-    }
-
-    html {
-        scroll-behavior: auto;
     }
 }
