@@ -139,7 +139,13 @@ span.pre {
     white-space: unset;
 }
 
+div.bodywrapper {
+    margin-left: 250px;
+}
+
 div.sphinxsidebar {
+    display: flex;
+    width: 250px;
     float: none;
     position: sticky;
     top: 0;
@@ -157,12 +163,12 @@ div.sphinxsidebar h4 {
 }
 
 div.sphinxsidebarwrapper {
-    width: 217px;
     box-sizing: border-box;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    float: left;
+    float: none;
+    flex-grow: 1;
 }
 
 div.sphinxsidebarwrapper > h3:first-child {
@@ -197,12 +203,13 @@ div.sphinxsidebar input[type='text'] {
     margin-left: 0;
     color: #444444;
     font-size: 1.2em;
-    cursor: pointer;
+    cursor: col-resize;
     padding-top: 1px;
-    float: right;
+    float: none;
     display: table;
     /* after Sphinx 4.x and earlier is dropped, only the below is needed */
     width: 12px;
+    min-width: 12px;
     border-radius: 0 5px 5px 0;
     border-left: none;
 }
@@ -468,7 +475,7 @@ div.genindex-jumpbox a {
         font-size: 0.875rem;
     }
     div.bodywrapper {
-        margin: 0;
+        margin: 0 !important;
     }
     /* Typography */
     div.body h1 {
@@ -490,7 +497,7 @@ div.genindex-jumpbox a {
     }
     /* Remove sidebar and top related bar */
     div.related, .sphinxsidebar {
-        display: none;
+        display: none !important;
     }
     /* Anchorlinks are not hidden by fixed-positioned navbar when scrolled to */
     html {

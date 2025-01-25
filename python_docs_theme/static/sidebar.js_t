@@ -27,12 +27,12 @@
 
 const initialiseSidebar = () => {
   // global elements used by the functions.
-  const bodyWrapper = document.getElementsByClassName("bodywrapper")[0]
-  const sidebar = document.getElementsByClassName("sphinxsidebar")[0]
-  const sidebarWrapper = document.getElementsByClassName("sphinxsidebarwrapper")[0]
+  const bodyWrapper = document.querySelector(".bodywrapper")
+  const sidebar = document.querySelector(".sphinxsidebar")
+  const sidebarWrapper = document.querySelector(".sphinxsidebarwrapper")
 
   // exit early if the document has no sidebar for some reason
-  if (typeof sidebar === "undefined") {
+  if (!sidebar) {
     return
   }
 
@@ -44,46 +44,43 @@ const initialiseSidebar = () => {
  #}
 {% if sphinx_version_tuple is defined and sphinx_version_tuple[0] >= 5 %}
   const sidebarButton = document.getElementById("sidebarbutton")
-  const sidebarArrow = sidebarButton.querySelector('span')
 {% else %}
   // create the sidebar button element
   const sidebarButton = document.createElement("div")
   sidebarButton.id = "sidebarbutton"
-  // create the sidebar button arrow element
-  const sidebarArrow = document.createElement("span")
-  sidebarArrow.innerText =  "«"
-  sidebarButton.appendChild(sidebarArrow)
-  sidebar.appendChild(sidebarButton)
 {% endif %}
+  sidebarbutton.innerHTML = ""
+  sidebarbutton.tabindex = "0"  // make it focusable
+  sidebarbutton.role = "slider"
+  sidebarbutton.title = _("Resize sidebar")
+  sidebarbutton.setAttribute("aria-label", _("Resize sidebar by dragging"))
+  sidebarbutton.setAttribute("aria-valuetext", _("Sidebar width XXX pixels"))
+  let clientX;
 
-  const collapse_sidebar = () => {
-    bodyWrapper.style.marginLeft = ".8em"
-    sidebar.style.width = ".8em"
-    sidebarWrapper.style.display = "none"
-    sidebarArrow.innerText = "»"
-    sidebarButton.title = _("Expand sidebar")
-    window.localStorage.setItem("sidebar", "collapsed")
+  function onMouseMove(e) {
+    e.preventDefault()
+    const sidebarWidth = sidebar.offsetWidth
+    const newWidth = Math.max(0, Math.min(window.innerWidth, sidebarWidth + e.clientX - clientX))
+    clientX = e.clientX
+    sidebar.style.width = `${newWidth}px`
+    bodyWrapper.style.marginLeft = `${newWidth}px`
+    window.localStorage.setItem("sidebar-width", newWidth)
   }
 
-  const expand_sidebar = () => {
-    bodyWrapper.style.marginLeft = ""
-    sidebar.style.removeProperty("width")
-    sidebarWrapper.style.display = ""
-    sidebarArrow.innerText = "«"
-    sidebarButton.title = _("Collapse sidebar")
-    window.localStorage.setItem("sidebar", "expanded")
-  }
-
-  sidebarButton.addEventListener("click", () => {
-    (sidebarWrapper.style.display === "none") ? expand_sidebar() : collapse_sidebar()
+  sidebarButton.addEventListener("mousedown", e => {
+    e.preventDefault()
+    clientX = e.clientX
+    document.addEventListener("mousemove", onMouseMove)
+    document.addEventListener("mouseup", () => {
+      document.removeEventListener("mousemove", onMouseMove)
+      sidebarbutton.setAttribute("aria-valuetext", _("Sidebar width XXX pixels"))
+    })
   })
 
-  const sidebar_state = window.localStorage.getItem("sidebar")
-  if (sidebar_state === "collapsed") {
-    collapse_sidebar()
-  }
-  else if (sidebar_state === "expanded") {
-    expand_sidebar()
+  const sidebarWidth = parseInt(window.localStorage.getItem("sidebar-width"), 10)
+  if(Number.isFinite(sidebarWidth)) {
+    sidebar.style.width = `${sidebarWidth}px`
+    bodyWrapper.style.marginLeft = `${sidebarWidth}px`
   }
 }
 
