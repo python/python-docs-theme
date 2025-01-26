@@ -26,6 +26,7 @@
  */
 
 const initialiseSidebar = () => {
+  const ngettext = Documentation.ngettext
   // global elements used by the functions.
   const bodyWrapper = document.querySelector(".bodywrapper")
   const sidebar = document.querySelector(".sphinxsidebar")
@@ -57,7 +58,14 @@ const initialiseSidebar = () => {
   sidebarbutton.role = "slider"
   sidebarbutton.title = _("Resize sidebar")
   sidebarbutton.setAttribute("aria-label", _("Resize sidebar by dragging"))
-  sidebarbutton.setAttribute("aria-valuetext", _("Sidebar width XXX pixels"))
+  sidebarbutton.setAttribute(
+    "aria-valuetext",
+    ngettext(
+      "Sidebar width {count} pixel",
+      "Sidebar width {count} pixels",
+      sidebar.offsetWidth
+    ).replace("{count}", sidebar.offsetWidth)
+  )
   let clientX;
 
   function onMouseMove(e) {
@@ -79,7 +87,14 @@ const initialiseSidebar = () => {
     document.addEventListener("mousemove", onMouseMove)
     document.addEventListener("mouseup", () => {
       document.removeEventListener("mousemove", onMouseMove)
-      sidebarbutton.setAttribute("aria-valuetext", _("Sidebar width XXX pixels"))
+      sidebarbutton.setAttribute(
+        "aria-valuetext",
+        ngettext(
+          "Sidebar width {count} pixel",
+          "Sidebar width {count} pixels",
+          sidebar.offsetWidth
+        ).replace("{count}", sidebar.offsetWidth)
+      )
     })
   })
 
