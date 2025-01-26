@@ -6,9 +6,6 @@ on:
   pull_request_target:
     types:
       - opened
-    paths:
-    - 'Doc/**'
-    - '.github/workflows/doc.yml'
 
 permissions:
   pull-requests: write
