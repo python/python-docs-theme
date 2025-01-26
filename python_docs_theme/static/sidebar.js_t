@@ -49,6 +49,9 @@ const initialiseSidebar = () => {
   const sidebarButton = document.createElement("div")
   sidebarButton.id = "sidebarbutton"
 {% endif %}
+  const sidebarMinWidth = 200
+  const sidebarMaxWidth = Math.round(0.5 * window.innerWidth)
+
   sidebarbutton.innerHTML = ""
   sidebarbutton.tabindex = "0"  // make it focusable
   sidebarbutton.role = "slider"
@@ -60,7 +63,10 @@ const initialiseSidebar = () => {
   function onMouseMove(e) {
     e.preventDefault()
     const sidebarWidth = sidebar.offsetWidth
-    const newWidth = Math.max(0, Math.min(window.innerWidth, sidebarWidth + e.clientX - clientX))
+    const newWidth = Math.max(
+      sidebarMinWidth,
+      Math.min(sidebarMaxWidth, sidebarWidth + e.clientX - clientX)
+    )
     clientX = e.clientX
     sidebar.style.width = `${newWidth}px`
     bodyWrapper.style.marginLeft = `${newWidth}px`
