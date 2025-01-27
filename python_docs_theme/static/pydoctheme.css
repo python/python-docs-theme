@@ -203,7 +203,7 @@ div.sphinxsidebar input[type='text'] {
     margin-left: 0;
     color: #444444;
     font-size: 1.2em;
-    cursor: col-resize;
+    cursor: default; /* cursor is set to 'col-resize' using JS */
     padding-top: 1px;
     float: none;
     display: table;

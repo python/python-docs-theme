@@ -57,6 +57,7 @@ const initialiseSidebar = () => {
   sidebarbutton.tabindex = "0"  // make it focusable
   sidebarbutton.role = "slider"
   sidebarbutton.title = _("Resize sidebar")
+  sidebarbutton.style.cursor = "col-resize" // Set the cursor only if JS is enabled
   sidebarbutton.setAttribute("aria-label", _("Resize sidebar by dragging"))
   sidebarbutton.setAttribute(
     "aria-valuetext",
