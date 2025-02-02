@@ -1,6 +1,7 @@
 [theme]
 inherit = "default"
 stylesheets = [
+    "classic.css",
     "pydoctheme.css",
 ]
 pygments_style = { default = "default", dark = "monokai" }
