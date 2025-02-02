@@ -140,6 +140,8 @@ span.pre {
 }
 
 div.sphinxsidebar {
+    display: flex;
+    width: 260px;
     float: none;
     position: sticky;
     top: 0;
@@ -156,13 +158,17 @@ div.sphinxsidebar h4 {
     margin-top: 1.5em;
 }
 
+div.documentwrapper > div.bodywrapper {
+    margin-left: 260px;
+}
+
 div.sphinxsidebarwrapper {
-    width: 217px;
     box-sizing: border-box;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    float: left;
+    float: none;
+    flex-grow: 1;
 }
 
 div.sphinxsidebarwrapper > h3:first-child {
@@ -199,10 +205,11 @@ div.sphinxsidebar input[type='text'] {
     font-size: 1.2em;
     cursor: pointer;
     padding-top: 1px;
-    float: right;
+    float: none;
     display: table;
     /* after Sphinx 4.x and earlier is dropped, only the below is needed */
     width: 12px;
+    min-width: 12px;
     border-radius: 0 5px 5px 0;
     border-left: none;
 }
