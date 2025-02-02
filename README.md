@@ -1,7 +1,7 @@
 # Python Docs Sphinx Theme
 
 This is the theme for the Python documentation.
-It requires Python 3.10 or newer and Sphinx 7.2 or newer.
+It requires Python 3.10 or newer and Sphinx 7.3 or newer.
 
 Note that when adopting this theme, you're also borrowing an element of the
 trust and credibility established by the CPython core developers over the

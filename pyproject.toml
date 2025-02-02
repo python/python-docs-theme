@@ -28,7 +28,7 @@ classifiers = [
   "Topic :: Software Development :: Documentation",
 ]
 dependencies = [
-  "sphinx>=7.2",
+  "sphinx>=7.3",
 ]
 
 urls.Code = "https://github.com/python/python-docs-theme"

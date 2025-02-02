@@ -1,16 +1,18 @@
 from __future__ import annotations
 
-import os
 from pathlib import Path
+from typing import TYPE_CHECKING
 
-THEME_PATH = Path(__file__).parent.resolve()
+if TYPE_CHECKING:
+    from sphinx.application import Sphinx
+    from sphinx.util.typing import ExtensionMetadata
+
+THEME_PATH = Path(__file__).resolve().parent
 
 
-def setup(app):
-    app.require_sphinx("7.2")
-
-    current_dir = os.path.abspath(os.path.dirname(__file__))
-    app.add_html_theme("python_docs_theme", current_dir)
+def setup(app: Sphinx) -> ExtensionMetadata:
+    app.require_sphinx("7.3")
+    app.add_html_theme("python_docs_theme", THEME_PATH)
 
     return {
         "version": "2024.12",
