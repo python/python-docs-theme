@@ -56,7 +56,7 @@ jobs:
       matrix:
         os: ["ubuntu-latest", "windows-latest"]
         # Test minimum supported and latest stable from 3.x series
-        python-version: ["3.9", "3"]
+        python-version: ["3.10", "3"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
