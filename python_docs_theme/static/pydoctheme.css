@@ -141,7 +141,7 @@ span.pre {
 
 div.sphinxsidebar {
     display: flex;
-    width: 260px;
+    width: min(25vw, 350px);
     float: none;
     position: sticky;
     top: 0;
@@ -159,7 +159,7 @@ div.sphinxsidebar h4 {
 }
 
 div.bodywrapper {
-    margin-left: 260px;
+    margin-left: min(25vw, 350px);
 }
 
 div.sphinxsidebarwrapper {
