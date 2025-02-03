@@ -158,7 +158,7 @@ div.sphinxsidebar h4 {
     margin-top: 1.5em;
 }
 
-div.documentwrapper > div.bodywrapper {
+div.bodywrapper {
     margin-left: 260px;
 }
 
@@ -496,7 +496,7 @@ div.genindex-jumpbox a {
         margin-inline-end: 0;
     }
     /* Remove sidebar and top related bar */
-    div.related, .sphinxsidebar {
+    div.related, div.sphinxsidebar {
         display: none;
     }
     /* Anchorlinks are not hidden by fixed-positioned navbar when scrolled to */
