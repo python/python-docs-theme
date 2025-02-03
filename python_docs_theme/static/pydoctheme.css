@@ -197,6 +197,9 @@ div.sphinxsidebar input[type='text'] {
 }
 
 #sidebarbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* Sphinx 4.x and earlier compat */
     height: 100%;
     background-color: #CCCCCC;
@@ -206,18 +209,11 @@ div.sphinxsidebar input[type='text'] {
     cursor: pointer;
     padding-top: 1px;
     float: none;
-    display: table;
     /* after Sphinx 4.x and earlier is dropped, only the below is needed */
     width: 12px;
     min-width: 12px;
     border-radius: 0 5px 5px 0;
     border-left: none;
-}
-
-#sidebarbutton span {
-    /* Sphinx 4.x and earlier compat */
-    display: table-cell;
-    vertical-align: middle;
 }
 
 #sidebarbutton:hover {
