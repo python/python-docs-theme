@@ -4,15 +4,15 @@ import hashlib
 from functools import cache
 from pathlib import Path
 
+import sphinx.application
+from sphinx.builders.html import StandaloneHTMLBuilder
+
 TYPE_CHECKING = False
 if TYPE_CHECKING:
     from typing import Any
 
     from sphinx.application import Sphinx
     from sphinx.util.typing import ExtensionMetadata
-
-import sphinx.application
-from sphinx.builders.html import StandaloneHTMLBuilder
 
 __version__ = "2024.12"
 
