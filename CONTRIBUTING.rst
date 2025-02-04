@@ -2,7 +2,7 @@ How to release
 --------------
 
 - Update ``CHANGELOG.rst``
-- Bump version (YYYY.MM) in ``pyproject.toml``
+- Bump version (YYYY.MM) in ``python_docs_theme/__init__.py``
 - Commit
 - Push to check tests pass on
   `GitHub Actions <https://github.com/python/python-docs-theme/actions>`__
