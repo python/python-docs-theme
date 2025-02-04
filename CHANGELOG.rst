@@ -1,6 +1,18 @@
 Changelog
 =========
 
+`2025.2 <https://github.com/python/python-docs-theme/releases/tag/2025.2>`_
+---------------------------------------------------------------------------
+
+- Note minimum requirements for Sphinx (#216)
+    Contributed by Adam Turner
+- Horizontally centre the sidebar collapse button (#219)
+    Contributed by Tomas Roun
+- Make sidebar width more flexible (#218)
+    Contributed by Tomas Roun
+- Set ``__version__`` in the runtime package (#222)
+    Contributed by Adam Turner
+
 `2024.12 <https://github.com/python/python-docs-theme/releases/tag/2024.12>`_
 -----------------------------------------------------------------------------
 

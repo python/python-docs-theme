@@ -138,6 +138,8 @@ span.pre {
 }
 
 div.sphinxsidebar {
+    display: flex;
+    width: min(25vw, 350px);
     float: none;
     position: sticky;
     top: 0;
@@ -154,13 +156,17 @@ div.sphinxsidebar h4 {
     margin-top: 1.5em;
 }
 
+div.bodywrapper {
+    margin-left: min(25vw, 350px);
+}
+
 div.sphinxsidebarwrapper {
-    width: 217px;
     box-sizing: border-box;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    float: left;
+    float: none;
+    flex-grow: 1;
 }
 
 div.sphinxsidebarwrapper > h3:first-child {
@@ -189,7 +195,11 @@ div.sphinxsidebar input[type='text'] {
 }
 
 #sidebarbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 12px;
+    min-width: 12px;
     border-radius: 0 5px 5px 0;
     border-left: none;
 }
@@ -470,7 +480,7 @@ div.genindex-jumpbox a {
         margin-inline-end: 0;
     }
     /* Remove sidebar and top related bar */
-    div.related, .sphinxsidebar {
+    div.related, div.sphinxsidebar {
         display: none;
     }
     /* Anchorlinks are not hidden by fixed-positioned navbar when scrolled to */
