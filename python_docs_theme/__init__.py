@@ -15,7 +15,7 @@ THEME_PATH = Path(__file__).resolve().parent
 def setup(app: Sphinx) -> ExtensionMetadata:
     app.require_sphinx("7.3")
 
-    app.add_html_theme("python_docs_theme", THEME_PATH)
+    app.add_html_theme("python_docs_theme", str(THEME_PATH))
 
     return {
         "version": __version__,
