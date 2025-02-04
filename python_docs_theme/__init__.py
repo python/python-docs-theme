@@ -1,15 +1,22 @@
 from __future__ import annotations
 
 import hashlib
-import os
 from functools import cache
 from pathlib import Path
-from typing import Any
 
 import sphinx.application
 from sphinx.builders.html import StandaloneHTMLBuilder
 
-THEME_PATH = Path(__file__).parent.resolve()
+TYPE_CHECKING = False
+if TYPE_CHECKING:
+    from typing import Any
+
+    from sphinx.application import Sphinx
+    from sphinx.util.typing import ExtensionMetadata
+
+__version__ = "2024.12"
+
+THEME_PATH = Path(__file__).resolve().parent
 
 
 @cache
@@ -52,15 +59,15 @@ def _html_page_context(
         )
 
 
-def setup(app):
+def setup(app: Sphinx) -> ExtensionMetadata:
     app.require_sphinx("3.4")
 
-    current_dir = os.path.abspath(os.path.dirname(__file__))
-    app.add_html_theme("python_docs_theme", current_dir)
+    app.add_html_theme("python_docs_theme", str(THEME_PATH))
 
     app.connect("html-page-context", _html_page_context)
 
     return {
+        "version": __version__,
         "parallel_read_safe": True,
         "parallel_write_safe": True,
     }
