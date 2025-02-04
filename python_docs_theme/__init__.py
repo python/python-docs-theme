@@ -3,8 +3,8 @@ from __future__ import annotations
 import hashlib
 from functools import cache
 from pathlib import Path
-from typing import TYPE_CHECKING
 
+TYPE_CHECKING = False
 if TYPE_CHECKING:
     from typing import Any
 
