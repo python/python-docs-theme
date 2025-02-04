@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import ast
 import subprocess
 from pathlib import Path
 
@@ -17,6 +18,8 @@ except ImportError:
         ) from ie
 
 PROJECT_DIR = Path(__file__).resolve().parent
+PYPROJECT_TOML = PROJECT_DIR / "pyproject.toml"
+INIT_PY = PROJECT_DIR / "python_docs_theme" / "__init__.py"
 
 # Global variables used by pybabel below (paths relative to PROJECT_DIR)
 DOMAIN = "messages"
@@ -29,9 +32,23 @@ MAPPING_FILE = ".babel.cfg"
 
 def get_project_info() -> dict:
     """Retrieve project's info to populate the message catalog template"""
-    with open(Path(PROJECT_DIR / "pyproject.toml"), "rb") as f:
-        data = tomllib.load(f)
-    return data["project"]
+    pyproject_text = PYPROJECT_TOML.read_text(encoding="utf-8")
+    project_data = tomllib.loads(pyproject_text)["project"]
+
+    # read __version__ from __init__.py
+    for child in ast.parse(INIT_PY.read_bytes()).body:
+        if not isinstance(child, ast.Assign):
+            continue
+        target = child.targets[0]
+        if not isinstance(target, ast.Name) or target.id != "__version__":
+            continue
+        version_node = child.value
+        if not isinstance(version_node, ast.Constant):
+            continue
+        project_data["version"] = version_node.value
+        break
+
+    return project_data
 
 
 def extract_messages() -> None:

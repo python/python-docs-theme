@@ -32,6 +32,7 @@ dynamic = [ "version" ]
 dependencies = [
   "sphinx>=3.4",
 ]
+
 urls.Code = "https://github.com/python/python-docs-theme"
 urls.Download = "https://pypi.org/project/python-docs-theme/"
 urls.Homepage = "https://github.com/python/python-docs-theme/"
