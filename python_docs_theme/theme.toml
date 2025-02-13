@@ -1,0 +1,39 @@
+[theme]
+inherit = "default"
+stylesheets = [
+    "classic.css",
+    "pydoctheme.css",
+]
+pygments_style = { default = "default", dark = "monokai" }
+
+[options]
+bodyfont = "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif"
+headfont = "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif"
+footerbgcolor = "white"
+footertextcolor = "#555555"
+relbarbgcolor = "white"
+relbartextcolor = "#666666"
+relbarlinkcolor = "#444444"
+sidebarbgcolor = "white"
+sidebartextcolor = "#444444"
+sidebarlinkcolor = "#444444"
+sidebarbtncolor = "#cccccc"
+bgcolor = "white"
+textcolor = "#222222"
+linkcolor = "#0090c0"
+visitedlinkcolor = "#00608f"
+headtextcolor = "#1a1a1a"
+headbgcolor = "white"
+headlinkcolor = "#aaaaaa"
+codebgcolor = "#eeffcc"
+codetextcolor = "#333333"
+
+hosted_on = ""
+issues_url = ""
+license_url = ""
+root_name = "Python"
+root_url = "https://www.python.org/"
+root_icon = "py.svg"
+root_icon_alt_text = "Python logo"
+root_include_title = "True"
+copyright_url = ""
