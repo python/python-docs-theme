@@ -442,17 +442,23 @@ div.genindex-jumpbox a {
     top: 0;
     right: 0;
     font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
+    font-size: 80%;
+    padding-left: .5em;
+    padding-right: .5em;
+    height: 100%;
+    max-height: min(100%, 2.4em);
     border-radius: 0 3px 0 0;
-    color: #ac9; /* follows div.body pre */
-    border-color: #ac9; /* follows div.body pre */
-    border-style: solid; /* follows div.body pre */
-    border-width: 1px; /* follows div.body pre */
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ac9; /* follows div.body pre */
 }
 
-.copybutton[data-hidden='true'] {
-    text-decoration: line-through;
+.copybutton:hover {
+    background-color: #eee;
+}
+
+.copybutton:active {
+    background-color: #ddd;
 }
 
 @media (max-width: 1023px) {
