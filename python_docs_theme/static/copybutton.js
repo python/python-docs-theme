@@ -33,8 +33,8 @@ const loadCopyButton = () => {
     /* Add a [>>>] button in the top-right corner of code samples to hide
      * the >>> and ... prompts and the output and thus make the code
      * copyable. */
-    const hide_text = "Hide the prompts and output"
-    const show_text = "Show the prompts and output"
+    const hide_text = _("Hide the prompts and output")
+    const show_text = _("Show the prompts and output")
 
     const button = document.createElement("span")
     button.classList.add("copybutton")
