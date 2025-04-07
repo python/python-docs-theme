@@ -14,7 +14,7 @@
           </li>
           {%- endfor %}
           {%- block rootrellink %}
-          <li><img src="{{ pathto('_static/' ~ theme_root_icon, 1) }}" alt="{{ theme_root_icon_alt_text }}" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><img src="{{ pathto('_static/' ~ theme_root_icon, 1) }}" alt="{{ theme_root_icon_alt_text }}" style="vertical-align: middle; margin-top: -1px"></li>
           <li><a href="{{theme_root_url}}">{{theme_root_name}}</a>{{ reldelim1 }}</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -48,8 +48,8 @@
     {%- if builder != "htmlhelp" %}
     <div class="inline-search" role="search">
         <form class="inline-search" action="{{ pathto('search') }}" method="get">
-          <input placeholder="{{ _('Quick search') }}" aria-label="{{ _('Quick search') }}" type="search" name="q" id="search-box" />
-          <input type="submit" value="{{ _('Go') }}" />
+          <input placeholder="{{ _('Quick search') }}" aria-label="{{ _('Quick search') }}" type="search" name="q" id="search-box">
+          <input type="submit" value="{{ _('Go') }}">
         </form>
     </div>
     {%- endif %}
@@ -71,7 +71,7 @@
 
 {%- block extrahead -%}
     <link rel="stylesheet" href="{{ pathto('_static/pydoctheme_dark.css', 1) }}" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
-    <link rel="shortcut icon" type="image/png" href="{{ pathto('_static/' ~ theme_root_icon, 1) }}" />
+    <link rel="shortcut icon" type="image/png" href="{{ pathto('_static/' ~ theme_root_icon, 1) }}">
     {%- if builder != "htmlhelp" %}
         {%- if not embedded %}
             <script type="text/javascript" src="{{ pathto('_static/copybutton.js', 1) }}"></script>
@@ -93,14 +93,14 @@
 {%- if builder != 'htmlhelp' %}
 <div class="mobile-nav">
     <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
-           aria-pressed="false" aria-expanded="false" role="button" aria-label="{{ _('Menu')}}" />
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="{{ _('Menu')}}">
     <nav class="nav-content" role="navigation">
         <label for="menuToggler" class="toggler__label">
             <span></span>
         </label>
         <span class="nav-items-wrapper">
             <a href="{{ theme_root_url }}" class="nav-logo">
-                <img src="{{ pathto('_static/' ~ theme_root_icon, 1) }}" alt="{{ theme_root_icon_alt_text }}"/>
+                <img src="{{ pathto('_static/' ~ theme_root_icon, 1) }}" alt="{{ theme_root_icon_alt_text }}">
             </a>
             <span class="version_switcher_placeholder"></span>
             {%- if pagename != "search" and builder != "singlehtml" %}
@@ -108,8 +108,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
                     <path fill-rule="nonzero" fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
                 </svg>
-                <input placeholder="{{ _('Quick search') }}" aria-label="{{ _('Quick search') }}" type="search" name="q" />
-                <input type="submit" value="{{ _('Go') }}"/>
+                <input placeholder="{{ _('Quick search') }}" aria-label="{{ _('Quick search') }}" type="search" name="q">
+                <input type="submit" value="{{ _('Go') }}">
             </form>
             {%- endif %}
         </span>
@@ -121,7 +121,7 @@
             {%- if logo %}
             <p class="logo">
                 <a href="{{ pathto('index') }}">
-                <img class="logo" src="{{ pathto('_static/' ~ logo, 1)|e }}" alt="Logo"/>
+                <img class="logo" src="{{ pathto('_static/' ~ logo, 1)|e }}" alt="Logo">
                 </a>
             </p>
             {%- endif %}
@@ -143,21 +143,21 @@
     {% if theme_copyright_url or hasdoc('copyright') %}
       </a>
     {% endif %} {{ copyright|e }}.
-    <br />
+    <br>
     {% trans %}This page is licensed under the Python Software Foundation License Version 2.{% endtrans %}
-    <br />
+    <br>
     {% trans %}Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.{% endtrans %}
-    <br />
+    <br>
     {% if theme_license_url %}
-      {% trans license_file=theme_license_url %}See <a href="{{ license_file }}">History and License</a> for more information.{% endtrans %}<br />
+      {% trans license_file=theme_license_url %}See <a href="{{ license_file }}">History and License</a> for more information.{% endtrans %}<br>
     {% endif %}
     {% if theme_hosted_on %}
-      {% trans hosted_on=theme_hosted_on %}Hosted on {{ hosted_on }}.{% endtrans %}<br />
+      {% trans hosted_on=theme_hosted_on %}Hosted on {{ hosted_on }}.{% endtrans %}<br>
     {% endif %}
-    <br />
+    <br>
 
     {% include "footerdonate.html" %}
-    <br />
+    <br>
 
     {%- if last_updated %}
       {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
@@ -165,7 +165,7 @@
     {% if theme_issues_url %}
       {% trans %}<a href="{{ theme_issues_url }}">Found a bug</a>?{% endtrans %}
     {% endif %}
-    <br />
+    <br>
 
     {% trans sphinx_version=sphinx_version|e %}Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
     </div>
