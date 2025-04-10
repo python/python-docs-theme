@@ -328,6 +328,10 @@ tt, code, pre {
     font-size: 96.5%;
 }
 
+div.body pre {
+    line-height: 120%;
+}
+
 div.body tt,
 div.body code {
     border-radius: 3px;
