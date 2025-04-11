@@ -1,0 +1,113 @@
+# Portuguese (Brazil) translations for python-docs-theme.
+# Copyright (C) 2025 Python Software Foundation
+# This file is distributed under the same license as the python-docs-theme
+# project.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: python-docs-theme 2024.6\n"
+"Report-Msgid-Bugs-To: https://github.com/python/python-docs-theme/issues\n"
+"POT-Creation-Date: 2024-08-03 15:53-0300\n"
+"PO-Revision-Date: 2024-08-03 15:53-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Language: pt_BR\n"
+"Language-Team: Brazilian Portuguese\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: python_docs_theme/footerdonate.html:1
+msgid "The Python Software Foundation is a non-profit corporation."
+msgstr "A Python Software Foundation é uma corporação sem fins lucrativos."
+
+#: python_docs_theme/footerdonate.html:2
+msgid "Please donate."
+msgstr "Por favor, doe."
+
+#: python_docs_theme/layout.html:6
+msgid "Navigation"
+msgstr "Navegação"
+
+#: python_docs_theme/layout.html:51 python_docs_theme/layout.html:111
+msgid "Quick search"
+msgstr "Pesquisa rápida"
+
+#: python_docs_theme/layout.html:52 python_docs_theme/layout.html:112
+msgid "Go"
+msgstr "Ir"
+
+#: python_docs_theme/layout.html:60
+msgid "Theme"
+msgstr "Tema"
+
+#: python_docs_theme/layout.html:62
+msgid "Auto"
+msgstr "Auto"
+
+#: python_docs_theme/layout.html:63
+msgid "Light"
+msgstr "Claro"
+
+#: python_docs_theme/layout.html:64
+msgid "Dark"
+msgstr "Escuro"
+
+#: python_docs_theme/layout.html:96
+msgid "Menu"
+msgstr "Menu"
+
+#: python_docs_theme/layout.html:142
+msgid "Copyright"
+msgstr "Copyright"
+
+#: python_docs_theme/layout.html:147
+msgid ""
+"This page is licensed under the Python Software Foundation License "
+"Version 2."
+msgstr ""
+"Esta página está licenciada sob a licença Python Software Foundation "
+"Versão 2."
+
+#: python_docs_theme/layout.html:149
+msgid ""
+"Examples, recipes, and other code in the documentation are additionally "
+"licensed under the Zero Clause BSD License."
+msgstr ""
+"Exemplos, receitas e outros códigos na documentação são adicionalmente "
+"licenciados soba licença Zero Clause BSD."
+
+#: python_docs_theme/layout.html:152
+#, python-format
+msgid ""
+"See <a href=\"%(license_file)s\">History and License</a> for more "
+"information."
+msgstr ""
+"Veja <a href=\"%(license_file)s\">História e licença</a> para mais "
+"informações."
+
+#: python_docs_theme/layout.html:155
+#, python-format
+msgid "Hosted on %(hosted_on)s."
+msgstr "Hospedado por %(hosted_on)s."
+
+#: python_docs_theme/layout.html:163
+#, python-format
+msgid "Last updated on %(last_updated)s."
+msgstr "Última atualizãaço em %(last_updated)s."
+
+#: python_docs_theme/layout.html:166
+#, python-format
+msgid "<a href=\"%(theme_issues_url)s\">Found a bug</a>?"
+msgstr "<a href=\"%(theme_issues_url)s\">Encontrou um bug</a>?"
+
+#: python_docs_theme/layout.html:170
+#, python-format
+msgid ""
+"Created using <a href=\"https://www.sphinx-doc.org/\">Sphinx</a> "
+"%(sphinx_version)s."
+msgstr ""
+"Criado usando <a href=\"https://www.sphinx-doc.org/\">Sphinx</a> "
+"%(sphinx_version)s."
