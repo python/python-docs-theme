@@ -38,7 +38,7 @@ jobs:
           --skip-cache-invalidation
           --theme "$(pwd)"
           --languages en
-          --branch ${{ matrix.branch }}
+          --branches ${{ matrix.branch }}
       - name: Show logs
         if: failure()
         run: |
