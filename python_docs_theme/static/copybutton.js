@@ -33,11 +33,23 @@ const loadCopyButton = () => {
     const makeOnButtonClick = () => {
         let timeout = null
         // define the behavior of the button when it's clicked
-        return event => {
+        return async event => {
+            // check if the clipboard is available
+            if (!navigator.clipboard || !navigator.clipboard.writeText) {
+                return;
+            }
+
             clearTimeout(timeout)
             const buttonEl = event.currentTarget
             const codeEl = buttonEl.nextElementSibling
-            navigator.clipboard.writeText(getCopyableText(codeEl))
+
+            try {
+                await navigator.clipboard.writeText(getCopyableText(codeEl))
+            } catch (e) {
+                console.error(e.message)
+                return
+            }
+
             buttonEl.innerText = _("Copied!")
             timeout = setTimeout(() => {
                 buttonEl.innerText = _("Copy")
