@@ -34,14 +34,14 @@ const loadCopyButton = () => {
         let timeout = null
         // define the behavior of the button when it's clicked
         return event => {
-          clearTimeout(timeout)
-          const buttonEl = event.currentTarget
-          const codeEl = buttonEl.nextElementSibling
-          navigator.clipboard.writeText(getCopyableText(codeEl))
-          buttonEl.innerText = _("Copied!")
-          timeout = setTimeout(() => {
-              buttonEl.innerText = _("Copy")
-          }, 1500)
+            clearTimeout(timeout)
+            const buttonEl = event.currentTarget
+            const codeEl = buttonEl.nextElementSibling
+            navigator.clipboard.writeText(getCopyableText(codeEl))
+            buttonEl.innerText = _("Copied!")
+            timeout = setTimeout(() => {
+                buttonEl.innerText = _("Copy")
+            }, 1500)
         }
     }
 
