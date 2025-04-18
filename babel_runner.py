@@ -5,17 +5,8 @@ from __future__ import annotations
 import argparse
 import ast
 import subprocess
+import tomllib
 from pathlib import Path
-
-try:
-    import tomllib
-except ImportError:
-    try:
-        import tomli as tomllib
-    except ImportError as ie:
-        raise ImportError(
-            "tomli or tomllib is required to parse pyproject.toml"
-        ) from ie
 
 PROJECT_DIR = Path(__file__).resolve().parent
 PYPROJECT_TOML = PROJECT_DIR / "pyproject.toml"
