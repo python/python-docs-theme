@@ -7,7 +7,7 @@ if TYPE_CHECKING:
     from sphinx.application import Sphinx
     from sphinx.util.typing import ExtensionMetadata
 
-__version__ = "2025.2"
+__version__ = "2025.4"
 
 THEME_PATH = Path(__file__).resolve().parent
 

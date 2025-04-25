@@ -1,6 +1,17 @@
 Changelog
 =========
 
+`2025.4 <https://github.com/python/python-docs-theme/releases/tag/2025.4>`_
+---------------------------------------------------------------------------
+
+* Require Sphinx 7.3 by @AA-Turner in https://github.com/python/python-docs-theme/pull/221
+* Add support for Python 3.14 by @hugovk https://github.com/python/python-docs-theme/pull/236
+* Drop support for Python 3.10 and 3.11 by @hugovk in https://github.com/python/python-docs-theme/pull/234
+* Add a copy button to code samples by @tomasr8 in https://github.com/python/python-docs-theme/pull/231
+* Add missing i18n for copy button titles by @tomasr8 in https://github.com/python/python-docs-theme/pull/225
+* Use consistent line-height for light & dark theme by @tomasr8 in https://github.com/python/python-docs-theme/pull/227
+* Remove self-closing tags by @hugovk in https://github.com/python/python-docs-theme/pull/226
+
 `2025.2 <https://github.com/python/python-docs-theme/releases/tag/2025.2>`_
 ---------------------------------------------------------------------------
 
