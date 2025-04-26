@@ -8,14 +8,14 @@ requires = [
 name = "python-docs-theme"
 description = "The Sphinx theme for the CPython docs and related projects"
 readme = "README.md"
-license.file = "LICENSE"
+license = "PSF-2.0"
+license-files = [ "LICENSE" ]
 authors = [ { name = "PyPA", email = "distutils-sig@python.org" } ]
 requires-python = ">=3.12"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Framework :: Sphinx :: Theme",
   "Intended Audience :: Developers",
-  "License :: OSI Approved :: Python Software Foundation License",
   "Operating System :: OS Independent",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3 :: Only",
