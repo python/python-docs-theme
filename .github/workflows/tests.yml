@@ -39,6 +39,7 @@ jobs:
           --theme "$(pwd)"
           --languages en
           --branches ${{ matrix.branch }}
+          ${{ matrix.branch == '3.14' && '--select-output no-html' || '' }}
       - name: Show logs
         if: failure()
         run: |
