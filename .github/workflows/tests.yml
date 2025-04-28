@@ -12,12 +12,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        branch: ["origin/main", "3.13", "3.12"]
+        branch: ["3.14", "3.13", "3.12"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: 3
+          python-version: ${{ matrix.branch }}
           allow-prereleases: true
           cache: pip
       - name: Clone docsbuild scripts
@@ -39,6 +39,7 @@ jobs:
           --theme "$(pwd)"
           --languages en
           --branches ${{ matrix.branch }}
+          ${{ matrix.branch == '3.14' && '--select-output no-html' || '' }}
       - name: Show logs
         if: failure()
         run: |
