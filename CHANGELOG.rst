@@ -11,6 +11,7 @@ Changelog
 * Add missing i18n for copy button titles by @tomasr8 in https://github.com/python/python-docs-theme/pull/225
 * Use consistent line-height for light & dark theme by @tomasr8 in https://github.com/python/python-docs-theme/pull/227
 * Remove self-closing tags by @hugovk in https://github.com/python/python-docs-theme/pull/226
+* Replace deprecated classifier with licence expression (PEP 639) by @hugovk in https://github.com/python/python-docs-theme/pull/237
 
 `2025.2 <https://github.com/python/python-docs-theme/releases/tag/2025.2>`_
 ---------------------------------------------------------------------------
