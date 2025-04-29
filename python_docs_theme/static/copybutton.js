@@ -8,7 +8,7 @@ function getCopyableText(rootElement) {
     for (const el of tracebacks) {
         while (
             el.nextSibling &&
-            (el.nextSibling.nodeType !== Node.DOCUMENT_NODE ||
+            (el.nextSibling.nodeType !== Node.ELEMENT_NODE ||
                 !el.nextSibling.matches(".gp, .go"))
         ) {
             el.nextSibling.remove()
