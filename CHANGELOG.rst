@@ -1,6 +1,11 @@
 Changelog
 =========
 
+`2025.4.1 <https://github.com/python/python-docs-theme/releases/tag/2025.4.1>`_
+-------------------------------------------------------------------------------
+
+* Fix copy button with multiple tracebacks by @tomasr8 in https://github.com/python/python-docs-theme/pull/240
+
 `2025.4 <https://github.com/python/python-docs-theme/releases/tag/2025.4>`_
 ---------------------------------------------------------------------------
 
