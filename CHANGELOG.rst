@@ -1,6 +1,11 @@
 Changelog
 =========
 
+`2025.5 <https://github.com/python/python-docs-theme/releases/tag/2025.5>`_
+---------------------------------------------------------------------------
+
+* Make the copy button only appear when hovered over or clicked on by @kevteg in https://github.com/python/python-docs-theme/pull/243
+
 `2025.4.1 <https://github.com/python/python-docs-theme/releases/tag/2025.4.1>`_
 -------------------------------------------------------------------------------
 
