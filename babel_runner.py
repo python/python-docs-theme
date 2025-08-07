@@ -1,4 +1,4 @@
-#!/usr/bin/venv python3
+#!/usr/bin/env python3
 """Script for handling translations with Babel"""
 from __future__ import annotations
 
@@ -15,9 +15,9 @@ INIT_PY = PROJECT_DIR / "python_docs_theme" / "__init__.py"
 # Global variables used by pybabel below (paths relative to PROJECT_DIR)
 DOMAIN = "messages"
 COPYRIGHT_HOLDER = "Python Software Foundation"
-LOCALES_DIR = "locales"
-POT_FILE = Path(LOCALES_DIR, f"{DOMAIN}.pot")
 SOURCE_DIR = "python_docs_theme"
+LOCALES_DIR = f"{SOURCE_DIR}/locales"
+POT_FILE = Path(LOCALES_DIR, f"{DOMAIN}.pot")
 MAPPING_FILE = ".babel.cfg"
 
 
