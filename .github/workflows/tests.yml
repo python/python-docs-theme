@@ -84,6 +84,3 @@ jobs:
       - name: Print .po file
         shell: bash
         run: cat python_docs_theme/locales/pt_BR/LC_MESSAGES/messages.po
-      - name: list files in locales dir
-        shell: bash
-        run: ls -R locales/
