@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import gettext
+import os
 from pathlib import Path
 
 TYPE_CHECKING = False
@@ -16,7 +17,7 @@ THEME_PATH = Path(__file__).resolve().parent
 def setup_translations(app):
     translation = gettext.translation(
         domain="messages",
-        localedir=str(THEME_PATH / "locales"),
+        localedir=os.fspath(THEME_PATH / "locales"),
         languages=[app.config.language],
         fallback=True,
     )
