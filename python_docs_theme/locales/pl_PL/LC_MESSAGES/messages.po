@@ -46,15 +46,15 @@ msgstr "Motyw"
 
 #: python_docs_theme/layout.html:62
 msgid "Auto"
-msgstr "Auto"
+msgstr "auto"
 
 #: python_docs_theme/layout.html:63
 msgid "Light"
-msgstr "Jasny"
+msgstr "jasny"
 
 #: python_docs_theme/layout.html:64
 msgid "Dark"
-msgstr "Ciemny"
+msgstr "ciemny"
 
 #: python_docs_theme/layout.html:96
 msgid "Menu"
@@ -69,16 +69,16 @@ msgid ""
 "This page is licensed under the Python Software Foundation License "
 "Version 2."
 msgstr ""
-"Ta strona jest licencjonowana na podstawie licencji Python Software "
-"Foundation License Version 2."
+"Ta strona jest objęta licencją Python Software "
+"Foundation w wersji 2."
 
 #: python_docs_theme/layout.html:149
 msgid ""
 "Examples, recipes, and other code in the documentation are additionally "
 "licensed under the Zero Clause BSD License."
 msgstr ""
-"Przykłady, przepisy i inny kod w dokumentacji są dodatkowo udostępnione "
-"na podstawie licencji Zero Clause BSD."
+"Przykłady, przepisy i inny kod w dokumentacji są dodatkowo objęte "
+"licencją Zero Clause BSD."
 
 #: python_docs_theme/layout.html:152
 #, python-format
