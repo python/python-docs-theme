@@ -80,7 +80,7 @@ jobs:
       - run: python babel_runner.py compile -l pt_BR
       - name: Print .pot file
         shell: bash
-        run: cat python_docs_theme/locale/messages.pot
+        run: cat python_docs_theme/locale/python-docs-theme.pot
       - name: Print .po file
         shell: bash
-        run: cat python_docs_theme/locale/pt_BR/LC_MESSAGES/messages.po
+        run: cat python_docs_theme/locale/pt_BR/LC_MESSAGES/python-docs-theme.po

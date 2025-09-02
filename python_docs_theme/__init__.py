@@ -6,8 +6,8 @@ from sphinx.locale import get_translation
 
 TYPE_CHECKING = False
 if TYPE_CHECKING:
-    from sphinx.application import Sphinx  # noqa: F401
-    from sphinx.util.typing import ExtensionMetadata  # noqa: F401
+    from sphinx.application import Sphinx
+    from sphinx.util.typing import ExtensionMetadata
 
 __version__ = "2025.5"
 
@@ -16,8 +16,9 @@ LOCALE_DIR = THEME_PATH / "locale"
 MESSAGE_CATALOG_NAME = "python-docs-theme"
 
 
-def setup(app):
+def setup(app: Sphinx) -> ExtensionMetadata:
     app.require_sphinx("7.3")
+
     app.add_html_theme("python_docs_theme", str(THEME_PATH))
     app.add_message_catalog(MESSAGE_CATALOG_NAME, LOCALE_DIR)
 
