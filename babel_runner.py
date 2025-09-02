@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
 """Script for handling translations with Babel"""
+
 from __future__ import annotations
 
 import argparse
@@ -8,17 +8,17 @@ import subprocess
 import tomllib
 from pathlib import Path
 
-PROJECT_DIR = Path(__file__).resolve().parent
-PYPROJECT_TOML = PROJECT_DIR / "pyproject.toml"
-INIT_PY = PROJECT_DIR / "python_docs_theme" / "__init__.py"
-
 # Global variables used by pybabel below (paths relative to PROJECT_DIR)
-DOMAIN = "messages"
+DOMAIN = "python-docs-theme"
 COPYRIGHT_HOLDER = "Python Software Foundation"
 SOURCE_DIR = "python_docs_theme"
-LOCALES_DIR = f"{SOURCE_DIR}/locales"
-POT_FILE = Path(LOCALES_DIR, f"{DOMAIN}.pot")
 MAPPING_FILE = ".babel.cfg"
+
+PROJECT_DIR = Path(__file__).resolve().parent
+PYPROJECT_TOML = PROJECT_DIR / "pyproject.toml"
+INIT_PY = PROJECT_DIR / SOURCE_DIR / "__init__.py"
+LOCALES_DIR = f"{SOURCE_DIR}/locale"
+POT_FILE = Path(LOCALES_DIR, f"{DOMAIN}.pot")
 
 
 def get_project_info() -> dict:
@@ -75,13 +75,24 @@ def init_locale(locale: str) -> None:
     if pofile.exists():
         print(f"There is already a message catalog for locale {locale}, skipping.")
         return
-    cmd = ["pybabel", "init", "-i", POT_FILE, "-d", LOCALES_DIR, "-l", locale]
+    cmd = [
+        "pybabel",
+        "init",
+        "-i",
+        POT_FILE,
+        "-d",
+        LOCALES_DIR,
+        "-D",
+        DOMAIN,
+        "-l",
+        locale,
+    ]
     subprocess.run(cmd, cwd=PROJECT_DIR, check=True)
 
 
 def update_catalogs(locale: str) -> None:
     """Update translations from existing message catalogs"""
-    cmd = ["pybabel", "update", "-i", POT_FILE, "-d", LOCALES_DIR]
+    cmd = ["pybabel", "update", "-i", POT_FILE, "-d", LOCALES_DIR, "-D", DOMAIN]
     if locale:
         cmd.extend(["-l", locale])
     subprocess.run(cmd, cwd=PROJECT_DIR, check=True)
@@ -89,7 +100,7 @@ def update_catalogs(locale: str) -> None:
 
 def compile_catalogs(locale: str) -> None:
     """Compile existing message catalogs"""
-    cmd = ["pybabel", "compile", "-d", LOCALES_DIR]
+    cmd = ["pybabel", "compile", "-d", LOCALES_DIR, "-D", DOMAIN]
     if locale:
         cmd.extend(["-l", locale])
     subprocess.run(cmd, cwd=PROJECT_DIR, check=True)
