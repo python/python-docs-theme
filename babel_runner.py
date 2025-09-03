@@ -15,9 +15,9 @@ SOURCE_DIR = "python_docs_theme"
 MAPPING_FILE = ".babel.cfg"
 
 PROJECT_DIR = Path(__file__).resolve().parent
-PYPROJECT_TOML = PROJECT_DIR / "pyproject.toml"
+PYPROJECT_TOML = Path(PROJECT_DIR, "pyproject.toml")
 INIT_PY = PROJECT_DIR / SOURCE_DIR / "__init__.py"
-LOCALES_DIR = f"{SOURCE_DIR}/locale"
+LOCALES_DIR = Path(f"{SOURCE_DIR}", "locale")
 POT_FILE = Path(LOCALES_DIR, f"{DOMAIN}.pot")
 
 
