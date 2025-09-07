@@ -14,7 +14,7 @@ jobs:
       matrix:
         branch: ["3.14", "3.13", "3.12"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.branch }}
@@ -59,7 +59,7 @@ jobs:
         # Test minimum supported and latest stable from 3.x series
         python-version: ["3.12", "3"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
@@ -71,7 +71,7 @@ jobs:
           pip install -r requirements.txt
       - name: Remove locale file for testing
         shell: bash
-        run: rm -rf locales/pt_BR/
+        run: rm -rf python_docs_theme/locale/pt_BR/
       - run: python babel_runner.py extract
       - run: python babel_runner.py init -l pt_BR
       - run: python babel_runner.py update
@@ -80,10 +80,7 @@ jobs:
       - run: python babel_runner.py compile -l pt_BR
       - name: Print .pot file
         shell: bash
-        run: cat locales/messages.pot
+        run: cat python_docs_theme/locale/python-docs-theme.pot
       - name: Print .po file
         shell: bash
-        run: cat locales/pt_BR/LC_MESSAGES/messages.po
-      - name: list files in locales dir
-        shell: bash
-        run: ls -R locales/
+        run: cat python_docs_theme/locale/pt_BR/LC_MESSAGES/python-docs-theme.po
