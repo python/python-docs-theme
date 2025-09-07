@@ -6,7 +6,7 @@ Changelog
 
 * Enable theme translation by @StanFromIreland in https://github.com/python/python-docs-theme/pull/246
 * Add Swedish translation by @yeager in https://github.com/python/python-docs-theme/pull/250
-* Pull Brazilian Portuguese, Simplified Chinese, Traditional Chinese translations from Transifex by @StanFromIreland in https://github.com/python/python-docs-theme/pull/253
+* Pull Brazilian Portuguese, Simplified Chinese, Traditional Chinese translations from `Transifex <https://explore.transifex.com/python-doc/python-docs-theme/>`_ in https://github.com/python/python-docs-theme/pull/253
 
 `2025.5 <https://github.com/python/python-docs-theme/releases/tag/2025.5>`_
 ---------------------------------------------------------------------------
