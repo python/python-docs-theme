@@ -1,0 +1,126 @@
+# Greek translations for python-docs-theme.
+# Copyright (C) 2025 Python Software Foundation
+# This file is distributed under the same license as the python-docs-theme
+# project.
+# Lysandros Nikolaou <lysandros@pygreece.org>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: python-docs-theme 2025.5\n"
+"Report-Msgid-Bugs-To: https://github.com/python/python-docs-theme/issues\n"
+"POT-Creation-Date: 2025-09-08 10:23+0300\n"
+"PO-Revision-Date: 2025-09-08 10:23+0300\n"
+"Last-Translator: Lysandros Nikolaou <lysandros@pygreece.org>\n"
+"Language: el\n"
+"Language-Team: PyGreece <organizers@pygreece.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: python_docs_theme/footerdonate.html:1
+msgid "The Python Software Foundation is a non-profit corporation."
+msgstr "Το Python Software Foundation είναι ένας μη κερδοσκοπικός οργανισμός."
+
+#: python_docs_theme/footerdonate.html:2
+msgid "Please donate."
+msgstr "Παρακαλώ κάντε μια δωρεά."
+
+#: python_docs_theme/layout.html:6
+msgid "Navigation"
+msgstr "Πλοήγηση"
+
+#: python_docs_theme/layout.html:51 python_docs_theme/layout.html:111
+msgid "Quick search"
+msgstr "Γρήγορη αναζήτηση"
+
+#: python_docs_theme/layout.html:52 python_docs_theme/layout.html:112
+msgid "Go"
+msgstr "Πήγαινε"
+
+#: python_docs_theme/layout.html:60
+msgid "Theme"
+msgstr "Θέμα"
+
+#: python_docs_theme/layout.html:62
+msgid "Auto"
+msgstr "Αυτόματα"
+
+#: python_docs_theme/layout.html:63
+msgid "Light"
+msgstr "Ανοιχτό"
+
+#: python_docs_theme/layout.html:64
+msgid "Dark"
+msgstr "Σκούρο"
+
+#: python_docs_theme/layout.html:96
+msgid "Menu"
+msgstr "Μενού"
+
+#: python_docs_theme/layout.html:142
+msgid "Copyright"
+msgstr "Πνευματικά δικαιώματα"
+
+#: python_docs_theme/layout.html:147
+msgid ""
+"This page is licensed under the Python Software Foundation License "
+"Version 2."
+msgstr ""
+"Η σελίδα αυτή διατίθεται υπό την άδεια χρήσης του Python Software "
+"Foundation, 2η έκδοση."
+
+#: python_docs_theme/layout.html:149
+msgid ""
+"Examples, recipes, and other code in the documentation are additionally "
+"licensed under the Zero Clause BSD License."
+msgstr ""
+"Παραδείγματα, οδηγοί και λοιπά κομμάτια κώδικα στην τεκμηρίωση διατίθενται "
+"επιπλέον υπό την άδεια χρήσης Zero Clause BSD."
+
+#: python_docs_theme/layout.html:152
+#, python-format
+msgid ""
+"See <a href=\"%(license_file)s\">History and License</a> for more "
+"information."
+msgstr ""
+"Δες την <a href=\"%(license_file)s\">Ιστορία και Άδεια χρήσης</a> για "
+"περισσότερες πληροφορίες."
+
+#: python_docs_theme/layout.html:155
+#, python-format
+msgid "Hosted on %(hosted_on)s."
+msgstr "Φιλοξενείται στο %(hosted_on)s."
+
+#: python_docs_theme/layout.html:163
+#, python-format
+msgid "Last updated on %(last_updated)s."
+msgstr "Τελευταία ενημέρωση στις %(last_updated)s."
+
+#: python_docs_theme/layout.html:166
+#, python-format
+msgid "<a href=\"%(theme_issues_url)s\">Found a bug</a>?"
+msgstr "<a href=\"%(theme_issues_url)s\">Βρήκες ένα bug</a>?"
+
+#: python_docs_theme/layout.html:170
+#, python-format
+msgid ""
+"Created using <a href=\"https://www.sphinx-doc.org/\">Sphinx</a> "
+"%(sphinx_version)s."
+msgstr ""
+"Δημιουργήθηκε με την χρήση του <a href=\"https://www.sphinx-doc.org/\">Sphinx</a> "
+"%(sphinx_version)s."
+
+#: python_docs_theme/static/copybutton.js:30
+#: python_docs_theme/static/copybutton.js:55
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+#: python_docs_theme/static/copybutton.js:31
+msgid "Copy to clipboard"
+msgstr "Αντιγραφή στο πρόχειρο"
+
+#: python_docs_theme/static/copybutton.js:53
+msgid "Copied!"
+msgstr "Αντιγράφηκε!"
