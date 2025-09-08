@@ -2,7 +2,7 @@ Changelog
 =========
 
 `2025.9.1 <https://github.com/python/python-docs-theme/releases/tag/2025.9.1>`_
----------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 * Add Japanese, Turkish and Spanish translations from Transifex in https://github.com/python/python-docs-theme/pull/259
 
