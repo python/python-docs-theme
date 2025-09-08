@@ -37,7 +37,7 @@ msgstr "Γρήγορη αναζήτηση"
 
 #: python_docs_theme/layout.html:52 python_docs_theme/layout.html:112
 msgid "Go"
-msgstr "Πήγαινε"
+msgstr "Μετάβαση"
 
 #: python_docs_theme/layout.html:60
 msgid "Theme"
@@ -49,7 +49,7 @@ msgstr "Αυτόματα"
 
 #: python_docs_theme/layout.html:63
 msgid "Light"
-msgstr "Ανοιχτό"
+msgstr "Φωτεινό"
 
 #: python_docs_theme/layout.html:64
 msgid "Dark"
