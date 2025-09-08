@@ -1,13 +1,18 @@
 Changelog
 =========
 
+`2025.9.1 <https://github.com/python/python-docs-theme/releases/tag/2025.9.1>`_
+-------------------------------------------------------------------------------
+
+* Add Japanese, Turkish and Spanish translations from Transifex in https://github.com/python/python-docs-theme/pull/259
+
 `2025.9 <https://github.com/python/python-docs-theme/releases/tag/2025.9>`_
 ---------------------------------------------------------------------------
 
 * Enable theme translation and add Polish by @StanFromIreland in https://github.com/python/python-docs-theme/pull/246
 * Add Greek translation by @lysnikolaou and @skpanagiotis in https://github.com/python/python-docs-theme/pull/256 and https://github.com/python/python-docs-theme/pull/257
 * Add Swedish translation by @yeager in https://github.com/python/python-docs-theme/pull/250
-* Pull Brazilian Portuguese, Simplified Chinese, Traditional Chinese, Japanese, Turkish and Spanish translations from `Transifex <https://explore.transifex.com/python-doc/python-docs-theme/>`_ in https://github.com/python/python-docs-theme/pull/253 and https://github.com/python/python-docs-theme/pull/259
+* Add Brazilian Portuguese, Simplified Chinese and Traditional Chinese translations from `Transifex <https://explore.transifex.com/python-doc/python-docs-theme/>`_ in https://github.com/python/python-docs-theme/pull/253
 
 `2025.5 <https://github.com/python/python-docs-theme/releases/tag/2025.5>`_
 ---------------------------------------------------------------------------
