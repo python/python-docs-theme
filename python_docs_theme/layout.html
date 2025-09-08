@@ -3,7 +3,6 @@
 {%- macro relbar() %}
 {# modified from sphinx/themes/basic/layout.html #}
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>{{ _('Navigation') }}</h3>
       <ul>
           {%- for rellink in rellinks %}
           <li class="right" {% if loop.first %}style="margin-right: 10px"{% endif %}>
