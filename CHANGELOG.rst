@@ -5,7 +5,7 @@ Changelog
 ---------------------------------------------------------------------------
 
 * Enable theme translation and add Polish by @StanFromIreland in https://github.com/python/python-docs-theme/pull/246
-* Add Greek translation by @lysnikolaou in https://github.com/python/python-docs-theme/pull/256
+* Add Greek translation by @lysnikolaou and @skpanagiotis in https://github.com/python/python-docs-theme/pull/256 and https://github.com/python/python-docs-theme/pull/257
 * Add Swedish translation by @yeager in https://github.com/python/python-docs-theme/pull/250
 * Pull Brazilian Portuguese, Simplified Chinese, Traditional Chinese translations from `Transifex <https://explore.transifex.com/python-doc/python-docs-theme/>`_ in https://github.com/python/python-docs-theme/pull/253
 
