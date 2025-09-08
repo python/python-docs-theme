@@ -9,7 +9,7 @@ if TYPE_CHECKING:
     from sphinx.application import Sphinx
     from sphinx.util.typing import ExtensionMetadata
 
-__version__ = "2025.5"
+__version__ = "2025.9"
 
 THEME_PATH = Path(__file__).resolve().parent
 LOCALE_DIR = THEME_PATH / "locale"
