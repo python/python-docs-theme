@@ -7,7 +7,6 @@
 # Translators:
 # Cristián Maureira-Fredes, 2025
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: python-docs-theme 2025.5\n"
