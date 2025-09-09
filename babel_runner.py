@@ -100,7 +100,7 @@ def update_catalogs(locale: str) -> None:
 
 def compile_catalogs(locale: str) -> None:
     """Compile existing message catalogs"""
-    cmd = ["pybabel", "compile", "-d", LOCALES_DIR, "-D", DOMAIN]
+    cmd = ["pybabel", "compile", "-d", LOCALES_DIR, "-D", DOMAIN, "--use-fuzzy"]
     if locale:
         cmd.extend(["-l", locale])
     subprocess.run(cmd, cwd=PROJECT_DIR, check=True)
