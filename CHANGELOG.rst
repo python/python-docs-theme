@@ -1,6 +1,14 @@
 Changelog
 =========
 
+`2025.9.2 <https://github.com/python/python-docs-theme/releases/tag/2025.9.2>`_
+-------------------------------------------------------------------------------
+
+* Add Korean translation from Transifex in https://github.com/python/python-docs-theme/pull/264
+* Add German translation by @cmaureir in https://github.com/python/python-docs-theme/pull/262
+* Fix compilation of translations and loading of translations on pages with html
+  source in https://github.com/python/python-docs-theme/pull/263
+
 `2025.9.1 <https://github.com/python/python-docs-theme/releases/tag/2025.9.1>`_
 -------------------------------------------------------------------------------
 
