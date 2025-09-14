@@ -2,6 +2,7 @@
 CPYTHON_PATH = ../cpython
 PYTHON       = python3
 PACKAGE_ABS_PATH = $(shell pwd)/$(shell find dist/python-docs-theme-*.tar.gz)
+SPNINXOPTS       ?=
 
 
 .PHONY: help
@@ -22,7 +23,7 @@ venv:
 .PHONY: html
 html: venv
 	cd $(CPYTHON_PATH)/Doc && \
-		make html
+		make SPHINXOPTS="$(SPHINXOPTS)" html
 
 .PHONY: htmlview
 htmlview: html
