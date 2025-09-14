@@ -8,6 +8,7 @@ Changelog
 * Add German translation by @cmaureir in https://github.com/python/python-docs-theme/pull/262
 * Fix compilation of translations and loading of translations on pages with html
   source in https://github.com/python/python-docs-theme/pull/263
+* Fix search button cutting off long translations in https://github.com/python/python-docs-theme/pull/268
 
 `2025.9.1 <https://github.com/python/python-docs-theme/releases/tag/2025.9.1>`_
 -------------------------------------------------------------------------------
