@@ -137,8 +137,10 @@
 {% block footer %}
     <div class="footer">
     &copy; {% if theme_copyright_url or hasdoc('copyright') %}
-      <a href="{% if theme_copyright_url %}{{ theme_copyright_url }}{% else %}{{ pathto('copyright') }}{% endif %}">{% trans %}Copyright{% endtrans %}</a>
-    {% endif %} {{ copyright|e }}.
+      <a href="{% if theme_copyright_url %}{{ theme_copyright_url }}{% else %}{{ pathto('copyright') }}{% endif %}">
+    {% endif %}
+    {% trans %}Copyright{% endtrans %}{% if theme_copyright_url or hasdoc('copyright') %}</a>
+      {% endif %} {{ copyright|e }}.
     <br>
     {% trans %}This page is licensed under the Python Software Foundation License Version 2.{% endtrans %}
     <br>
