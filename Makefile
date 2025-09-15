@@ -2,7 +2,7 @@
 CPYTHON_PATH = ../cpython
 PYTHON       = python3
 PACKAGE_ABS_PATH = $(shell pwd)/$(shell find dist/python-docs-theme-*.tar.gz)
-SPNINXOPTS       ?=
+SPHINXOPTS   =
 
 
 .PHONY: help
