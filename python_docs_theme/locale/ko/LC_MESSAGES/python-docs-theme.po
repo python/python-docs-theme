@@ -1,0 +1,124 @@
+# Translations template for python-docs-theme.
+# Copyright (C) 2025 Python Software Foundation
+# This file is distributed under the same license as the python-docs-theme
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+# Translators:
+# wonsuk yang, 2025
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: python-docs-theme 2025.5\n"
+"Report-Msgid-Bugs-To: https://github.com/python/python-docs-theme/issues\n"
+"POT-Creation-Date: 2025-09-06 08:40+0100\n"
+"PO-Revision-Date: 2025-09-06 07:41+0000\n"
+"Last-Translator: wonsuk yang, 2025\n"
+"Language-Team: Korean (https://app.transifex.com/python-doc/teams/5390/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: python_docs_theme/footerdonate.html:1
+msgid "The Python Software Foundation is a non-profit corporation."
+msgstr "파이썬 소프트웨어 재단은 비영리 재단입니다."
+
+#: python_docs_theme/footerdonate.html:2
+msgid "Please donate."
+msgstr "기부를 부탁드립니다."
+
+#: python_docs_theme/layout.html:6
+msgid "Navigation"
+msgstr "내비게이션"
+
+#: python_docs_theme/layout.html:51 python_docs_theme/layout.html:111
+msgid "Quick search"
+msgstr "빠른 검색"
+
+#: python_docs_theme/layout.html:52 python_docs_theme/layout.html:112
+msgid "Go"
+msgstr "시작"
+
+#: python_docs_theme/layout.html:60
+msgid "Theme"
+msgstr "테마"
+
+#: python_docs_theme/layout.html:62
+msgid "Auto"
+msgstr "자동"
+
+#: python_docs_theme/layout.html:63
+msgid "Light"
+msgstr "라이트"
+
+#: python_docs_theme/layout.html:64
+msgid "Dark"
+msgstr "다크"
+
+#: python_docs_theme/layout.html:96
+msgid "Menu"
+msgstr "메뉴"
+
+#: python_docs_theme/layout.html:142
+msgid "Copyright"
+msgstr "저작권"
+
+#: python_docs_theme/layout.html:147
+msgid ""
+"This page is licensed under the Python Software Foundation License Version "
+"2."
+msgstr "해당하는 페이지의 저작권은 파이썬 소프트웨어 재단 저작권 라이센스 버전 2를 통해 보호받음을 고지 드립니다."
+
+#: python_docs_theme/layout.html:149
+msgid ""
+"Examples, recipes, and other code in the documentation are additionally "
+"licensed under the Zero Clause BSD License."
+msgstr ""
+"해당하는 문서 내의 예제, 사용법, 그리고 다른 코드들은 또한 Zero Clause BSD 라이센스를 통해 보호받음을 고지 드립니다."
+
+#: python_docs_theme/layout.html:152
+#, python-format
+msgid ""
+"See <a href=\"%(license_file)s\">History and License</a> for more "
+"information."
+msgstr "보다 다양한 정보를 위해서는 <a href=\"%(license_file)s\">라이센스와 기록물</a> 을 참고 부탁드립니다."
+
+#: python_docs_theme/layout.html:155
+#, python-format
+msgid "Hosted on %(hosted_on)s."
+msgstr "호스트 주소는 다음과 같습니다: %(hosted_on)s."
+
+#: python_docs_theme/layout.html:163
+#, python-format
+msgid "Last updated on %(last_updated)s."
+msgstr "마지막 업데이트: %(last_updated)s."
+
+#: python_docs_theme/layout.html:166
+#, python-format
+msgid "<a href=\"%(theme_issues_url)s\">Found a bug</a>?"
+msgstr "<a href=\"%(theme_issues_url)s\">문제가 생기셨나요</a>?"
+
+#: python_docs_theme/layout.html:170
+#, python-format
+msgid ""
+"Created using <a href=\"https://www.sphinx-doc.org/\">Sphinx</a> "
+"%(sphinx_version)s."
+msgstr ""
+"해당하는 문서는 <a href=\"https://www.sphinx-doc.org/\">스핑크스</a> "
+"%(sphinx_version)s를 통해 만들어졌습니다."
+
+#: python_docs_theme/static/copybutton.js:30
+#: python_docs_theme/static/copybutton.js:55
+msgid "Copy"
+msgstr "복사"
+
+#: python_docs_theme/static/copybutton.js:31
+msgid "Copy to clipboard"
+msgstr "클립보드에 복사"
+
+#: python_docs_theme/static/copybutton.js:53
+msgid "Copied!"
+msgstr "복사되었습니다!"
