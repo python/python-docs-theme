@@ -10,6 +10,7 @@ description = "The Sphinx theme for the CPython docs and related projects"
 readme = "README.md"
 license = "PSF-2.0"
 license-files = [ "LICENSE" ]
+authors = [ { name = "python-docs-theme maintainers" } ]
 requires-python = ">=3.12"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
