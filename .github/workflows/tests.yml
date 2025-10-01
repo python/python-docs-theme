@@ -15,7 +15,7 @@ jobs:
         branch: ["3.14", "3.13", "3.12"]
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.branch }}
           allow-prereleases: true
@@ -60,7 +60,7 @@ jobs:
         python-version: ["3.12", "3"]
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
           allow-prereleases: true
