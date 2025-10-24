@@ -7,7 +7,7 @@ Changelog
 * Add Romanian translation by @octaG-M in https://github.com/python/python-docs-theme/pull/272
 * Add Arabic and Russian translations by @StanFromIreland in https://github.com/python/python-docs-theme/pull/274
 * Add French translation by @JulienPalard in https://github.com/python/python-docs-theme/pull/275
-* Update authors in `pyproject.toml` by @StanFromIreland in https://github.com/python/python-docs-theme/pull/271
+* Update authors in ``pyproject.toml`` by @StanFromIreland in https://github.com/python/python-docs-theme/pull/271
 * Add link to devguide in README by @StanFromIreland in https://github.com/python/python-docs-theme/pull/266
 
 `2025.9.2 <https://github.com/python/python-docs-theme/releases/tag/2025.9.2>`_
