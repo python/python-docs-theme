@@ -22,6 +22,13 @@ To use this theme, add the following to `conf.py`:
 
 - `html_sidebars`, defaults taken from https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_sidebars
 
+
+## Translation
+
+This theme supports localization. For more information see the [Python Developer's
+Guide](https://devguide.python.org/documentation/translations/translating/#how-do-i-translate-the-python-docs-sphinx-theme).
+
+
 ## Preview
 
 See a demo of the CPython docs using this theme:
