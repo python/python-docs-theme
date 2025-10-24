@@ -1,50 +1,42 @@
-Changelog
-=========
+# Changelog
 
-`2025.10 <https://github.com/python/python-docs-theme/releases/tag/2025.10>`_
--------------------------------------------------------------------------------
+## [2025.10](https://github.com/python/python-docs-theme/releases/tag/2025.10)
 
 * Add Romanian translation by @octaG-M in https://github.com/python/python-docs-theme/pull/272
 * Add Arabic and Russian translations by @StanFromIreland in https://github.com/python/python-docs-theme/pull/274
 * Add French translation by @JulienPalard in https://github.com/python/python-docs-theme/pull/275
-* Update authors in ``pyproject.toml`` by @StanFromIreland in https://github.com/python/python-docs-theme/pull/271
+* Update authors in `pyproject.toml` by @StanFromIreland in https://github.com/python/python-docs-theme/pull/271
 * Add link to devguide in README by @StanFromIreland in https://github.com/python/python-docs-theme/pull/266
 
-`2025.9.2 <https://github.com/python/python-docs-theme/releases/tag/2025.9.2>`_
--------------------------------------------------------------------------------
+## [2025.9.2](https://github.com/python/python-docs-theme/releases/tag/2025.9.2)
 
 * Add Korean and Indonesian translations from Transifex in https://github.com/python/python-docs-theme/pull/264
 * Add German translation by @cmaureir in https://github.com/python/python-docs-theme/pull/262
 * Fix compilation of translations and loading of translations on pages with html
   source in https://github.com/python/python-docs-theme/pull/263
 * Fix search button cutting off long translations in https://github.com/python/python-docs-theme/pull/268
-* Fix ``Copy`` button copying line numbers by @StanFromIreland in https://github.com/python/python-docs-theme/pull/270
+* Fix `Copy` button copying line numbers by @StanFromIreland in https://github.com/python/python-docs-theme/pull/270
 
-`2025.9.1 <https://github.com/python/python-docs-theme/releases/tag/2025.9.1>`_
--------------------------------------------------------------------------------
+## [2025.9.1](https://github.com/python/python-docs-theme/releases/tag/2025.9.1)
 
 * Add Japanese, Turkish and Spanish translations from Transifex in https://github.com/python/python-docs-theme/pull/259
 
-`2025.9 <https://github.com/python/python-docs-theme/releases/tag/2025.9>`_
----------------------------------------------------------------------------
+## [2025.9](https://github.com/python/python-docs-theme/releases/tag/2025.9)
 
 * Enable theme translation and add Polish by @StanFromIreland in https://github.com/python/python-docs-theme/pull/246
 * Add Greek translation by @lysnikolaou and @skpanagiotis in https://github.com/python/python-docs-theme/pull/256 and https://github.com/python/python-docs-theme/pull/257
 * Add Swedish translation by @yeager in https://github.com/python/python-docs-theme/pull/250
-* Add Brazilian Portuguese, Simplified Chinese and Traditional Chinese translations from `Transifex <https://explore.transifex.com/python-doc/python-docs-theme/>`_ in https://github.com/python/python-docs-theme/pull/253
+* Add Brazilian Portuguese, Simplified Chinese and Traditional Chinese translations from [Transifex](https://explore.transifex.com/python-doc/python-docs-theme/) in https://github.com/python/python-docs-theme/pull/253
 
-`2025.5 <https://github.com/python/python-docs-theme/releases/tag/2025.5>`_
----------------------------------------------------------------------------
+## [2025.5](https://github.com/python/python-docs-theme/releases/tag/2025.5)
 
 * Make the copy button only appear when hovered over or clicked on by @kevteg in https://github.com/python/python-docs-theme/pull/243
 
-`2025.4.1 <https://github.com/python/python-docs-theme/releases/tag/2025.4.1>`_
--------------------------------------------------------------------------------
+## [2025.4.1](https://github.com/python/python-docs-theme/releases/tag/2025.4.1)
 
 * Fix copy button with multiple tracebacks by @tomasr8 in https://github.com/python/python-docs-theme/pull/240
 
-`2025.4 <https://github.com/python/python-docs-theme/releases/tag/2025.4>`_
----------------------------------------------------------------------------
+## [2025.4](https://github.com/python/python-docs-theme/releases/tag/2025.4)
 
 * Require Sphinx 7.3 by @AA-Turner in https://github.com/python/python-docs-theme/pull/221
 * Add support for Python 3.14 by @hugovk https://github.com/python/python-docs-theme/pull/236
@@ -55,8 +47,7 @@ Changelog
 * Remove self-closing tags by @hugovk in https://github.com/python/python-docs-theme/pull/226
 * Replace deprecated classifier with licence expression (PEP 639) by @hugovk in https://github.com/python/python-docs-theme/pull/237
 
-`2025.2 <https://github.com/python/python-docs-theme/releases/tag/2025.2>`_
----------------------------------------------------------------------------
+## [2025.2](https://github.com/python/python-docs-theme/releases/tag/2025.2)
 
 - Note minimum requirements for Sphinx (#216)
     Contributed by Adam Turner
@@ -64,17 +55,15 @@ Changelog
     Contributed by Tomas Roun
 - Make sidebar width more flexible (#218)
     Contributed by Tomas Roun
-- Set ``__version__`` in the runtime package (#222)
+- Set `__version__` in the runtime package (#222)
     Contributed by Adam Turner
 
-`2024.12 <https://github.com/python/python-docs-theme/releases/tag/2024.12>`_
------------------------------------------------------------------------------
+## [2024.12](https://github.com/python/python-docs-theme/releases/tag/2024.12)
 
 - Hide header and search bar when printing (#204)
     Contributed by Hugo van Kemenade
 
-`2024.10 <https://github.com/python/python-docs-theme/releases/tag/2024.10>`_
------------------------------------------------------------------------------
+## [2024.10](https://github.com/python/python-docs-theme/releases/tag/2024.10)
 
 - Add support for Python 3.13 (#196)
     Contributed by Hugo van Kemenade
@@ -85,60 +74,53 @@ Changelog
 - Generate digital attestations for PyPI (PEP 740) (#198)
     Contributed by Hugo van Kemenade
 
-`2024.6 <https://github.com/python/python-docs-theme/releases/tag/2024.6>`_
----------------------------------------------------------------------------
+## [2024.6](https://github.com/python/python-docs-theme/releases/tag/2024.6)
 
 - Add backgrounds and borders to admonitions (#190)
     Contributed by Hugo van Kemenade
 - Use different colour for 'Return value: Borrowed reference' (#188)
     Contributed by Hugo van Kemenade
 
-`2024.4 <https://github.com/python/python-docs-theme/releases/tag/2024.4>`_
----------------------------------------------------------------------------
+## [2024.4](https://github.com/python/python-docs-theme/releases/tag/2024.4)
 
 - Add colour to version change directives (#185)
     Contributed by Hugo van Kemenade
-- Only show 'Last updated on ...' when ``last_updated`` defined (#183)
+- Only show 'Last updated on ...' when `last_updated` defined (#183)
     Contributed by Hugo van Kemenade
 - Use system font stack for all code (#186)
     Contributed by Hugo van Kemenade
 
-`2024.3 <https://github.com/python/python-docs-theme/releases/tag/2024.3>`_
----------------------------------------------------------------------------
+## [2024.3](https://github.com/python/python-docs-theme/releases/tag/2024.3)
 
 - Modernise font: use system font stack to improve text readability and webpage performance (#174)
     Contributed by Hugo van Kemenade
 - Remove incorrect CSS property (#178)
     Contributed by Kerim Kabirov
 
-`2024.2 <https://github.com/python/python-docs-theme/releases/tag/2024.2>`_
----------------------------------------------------------------------------
+## [2024.2](https://github.com/python/python-docs-theme/releases/tag/2024.2)
 
 - Do not underline navigation links (#169)
    Contributed by Hugo van Kemenade
 - Only apply underline offset to code formatting for underline visibility (#171)
    Contributed by Hugo van Kemenade
 
-`2024.1 <https://github.com/python/python-docs-theme/releases/tag/2024.1>`_
----------------------------------------------------------------------------
+## [2024.1](https://github.com/python/python-docs-theme/releases/tag/2024.1)
 
 - Underline links for readability and a11y (#160, #166)
    Contributed by Hugo van Kemenade
-- Add ``hosted_on`` variable for a link in the footer (#165)
+- Add `hosted_on` variable for a link in the footer (#165)
    Contributed by Hugo van Kemenade
-- Consistently reference ``theme_root_icon`` (#163)
+- Consistently reference `theme_root_icon` (#163)
    Contributed by Marko Budiselic
 - Dark mode: fix contrast of footer highlight (#162)
    Contributed by Hugo van Kemenade
 
-`2023.9 <https://github.com/python/python-docs-theme/releases/tag/2023.9>`_
----------------------------------------------------------------------------
+## [2023.9](https://github.com/python/python-docs-theme/releases/tag/2023.9)
 
 - Focus search box when pressing slash (#153)
    Contributed by Hugo van Kemenade
 
-`2023.8 <https://github.com/python/python-docs-theme/releases/tag/2023.8>`_
----------------------------------------------------------------------------
+## [2023.8](https://github.com/python/python-docs-theme/releases/tag/2023.8)
 
 - Add Python 3.12 and 3.13 classifiers (#147)
    Contributed by Hugo van Kemenade
@@ -147,14 +129,13 @@ Changelog
 - Restore the menu on mobile devices (inadvertently broken in 2023.7) (#146)
    Contributed by Hugo van Kemenade
 
-`2023.7 <https://github.com/python/python-docs-theme/releases/tag/2023.7>`_
----------------------------------------------------------------------------
+## [2023.7](https://github.com/python/python-docs-theme/releases/tag/2023.7)
 
 - Fix compatibility with Sphinx 7.1 (#137)
    Contributed by Pradyun Gedam
 - Enable the slash keypress to focus the search field (#141)
    Contributed by Mike Fiedler
-- Sphinx 6.2 fix: add ``nav.contents`` where ``div.topic`` is used (#138)
+- Sphinx 6.2 fix: add `nav.contents` where `div.topic` is used (#138)
    Contributed by Hugo van Kemenade
 - Dark mode: fix contrast for C++ specific styling (#133)
    Contributed by Hugo van Kemenade
@@ -163,29 +144,26 @@ Changelog
 - Test with Python 3.12 (#140)
    Contributed by Hugo van Kemenade
 
-`2023.5 <https://github.com/python/python-docs-theme/releases/tag/2023.5>`_
----------------------------------------------------------------------------
+## [2023.5](https://github.com/python/python-docs-theme/releases/tag/2023.5)
 
 - Add a dark theme. (#44)
    Contributed by Nils K
 - Fix: Remove searchbox id from form. (fixes #117)
    Contributed by Nils K
-- Update ``python-docs-theme`` to work with Sphinx 5 & 6. (#99 & #127)
+- Update `python-docs-theme` to work with Sphinx 5 & 6. (#99 & #127)
    Contributed by Adam Turner
-- Override font for ``.sig`` for consistency with other code blocks. (#121)
+- Override font for `.sig` for consistency with other code blocks. (#121)
    Contributed by Chris Warrick
 - Dark mode: add class to invert image brightness. (#128)
    Contributed by Hugo van Kemenade
 
 
-`2023.3.1 <https://github.com/python/python-docs-theme/releases/tag/2023.3.1>`_
--------------------------------------------------------------------------------
+## [2023.3.1](https://github.com/python/python-docs-theme/releases/tag/2023.3.1)
 
 - Skip cache-busting for old Sphinx #113
 
 
-`2023.3 <https://github.com/python/python-docs-theme/releases/tag/2023.3>`_
----------------------------------------------------------------------------
+## [2023.3](https://github.com/python/python-docs-theme/releases/tag/2023.3)
 
 - Fix problem with monospace rendering in Vivaldi #104
 - Fix mobile nav obstructing content #96
@@ -193,30 +171,26 @@ Changelog
 - Append a hash ?digest to CSS files for cache-busting #108
 
 
-`2022.1 <https://github.com/python/python-docs-theme/releases/tag/2022.1>`_
-----------------------------------------------------------------------------
+## [2022.1](https://github.com/python/python-docs-theme/releases/tag/2022.1)
 
 - Add a configuration for license URL. (#90)
 - Exclude the floating navbar from CHM help. (#84)
 - Make sidebar scrollable and sticky (on modern browsers) (#91)
 
 
-`2021.11.1 <https://github.com/python/python-docs-theme/releases/tag/2021.11.1>`_
-----------------------------------------------------------------------------------
+## [2021.11.1](https://github.com/python/python-docs-theme/releases/tag/2021.11.1)
 
 - Fix monospace again, on buggy Google Chrome (#87)
    Contributed by Tushar Sadhwani
 
 
-`2021.11 <https://github.com/python/python-docs-theme/releases/tag/2021.11>`_
-------------------------------------------------------------------------------
+## [2021.11](https://github.com/python/python-docs-theme/releases/tag/2021.11)
 
 - Fix monospace on buggy Google Chrome (#85)
    Contributed by Tushar Sadhwani
 
 
-`2021.8 <https://github.com/python/python-docs-theme/releases/tag/2021.8>`_
------------------------------------------------------------------------------
+## [2021.8](https://github.com/python/python-docs-theme/releases/tag/2021.8)
 
 - Add the copyright_url variable in the theme (#67)
    Contributed by jablonskidev
@@ -228,8 +202,7 @@ Changelog
    Contributed by Olga Bulat
 
 
-`2021.5 <https://github.com/python/python-docs-theme/releases/tag/2021.5>`_
------------------------------------------------------------------------------
+## [2021.5](https://github.com/python/python-docs-theme/releases/tag/2021.5)
 
 - Make the theme responsive (#46)
    Contributed by Olga Bulat.
@@ -243,8 +216,7 @@ Changelog
    Contributed by Julien Palard.
 
 
-`2020.12 <https://github.com/python/python-docs-theme/releases/tag/v2020.12>`_
-------------------------------------------------------------------------------
+## [2020.12](https://github.com/python/python-docs-theme/releases/tag/v2020.12)
 
 - Updated the readme, to remind user to install the package in a virtual environment. (#41)
    Contributed by Mariatta.
@@ -261,12 +233,10 @@ Changelog
 - Fixed code bgcolor and codetextcolor for Sphinx 3.1.0+ (#57)
    Contributed by Zhiming Wang.
 
-2018.7
-------
-Corresponds to `44a8f30 <https://github.com/python/python-docs-theme/commit/44a8f306db9ec86d277a8a687538d5d51e415130>`_
+## 2018.7
+Corresponds to [44a8f30](https://github.com/python/python-docs-theme/commit/44a8f306db9ec86d277a8a687538d5d51e415130)
 
 
-`2018.2 <https://github.com/python/python-docs-theme/releases/tag/2018.2>`_
----------------------------------------------------------------------------
+## [2018.2 <https://github.com/python/python-docs-theme/releases/tag/2018.2)
 
 Initial release.

@@ -1,7 +1,7 @@
 How to release
 --------------
 
-- Update ``CHANGELOG.rst``
+- Update ``CHANGELOG.md``
 - Bump version (YYYY.MM) in ``python_docs_theme/__init__.py``
 - Commit
 - Push to check tests pass on
