@@ -25,7 +25,7 @@ To use this theme, add the following to `conf.py`:
 
 ## Translation
 
-This theme supports localization.  For more information see the [Python Developer's
+This theme supports localization. For more information see the [Python Developer's
 Guide](https://devguide.python.org/documentation/translations/translating/#how-do-i-translate-the-python-docs-sphinx-theme).
 
 
