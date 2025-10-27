@@ -237,6 +237,6 @@
 Corresponds to [44a8f30](https://github.com/python/python-docs-theme/commit/44a8f306db9ec86d277a8a687538d5d51e415130)
 
 
-## [2018.2 <https://github.com/python/python-docs-theme/releases/tag/2018.2)
+## [2018.2](https://github.com/python/python-docs-theme/releases/tag/2018.2)
 
 Initial release.
