@@ -1,17 +1,17 @@
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.3
+    rev: v0.14.5
     hooks:
       - id: ruff
         args: [--exit-non-zero-on-fix]
 
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 24.10.0
+    rev: 25.11.0
     hooks:
       - id: black
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: check-case-conflict
       - id: check-merge-conflict
@@ -22,23 +22,23 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.31.0
+    rev: 0.35.0
     hooks:
       - id: check-dependabot
       - id: check-github-workflows
 
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.7
+    rev: v1.7.8
     hooks:
       - id: actionlint
 
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: v2.5.0
+    rev: v2.11.1
     hooks:
       - id: pyproject-fmt
 
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: v0.23
+    rev: v0.24.1
     hooks:
       - id: validate-pyproject
 
