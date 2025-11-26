@@ -2,6 +2,8 @@ name: Tests
 
 on: [push, pull_request, workflow_dispatch]
 
+permissions: {}
+
 env:
   FORCE_COLOR: 1
 
@@ -15,6 +17,8 @@ jobs:
         branch: ["3.14", "3.13", "3.12"]
     steps:
       - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
       - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.branch }}
@@ -60,6 +64,8 @@ jobs:
         python-version: ["3.12", "3"]
     steps:
       - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
       - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
