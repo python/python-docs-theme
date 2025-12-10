@@ -1,5 +1,13 @@
 # Changelog
 
+## [2025.12](https://github.com/python/python-docs-theme/releases/tag/2025.12)
+
+* Add green, red and yellow side borders for code examples by @hugovk in https://github.com/python/python-docs-theme/pull/285
+* Add Portuguese translation by @NyaPuma and @StanFromIreland in https://github.com/python/python-docs-theme/pull/281
+* Add support for Python 3.15 by @hugovk in https://github.com/python/python-docs-theme/pull/282
+* Convert CHANGELOG and CONTRIBUTING from .rst to .md by @hugovk in https://github.com/python/python-docs-theme/pull/277
+* Add zizmor to CI and fix findings by @hugovk in https://github.com/python/python-docs-theme/pull/283
+
 ## [2025.10](https://github.com/python/python-docs-theme/releases/tag/2025.10)
 
 * Add Romanian translation by @octaG-M in https://github.com/python/python-docs-theme/pull/272
