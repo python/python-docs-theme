@@ -247,6 +247,21 @@ div.body {
     }
 }
 
+div.code-block-caption {
+    background-color: #eee;
+    border: 1px solid #ac9;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    padding: 0.3em 0.6em;
+    font-size: 90%;
+    color: #333;
+}
+
+div.literal-block-wrapper pre {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
 /* Admonitions */
 :root {
     --admonition-background: #eee;
