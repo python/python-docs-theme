@@ -425,6 +425,12 @@ div.footer a:hover {
     color: #229;
 }
 
+dl.field-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 dl > dt span ~ em,
 .sig {
     font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
