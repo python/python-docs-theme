@@ -52,7 +52,7 @@ jobs:
         run: |
           cat ./logs/docsbuild.log
       - name: Upload
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: doc-html-${{ matrix.python-version }}
           path: www/
