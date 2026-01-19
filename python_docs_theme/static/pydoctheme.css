@@ -151,6 +151,7 @@ div.sphinxsidebar {
     border-radius: 5px;
     line-height: 130%;
     font-size: smaller;
+    transition: width 0.3s ease;
 }
 
 div.sphinxsidebar h3,
@@ -204,6 +205,9 @@ div.sphinxsidebar input[type='text'] {
     min-width: 12px;
     border-radius: 0 5px 5px 0;
     border-left: none;
+    position: absolute;
+    right: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #sidebarbutton:hover {
@@ -783,5 +787,16 @@ div.versionremoved .versionmodified {
 @media print {
     div.mobile-nav {
         display: none;
+    }
+}
+
+/* Animation */
+@media (prefers-reduced-motion: reduce) {
+    div.document {
+        transition: none;
+    }
+
+    #sidebarbutton {
+        transition: none;
     }
 }
