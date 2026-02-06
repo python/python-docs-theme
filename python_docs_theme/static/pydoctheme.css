@@ -255,11 +255,15 @@ div.code-block-caption {
     padding: 0.3em 0.6em;
     font-size: 90%;
     color: #333;
-}
 
-div.literal-block-wrapper pre {
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
+    & + div pre {
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+    }
+
+    & + div .copybutton {
+        border-top-right-radius: 0 !important;
+    }
 }
 
 /* Admonitions */
