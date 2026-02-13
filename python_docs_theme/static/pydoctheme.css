@@ -426,6 +426,10 @@ div.footer a:hover {
     color: #0095c4;
 }
 
+dl.field-list > dt {
+    align-self: center;
+}
+
 /* C API return value annotations */
 :root {
     --refcount: var(--good-color);
