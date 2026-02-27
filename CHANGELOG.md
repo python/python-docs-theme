@@ -1,5 +1,11 @@
 # Changelog
 
+## [2026.2](https://github.com/python/python-docs-theme/releases/tag/2026.2)
+
+* Style codeblock `:caption:` by @StanFromIreland in https://github.com/python/python-docs-theme/pull/288
+* Enable copy button for shell sessions and consoles by @hugovk in https://github.com/python/python-docs-theme/pull/295
+* Add colors for thread safety annotations by @lysnikolaou in https://github.com/python/python-docs-theme/pull/297
+
 ## [2025.12](https://github.com/python/python-docs-theme/releases/tag/2025.12)
 
 * Add support for green, red and yellow side borders for code examples by @hugovk in https://github.com/python/python-docs-theme/pull/285

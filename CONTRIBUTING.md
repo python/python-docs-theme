@@ -7,9 +7,10 @@
   [GitHub Actions](https://github.com/python/python-docs-theme/actions)
 - Go to https://github.com/python/python-docs-theme/releases
 - Click "Draft a new release"
-- Click "Choose a tag"
+- Click "Tag: Select tag"
 - Type the next YYYY.MM version (no leading zero) and
-  select "**Create new tag: YYYY.MM** on publish"
+  select "Create new tag"
+- Click "Create" for "YYYY.MM will be created on publish"
 - Leave the "Release title" blank (it will be autofilled)
 - Click "Generate release notes" and amend as required
 - Click "Publish release"
