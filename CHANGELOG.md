@@ -1,5 +1,9 @@
 # Changelog
 
+## [2026.3](https://github.com/python/python-docs-theme/releases/tag/2026.3)
+
+* Add colors for new thread-safety levels by @lysnikolaou in https://github.com/python/python-docs-theme/pull/299
+
 ## [2026.2](https://github.com/python/python-docs-theme/releases/tag/2026.2)
 
 * Style codeblock `:caption:` by @StanFromIreland in https://github.com/python/python-docs-theme/pull/288
