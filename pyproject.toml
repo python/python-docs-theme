@@ -27,26 +27,21 @@ classifiers = [
   "Topic :: Software Development :: Documentation",
 ]
 dynamic = [ "version" ]
-
 dependencies = [
   "sphinx>=7.3",
 ]
-
+urls."Issue tracker" = "https://github.com/python/python-docs-theme/issues"
 urls.Code = "https://github.com/python/python-docs-theme"
 urls.Download = "https://pypi.org/project/python-docs-theme/"
 urls.Homepage = "https://github.com/python/python-docs-theme/"
-urls."Issue tracker" = "https://github.com/python/python-docs-theme/issues"
 entry-points."sphinx.html_themes".python_docs_theme = "python_docs_theme"
 
-[tool.flit.module]
-name = "python_docs_theme"
-
-[tool.flit.sdist]
-include = [ "python_docs_theme/" ]
+[tool.flit]
+module.name = "python_docs_theme"
+sdist.include = [ "python_docs_theme/" ]
 
 [tool.ruff]
 fix = true
-
 lint.select = [
   "C4",     # flake8-comprehensions
   "E",      # pycodestyle errors
