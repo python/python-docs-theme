@@ -223,6 +223,9 @@ div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
     border: 0;
     padding: 0.3em 0;
 }
+div.body dl.field-list > dt {
+    line-height: 1.6;
+}
 
 div.body hr {
     border: 0;
