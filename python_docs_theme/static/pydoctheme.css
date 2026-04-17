@@ -789,10 +789,12 @@ div.genindex-jumpbox a {
     --versionadded: var(--good-color);
     --versionchanged: var(--middle-color);
     --deprecated: var(--bad-color);
+    --soft-deprecated: rgb(175, 0, 255);
 
     --versionadded-border: var(--good-border);
     --versionchanged-border: var(--middle-border);
     --deprecated-border: var(--bad-border);
+    --soft-deprecated-border: rgb(175, 0, 255);
 }
 
 div.versionadded,
@@ -817,6 +819,10 @@ div.versionremoved {
     border-left-color: var(--deprecated-border);
 }
 
+div.soft-deprecated {
+    border-left-color: var(--soft-deprecated-border);
+}
+
 div.versionadded .versionmodified {
     color: var(--versionadded);
 }
@@ -829,6 +835,10 @@ div.deprecated .versionmodified,
 div.deprecated-removed .versionmodified,
 div.versionremoved .versionmodified {
     color: var(--deprecated);
+}
+
+div.soft-deprecated .versionmodified {
+    color: var(--soft-deprecated);
 }
 
 /* Hide header when printing */
