@@ -1,5 +1,13 @@
 # Changelog
 
+## [2026.4](https://github.com/python/python-docs-theme/releases/tag/2026.4)
+
+* Fix the vertical alignment of `:Editor:` by @pradyunsg in
+  https://github.com/python/python-docs-theme/pull/303
+* Add Tamil translation in https://github.com/python/python-docs-theme/pull/304
+* Add styling for the `soft-deprecated` class by @StanFromIreland
+  in https://github.com/python/python-docs-theme/pull/305
+
 ## [2026.3](https://github.com/python/python-docs-theme/releases/tag/2026.3)
 
 * Add colors for new thread-safety levels by @lysnikolaou in https://github.com/python/python-docs-theme/pull/299
