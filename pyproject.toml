@@ -1,7 +1,8 @@
 [build-system]
-build-backend = "flit_core.buildapi"
+build-backend = "hatchling.build"
 requires = [
-  "flit-core>=3.7",
+  "babel",
+  "hatchling",
 ]
 
 [project]
@@ -36,9 +37,12 @@ urls.Download = "https://pypi.org/project/python-docs-theme/"
 urls.Homepage = "https://github.com/python/python-docs-theme/"
 entry-points."sphinx.html_themes".python_docs_theme = "python_docs_theme"
 
-[tool.flit]
-module.name = "python_docs_theme"
-sdist.include = [ "python_docs_theme/" ]
+[tool.hatch]
+build.artifacts = [ "python_docs_theme/locale/**/*.mo" ]
+build.hooks.custom.path = "babel_runner.py"
+build.targets.wheel.packages = [ "python_docs_theme" ]
+build.targets.wheel.exclude = [ "python_docs_theme/locale/**/*.po" ]
+version.path = "python_docs_theme/__init__.py"
 
 [tool.ruff]
 fix = true

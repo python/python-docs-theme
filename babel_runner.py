@@ -8,6 +8,8 @@ import subprocess
 import tomllib
 from pathlib import Path
 
+from hatchling.builders.hooks.plugin.interface import BuildHookInterface
+
 # Global variables used by pybabel below (paths relative to PROJECT_DIR)
 DOMAIN = "python-docs-theme"
 COPYRIGHT_HOLDER = "Python Software Foundation"
@@ -104,6 +106,11 @@ def compile_catalogs(locale: str) -> None:
     if locale:
         cmd.extend(["-l", locale])
     subprocess.run(cmd, cwd=PROJECT_DIR, check=True)
+
+
+class CustomBuildHook(BuildHookInterface):
+    def initialize(self, version: str, build_data: dict[str, object]) -> None:
+        compile_catalogs("")
 
 
 def main() -> None:
