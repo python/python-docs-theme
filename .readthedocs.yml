@@ -16,5 +16,5 @@ build:
     - make html CPYTHON_PATH=cpython
     - mv cpython/Doc/build _readthedocs
     # Build Polish translation preview.
-    - make html CPYTHON_PATH=cpython SPHINXOPTS="-D language=pl"
+    - make html CPYTHON_PATH=cpython SPHINXOPTS="-D language=pl" || true
     - mv cpython/Doc/build _readthedocs/pl
