@@ -25,12 +25,6 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
 
-      - name: Compile translations
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-          python babel_runner.py compile
-
       - uses: hynek/build-and-inspect-python-package@d44ca7d91762de7a7d5436ddae667c6da6d1c3df # v2.18.0
 
   # Upload to real PyPI on GitHub Releases.
