@@ -24,6 +24,7 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
   "Programming Language :: Python :: 3.15",
+  "Programming Language :: Python :: 3.16",
   "Topic :: Documentation",
   "Topic :: Software Development :: Documentation",
 ]
@@ -70,4 +71,4 @@ lint.ignore = [
 lint.isort.required-imports = [ "from __future__ import annotations" ]
 
 [tool.pyproject-fmt]
-max_supported_python = "3.15"
+max_supported_python = "3.16"
