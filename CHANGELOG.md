@@ -1,5 +1,10 @@
 # Changelog
 
+## [2026.7](https://github.com/python/python-docs-theme/releases/tag/2026.7)
+
+* Add Vietnamese translation by @StanFromIreland in https://github.com/python/python-docs-theme/pull/309
+* Switch to Hatchling build hooks for i18n packaging and exclude .po from wheels by @StanFromIreland in https://github.com/python/python-docs-theme/pull/312
+
 ## [2026.4](https://github.com/python/python-docs-theme/releases/tag/2026.4)
 
 * Add styling for the `soft-deprecated` class by @StanFromIreland
