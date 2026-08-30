@@ -564,8 +564,8 @@ div.genindex-jumpbox a {
         margin-inline-start: 1rem;
         margin-inline-end: 0;
     }
-    /* Remove sidebar and top related bar */
-    div.related, div.sphinxsidebar {
+    /* Remove sidebar and desktop-only related controls */
+    div.related li.right, div.related li.switchers, div.sphinxsidebar {
         display: none;
     }
     /* Anchorlinks are not hidden by fixed-positioned navbar when scrolled to */
