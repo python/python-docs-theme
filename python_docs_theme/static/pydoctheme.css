@@ -571,8 +571,7 @@ div.genindex-jumpbox a {
     div.related .root-icon {
         display: none;
     }
-    div.related ul,
-    div.related li {
+    div.related {
         line-height: 1.3;
     }
     /* Anchorlinks are not hidden by fixed-positioned navbar when scrolled to */
