@@ -568,6 +568,13 @@ div.genindex-jumpbox a {
     div.related li.right, div.related li.switchers, div.sphinxsidebar {
         display: none;
     }
+    div.related .root-icon {
+        display: none;
+    }
+    div.related ul,
+    div.related li {
+        line-height: 1.3;
+    }
     /* Anchorlinks are not hidden by fixed-positioned navbar when scrolled to */
     html {
         scroll-padding-top: 40px;

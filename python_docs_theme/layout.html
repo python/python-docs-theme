@@ -14,7 +14,7 @@
           </li>
           {%- endfor %}
           {%- block rootrellink %}
-          <li><img src="{{ pathto('_static/' ~ theme_root_icon, 1) }}" alt="{{ theme_root_icon_alt_text }}" style="vertical-align: middle; margin-top: -1px"></li>
+          <li class="root-icon"><img src="{{ pathto('_static/' ~ theme_root_icon, 1) }}" alt="{{ theme_root_icon_alt_text }}" style="vertical-align: middle; margin-top: -1px"></li>
           <li><a href="{{theme_root_url}}">{{theme_root_name}}</a>{{ reldelim1 }}</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
