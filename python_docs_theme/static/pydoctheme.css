@@ -568,7 +568,7 @@ div.genindex-jumpbox a {
     div.related li.right, div.related li.switchers, div.sphinxsidebar {
         display: none;
     }
-    div.related .root-icon {
+    div.related .root-icon, div.related .root-icon + li {
         display: none;
     }
     div.related {
