@@ -1,5 +1,14 @@
 # Changelog
 
+## [2026.9](https://github.com/python/python-docs-theme/releases/tag/2026.9)
+
+* Add support for right-to-left page layout by @sepehr-rs in https://github.com/python/python-docs-theme/pull/324
+* Improve contrast between unvisited and visited links in dark mode
+  by @StanFromIreland in https://github.com/python/python-docs-theme/pull/329
+* Keep breadcrumb navigation visible on mobile by @undeMalum in
+  https://github.com/python/python-docs-theme/pull/326
+* Add Persian translation by @sepehr-rs in https://github.com/python/python-docs-theme/pull/322
+
 ## [2026.7](https://github.com/python/python-docs-theme/releases/tag/2026.7)
 
 * Add Vietnamese translation by @StanFromIreland in https://github.com/python/python-docs-theme/pull/309
