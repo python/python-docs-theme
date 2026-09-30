@@ -1,5 +1,9 @@
 # Changelog
 
+## [2026.9.1](https://github.com/python/python-docs-theme/releases/tag/2026.9.1)
+
+* Use the Vazirmatn font for Persian by @sepehr-rs in https://github.com/python/python-docs-theme/commit/2e0d368a26973342810e130c941d960f7d36fd89
+
 ## [2026.9](https://github.com/python/python-docs-theme/releases/tag/2026.9)
 
 * Add support for right-to-left page layout by @sepehr-rs in https://github.com/python/python-docs-theme/pull/324
