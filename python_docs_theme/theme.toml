@@ -27,6 +27,7 @@ headbgcolor = "white"
 headlinkcolor = "#aaaaaa"
 codebgcolor = "#eeffcc"
 codetextcolor = "#333333"
+is_rtl = "false"
 
 hosted_on = ""
 issues_url = ""

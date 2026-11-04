@@ -1,3 +1,4 @@
 # for babel_runner.py
 Babel
+hatchling
 Jinja2

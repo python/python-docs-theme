@@ -1,7 +1,8 @@
 [build-system]
-build-backend = "flit_core.buildapi"
+build-backend = "hatchling.build"
 requires = [
-  "flit-core>=3.7",
+  "babel",
+  "hatchling",
 ]
 
 [project]
@@ -9,7 +10,7 @@ name = "python-docs-theme"
 description = "The Sphinx theme for the CPython docs and related projects"
 readme = "README.md"
 license = "PSF-2.0"
-license-files = [ "LICENSE" ]
+license-files = [ "LICENSE", "python_docs_theme/static/fonts/OFL.txt" ]
 authors = [ { name = "Python Docs Sphinx Theme maintainers" } ]
 requires-python = ">=3.12"
 classifiers = [
@@ -37,9 +38,15 @@ urls.Download = "https://pypi.org/project/python-docs-theme/"
 urls.Homepage = "https://github.com/python/python-docs-theme/"
 entry-points."sphinx.html_themes".python_docs_theme = "python_docs_theme"
 
-[tool.flit]
-module.name = "python_docs_theme"
-sdist.include = [ "python_docs_theme/" ]
+[tool.hatch]
+version.path = "python_docs_theme/__init__.py"
+build.artifacts = [ "python_docs_theme/locale/**/*.mo" ]
+build.hooks.custom.path = "babel_runner.py"
+build.targets.wheel.packages = [ "python_docs_theme" ]
+build.targets.wheel.exclude = [
+  "python_docs_theme/locale/**/*.po",
+  "python_docs_theme/static/fonts/OFL.txt",
+]
 
 [tool.ruff]
 fix = true

@@ -1,7 +1,6 @@
 # You can set these variables from the command line.
 CPYTHON_PATH = ../cpython
 PYTHON       = python3
-PACKAGE_ABS_PATH = $(shell pwd)/$(shell find dist/python-docs-theme-*.tar.gz)
 SPHINXOPTS   =
 
 
@@ -15,10 +14,11 @@ help:
 .PHONY: venv
 venv:
 	$(PYTHON) -m pip install build
+	rm -rf dist/
 	$(PYTHON) -m build
 	cd $(CPYTHON_PATH)/Doc \
 		&& make venv \
-		&& ./venv/bin/pip install $(PACKAGE_ABS_PATH)
+		&& ./venv/bin/pip install $(CURDIR)/dist/python_docs_theme-*.tar.gz
 
 .PHONY: html
 html: venv

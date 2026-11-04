@@ -6,7 +6,7 @@
       <h3>{{ _('Navigation') }}</h3>
       <ul>
           {%- for rellink in rellinks %}
-          <li class="right" {% if loop.first %}style="margin-right: 10px"{% endif %}>
+          <li class="right" {% if loop.first %}style="margin-inline-end: 10px"{% endif %}>
               <a href="{{ pathto(rellink[0])|e }}" title="{{ rellink[1]|striptags|e }}"
                  {{ accesskey(rellink[2]) }}>{{ rellink[3] }}
               </a>
@@ -14,7 +14,7 @@
           </li>
           {%- endfor %}
           {%- block rootrellink %}
-          <li><img src="{{ pathto('_static/' ~ theme_root_icon, 1) }}" alt="{{ theme_root_icon_alt_text }}" style="vertical-align: middle; margin-top: -1px"></li>
+          <li class="root-icon"><img src="{{ pathto('_static/' ~ theme_root_icon, 1) }}" alt="{{ theme_root_icon_alt_text }}" style="vertical-align: middle; margin-top: -1px"></li>
           <li><a href="{{theme_root_url}}">{{theme_root_name}}</a>{{ reldelim1 }}</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -89,7 +89,7 @@
 {%- endblock -%}
 
 {%- block body_tag %}
-{{ super() }}
+<body{% if theme_is_rtl|tobool %} dir="rtl"{% endif %}>
 {%- if builder != 'htmlhelp' %}
 <div class="mobile-nav">
     <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
