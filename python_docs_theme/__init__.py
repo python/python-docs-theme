@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+from gettext import find
 from pathlib import Path
+from shutil import copyfile
 
 from sphinx.locale import get_translation
 
@@ -37,12 +39,36 @@ def add_translation_to_context(
     context["_"] = context["gettext"] = context["ngettext"] = combined
 
 
+def get_js_catalog(app: Sphinx) -> Path | None:
+    catalog = find(
+        MESSAGE_CATALOG_NAME,
+        localedir=LOCALE_DIR,
+        languages=[app.config.language or "en"],
+    )
+    if catalog is not None:
+        js_catalog = Path(catalog).with_suffix(".js")
+        if js_catalog.is_file():
+            return js_catalog
+    return None
+
+
+def add_js_translations(app: Sphinx) -> None:
+    if app.builder.format != "html":
+        return
+    if catalog := get_js_catalog(app):
+        static_dir = Path(app.outdir) / "_static"
+        static_dir.mkdir(parents=True, exist_ok=True)
+        copyfile(catalog, static_dir / "python-docs-theme-translations.js")
+        app.add_js_file("python-docs-theme-translations.js")
+
+
 def setup(app: Sphinx) -> ExtensionMetadata:
     app.require_sphinx("7.3")
 
     app.add_html_theme("python_docs_theme", str(THEME_PATH))
     app.add_message_catalog(MESSAGE_CATALOG_NAME, LOCALE_DIR)
     app.connect("html-page-context", add_translation_to_context)
+    app.connect("builder-inited", add_js_translations)
 
     return {
         "version": __version__,

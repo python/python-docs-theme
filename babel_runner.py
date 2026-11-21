@@ -4,10 +4,13 @@ from __future__ import annotations
 
 import argparse
 import ast
+import json
 import subprocess
 import tomllib
 from pathlib import Path
 
+from babel.messages.mofile import read_mo
+from babel.messages.pofile import read_po
 from hatchling.builders.hooks.plugin.interface import BuildHookInterface
 
 # Global variables used by pybabel below (paths relative to PROJECT_DIR)
@@ -106,6 +109,43 @@ def compile_catalogs(locale: str) -> None:
     if locale:
         cmd.extend(["-l", locale])
     subprocess.run(cmd, cwd=PROJECT_DIR, check=True)
+
+    locale_dirs = PROJECT_DIR / LOCALES_DIR
+    catalogs = (
+        [locale_dirs / locale / "LC_MESSAGES" / f"{DOMAIN}.po"]
+        if locale
+        else sorted(locale_dirs.glob(f"*/LC_MESSAGES/{DOMAIN}.po"))
+    )
+    for pofile in catalogs:
+        compile_js_catalog(pofile)
+
+
+def compile_js_catalog(pofile: Path) -> None:
+    """Export translated singular JavaScript messages from the compiled catalog."""
+    mofile = pofile.with_suffix(".mo")
+    jsfile = pofile.with_suffix(".js")
+    if not mofile.exists():
+        jsfile.unlink(missing_ok=True)
+        return
+    with pofile.open("rb") as f:
+        source = read_po(f)
+    with mofile.open("rb") as f:
+        compiled = read_mo(f)
+    messages = {}
+    for message in source:
+        if not isinstance(message.id, str):
+            continue
+        if not any(filename.endswith(".js") for filename, _ in message.locations):
+            continue
+        translation = compiled.get(message.id)
+        if translation is not None and translation.string:
+            messages[message.id] = translation.string
+    jsfile.write_text(
+        "Object.assign(Documentation.TRANSLATIONS, "
+        + json.dumps(messages, ensure_ascii=True, sort_keys=True)
+        + ");\n",
+        encoding="utf-8",
+    )
 
 
 class CustomBuildHook(BuildHookInterface):

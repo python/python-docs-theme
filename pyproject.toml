@@ -40,7 +40,10 @@ entry-points."sphinx.html_themes".python_docs_theme = "python_docs_theme"
 
 [tool.hatch]
 version.path = "python_docs_theme/__init__.py"
-build.artifacts = [ "python_docs_theme/locale/**/*.mo" ]
+build.artifacts = [
+  "python_docs_theme/locale/**/*.mo",
+  "python_docs_theme/locale/**/*.js",
+]
 build.hooks.custom.path = "babel_runner.py"
 build.targets.wheel.packages = [ "python_docs_theme" ]
 build.targets.wheel.exclude = [
