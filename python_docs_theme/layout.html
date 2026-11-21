@@ -74,7 +74,10 @@
     <link rel="shortcut icon" type="image/png" href="{{ pathto('_static/' ~ theme_root_icon, 1) }}">
     {%- if builder != "htmlhelp" %}
         {%- if not embedded %}
-            <script type="text/javascript" src="{{ pathto('_static/copybutton.js', 1) }}"></script>
+            <script type="text/javascript" src="{{ pathto('_static/copybutton.js', 1) }}"
+                    data-copy="{{ _('Copy')|e }}"
+                    data-copy-to-clipboard="{{ _('Copy to clipboard')|e }}"
+                    data-copied="{{ _('Copied!')|e }}"></script>
             <script type="text/javascript" src="{{ pathto('_static/menu.js', 1) }}"></script>
             <script type="text/javascript" src="{{ pathto('_static/search-focus.js', 1) }}"></script>
             <script type="text/javascript" src="{{ pathto('_static/themetoggle.js', 1) }}"></script>

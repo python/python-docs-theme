@@ -23,12 +23,14 @@ function getCopyableText(rootElement) {
     return rootElement.innerText.trim()
 }
 
+const copyButtonLabels = document.currentScript.dataset
+
 const loadCopyButton = () => {
     const button = document.createElement("button")
     button.classList.add("copybutton")
     button.type = "button"
-    button.innerText = _("Copy")
-    button.title = _("Copy to clipboard")
+    button.innerText = copyButtonLabels.copy
+    button.title = copyButtonLabels.copyToClipboard
 
     const makeOnButtonClick = () => {
         let timeout = null
@@ -50,9 +52,9 @@ const loadCopyButton = () => {
                 return
             }
 
-            buttonEl.innerText = _("Copied!")
+            buttonEl.innerText = copyButtonLabels.copied
             timeout = setTimeout(() => {
-                buttonEl.innerText = _("Copy")
+                buttonEl.innerText = copyButtonLabels.copy
             }, 1500)
         }
     }
