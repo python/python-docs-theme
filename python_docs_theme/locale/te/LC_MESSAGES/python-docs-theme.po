@@ -124,4 +124,3 @@ msgstr "క్లిప్‌బోర్డ్‌కు కాపీ చేయ�
 #: python_docs_theme/static/copybutton.js:53
 msgid "Copied!"
 msgstr "కాపీ అయింది!"
-
