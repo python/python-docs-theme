@@ -141,6 +141,7 @@ def compile_js_catalog(pofile: Path) -> None:
         if translation is not None and translation.string:
             messages[message.id] = translation.string
     jsfile.write_text(
+        f"// {DOMAIN} translations for {pofile.parents[1].name}\n"
         "Object.assign(Documentation.TRANSLATIONS, "
         + json.dumps(messages, ensure_ascii=True, sort_keys=True)
         + ");\n",
