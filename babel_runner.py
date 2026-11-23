@@ -120,7 +120,7 @@ def compile_catalogs(locale: str) -> None:
 
 
 def compile_js_catalog(pofile: Path) -> None:
-    """Export translated singular JavaScript messages from the PO catalog."""
+    """Export translated JavaScript messages from the PO catalog."""
     jsfile = pofile.with_suffix(".js")
     with pofile.open("rb") as f:
         source = read_po(f)
@@ -129,18 +129,26 @@ def compile_js_catalog(pofile: Path) -> None:
         return
     messages = {}
     for message in source:
-        if not isinstance(message.id, str):
-            continue
         if not any(filename.endswith(".js") for filename, _ in message.locations):
             continue
         if message.context is not None or message.fuzzy or not message.string:
             continue
-        messages[message.id] = message.string
+        if message.pluralizable and not all(message.string):
+            continue
+        msgid = message.id[0] if message.pluralizable else message.id
+        messages[msgid] = message.string
+    serialized = json.dumps(
+        {
+            "locale": str(source.locale),
+            "messages": messages,
+            "plural_expr": f"Number({source.plural_expr})",
+        },
+        ensure_ascii=True,
+        sort_keys=True,
+    )
     jsfile.write_text(
         f"// {DOMAIN} translations for {pofile.parents[1].name}\n"
-        "Object.assign(Documentation.TRANSLATIONS, "
-        + json.dumps(messages, ensure_ascii=True, sort_keys=True)
-        + ");\n",
+        f"Documentation.addTranslations({serialized});\n",
         encoding="utf-8",
     )
 
