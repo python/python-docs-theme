@@ -9,7 +9,6 @@ import subprocess
 import tomllib
 from pathlib import Path
 
-from babel.messages.mofile import read_mo
 from babel.messages.pofile import read_po
 from hatchling.builders.hooks.plugin.interface import BuildHookInterface
 
@@ -121,25 +120,22 @@ def compile_catalogs(locale: str) -> None:
 
 
 def compile_js_catalog(pofile: Path) -> None:
-    """Export translated singular JavaScript messages from the compiled catalog."""
-    mofile = pofile.with_suffix(".mo")
+    """Export translated singular JavaScript messages from the PO catalog."""
     jsfile = pofile.with_suffix(".js")
-    if not mofile.exists():
-        jsfile.unlink(missing_ok=True)
-        return
     with pofile.open("rb") as f:
         source = read_po(f)
-    with mofile.open("rb") as f:
-        compiled = read_mo(f)
+    if source.fuzzy:
+        jsfile.unlink(missing_ok=True)
+        return
     messages = {}
     for message in source:
         if not isinstance(message.id, str):
             continue
         if not any(filename.endswith(".js") for filename, _ in message.locations):
             continue
-        translation = compiled.get(message.id)
-        if translation is not None and translation.string:
-            messages[message.id] = translation.string
+        if message.context is not None or message.fuzzy or not message.string:
+            continue
+        messages[message.id] = message.string
     jsfile.write_text(
         f"// {DOMAIN} translations for {pofile.parents[1].name}\n"
         "Object.assign(Documentation.TRANSLATIONS, "
