@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: python-docs-theme 2026.9.1\n"
 "Report-Msgid-Bugs-To: https://github.com/python/python-docs-theme/issues\n"
 "POT-Creation-Date: 2026-11-20 18:21-0800\n"
-"PO-Revision-Date: 2026-11-20 18:21-0800\n"
+"PO-Revision-Date: 2026-11-23 20:46-0800\n"
 "Last-Translator: Divya Chukkapalli <divya.95j@gmail.com>, 2026\n"
 "Language: te\n"
 "Language-Team: Telugu (https://github.com/divya0795/python-docs-te/)\n"
@@ -77,7 +77,7 @@ msgid ""
 "licensed under the Zero Clause BSD License."
 msgstr ""
 "డాక్యుమెంటేషన్‌లోని ఉదాహరణలు, రెసిపీలు, ఇతర కోడ్ అదనంగా Zero Clause BSD "
-"License కింద కూడా లైసెన్స్ చేయబడ్డాయి."
+"License కింద లైసెన్స్ చేయబడ్డాయి."
 
 #: python_docs_theme/layout.html:152
 #, python-format
@@ -115,7 +115,7 @@ msgstr ""
 #: python_docs_theme/static/copybutton.js:30
 #: python_docs_theme/static/copybutton.js:55
 msgid "Copy"
-msgstr "కాపీ చేయండి"
+msgstr "కాపీ"
 
 #: python_docs_theme/static/copybutton.js:31
 msgid "Copy to clipboard"
