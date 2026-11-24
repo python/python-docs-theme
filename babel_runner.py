@@ -131,9 +131,10 @@ def compile_js_catalog(pofile: Path) -> None:
     for message in source:
         if not any(filename.endswith(".js") for filename, _ in message.locations):
             continue
-        # skip messages with context: Sphinx's JavaScript gettext runtime
-        # doesn't provide pgettext()
-        if message.context is not None or message.fuzzy or not message.string:
+        # Sphinx's JavaScript gettext runtime doesn't provide pgettext()
+        if message.context is not None:
+            continue
+        if message.fuzzy or not message.string:
             continue
         if message.pluralizable and not all(message.string):
             continue
