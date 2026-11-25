@@ -11,5 +11,10 @@ build:
 
   commands:
     - git clone --depth=1 https://github.com/python/cpython
+    - git clone --depth=1 https://github.com/python/python-docs-pl cpython/Doc/locales/pl/LC_MESSAGES
+    # Build English preview.
     - make html CPYTHON_PATH=cpython
     - mv cpython/Doc/build _readthedocs
+    # Build Polish translation preview.
+    - make html CPYTHON_PATH=cpython SPHINXOPTS="-D language=pl" || true
+    - mv cpython/Doc/build _readthedocs/pl
