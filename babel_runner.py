@@ -4,10 +4,12 @@ from __future__ import annotations
 
 import argparse
 import ast
+import json
 import subprocess
 import tomllib
 from pathlib import Path
 
+from babel.messages.pofile import read_po
 from hatchling.builders.hooks.plugin.interface import BuildHookInterface
 
 # Global variables used by pybabel below (paths relative to PROJECT_DIR)
@@ -106,6 +108,55 @@ def compile_catalogs(locale: str) -> None:
     if locale:
         cmd.extend(["-l", locale])
     subprocess.run(cmd, cwd=PROJECT_DIR, check=True)
+
+    locale_dirs = PROJECT_DIR / LOCALES_DIR
+    catalogs = (
+        [locale_dirs / locale / "LC_MESSAGES" / f"{DOMAIN}.po"]
+        if locale
+        else sorted(locale_dirs.glob(f"*/LC_MESSAGES/{DOMAIN}.po"))
+    )
+    for pofile in catalogs:
+        compile_js_catalog(pofile)
+
+
+def compile_js_catalog(pofile: Path) -> None:
+    """Export translated JavaScript messages from the PO catalog."""
+    jsfile = pofile.with_suffix(".js")
+    with pofile.open("rb") as f:
+        source = read_po(f)
+    if source.fuzzy:
+        jsfile.unlink(missing_ok=True)
+        return
+    messages = {}
+    for message in source:
+        if not any(filename.endswith(".js") for filename, _ in message.locations):
+            continue
+        # Sphinx's JavaScript gettext runtime doesn't provide pgettext()
+        if message.context is not None:
+            continue
+        if message.fuzzy or not message.string:
+            continue
+        if message.pluralizable and not all(message.string):
+            continue
+        msgid = message.id[0] if message.pluralizable else message.id
+        messages[msgid] = message.string
+    serialized = json.dumps(
+        {
+            "locale": str(source.locale),
+            "messages": messages,
+            "plural_expr": f"Number({source.plural_expr})",
+        },
+        ensure_ascii=True,
+        sort_keys=True,
+    )
+    jsfile.write_text(
+        f"// {DOMAIN} translations for {pofile.parents[1].name}\n"
+        f"// prevent overriding default Sphinx plural rules"
+        "const previousPlural = Documentation.PLURAL_EXPR;\n"
+        f"Documentation.addTranslations({serialized});\n"
+        "Documentation.PLURAL_EXPR = previousPlural;\n",
+        encoding="utf-8",
+    )
 
 
 class CustomBuildHook(BuildHookInterface):

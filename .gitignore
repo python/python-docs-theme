@@ -48,6 +48,7 @@ coverage.xml
 
 # Translations
 *.mo
+/python_docs_theme/locale/**/*.js
 *.pot
 
 # Django stuff:
