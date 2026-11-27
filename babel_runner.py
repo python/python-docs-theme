@@ -151,7 +151,10 @@ def compile_js_catalog(pofile: Path) -> None:
     )
     jsfile.write_text(
         f"// {DOMAIN} translations for {pofile.parents[1].name}\n"
-        f"Documentation.addTranslations({serialized});\n",
+        f"// prevent overriding default Sphinx plural rules"
+        "const previousPlural = Documentation.PLURAL_EXPR;\n"
+        f"Documentation.addTranslations({serialized});\n"
+        "Documentation.PLURAL_EXPR = previousPlural;\n",
         encoding="utf-8",
     )
 
